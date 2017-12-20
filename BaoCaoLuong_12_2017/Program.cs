@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
-using DevExpress.UserSkins;
 using DevExpress.Skins;
-using DevExpress.LookAndFeel;
+using DevExpress.UserSkins;
+using BaoCaoLuong_12_2017.MyForm;
 
 namespace BaoCaoLuong_12_2017
 {
@@ -18,11 +16,28 @@ namespace BaoCaoLuong_12_2017
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             BonusSkins.Register();
-            SkinManager.EnableFormSkins();
-            UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new Form1());
+            //Application.Run(new frmFeedback());
+            //if (new frm_ChangeServer().ShowDialog() != DialogResult.OK)
+            //    return;
+            //bool temp = false;
+            //do
+            //{
+                //temp = false;
+                frmLogin frLogin = new frmLogin();
+
+                if (frLogin.ShowDialog() == DialogResult.OK)
+                {
+                    frm_Main frMain = new frm_Main();
+
+                    if (frMain.ShowDialog() == DialogResult.Yes)
+                    {
+                        frMain.Close();
+                        //temp = true;
+                    }
+                }
+            //}
+            //while (temp);
         }
     }
 }
