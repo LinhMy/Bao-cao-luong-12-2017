@@ -38,7 +38,6 @@ namespace BaoCaoLuong_12_2017.MyForm
         {
             try
             {
-                Global.FreeTime = 0;
                 ChiaUser = -1;
                 LevelUser = -1;
                 Global.FlagChangeSave = false;
@@ -777,7 +776,7 @@ namespace BaoCaoLuong_12_2017.MyForm
             if (e.KeyCode == Keys.Escape)
             {
                 //new FrmFreeTime().ShowDialog();
-                Global.DbBpo.UpdateTimeFree(Global.Token, Global.FreeTime);
+                //Global.DbBpo.UpdateTimeFree(Global.Token, Global.FreeTime);
             }
         }
         
@@ -833,7 +832,7 @@ namespace BaoCaoLuong_12_2017.MyForm
         private void btn_Pause_Click(object sender, EventArgs e)
         {
           //  new FrmFreeTime().ShowDialog();
-            Global.DbBpo.UpdateTimeFree(Global.Token, Global.FreeTime);
+            //Global.DbBpo.UpdateTimeFree(Global.Token, Global.FreeTime);
         }
 
         private void lb_IdImage_Click(object sender, EventArgs e)
