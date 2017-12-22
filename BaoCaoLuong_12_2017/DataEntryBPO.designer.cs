@@ -237,73 +237,32 @@ namespace BaoCaoLuong_12_2017
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChangeIsDelete")]
-		public int ChangeIsDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsDelete", DbType="Bit")] System.Nullable<bool> isDelete)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.KiemTraLogin")]
+		public int KiemTraLogin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string password)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, isDelete);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password);
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateUsername_BaoCaoLuong")]
-		public int UpdateUsername_BaoCaoLuong([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(100)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRole", DbType="NVarChar(100)")] string iDRole, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDNhanVien", DbType="NVarChar(100)")] string iDNhanVien, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GroupLevel", DbType="NVarChar(100)")] string groupLevel)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetRoLeCheckLogin")]
+		public ISingleResult<GetRoLeCheckLoginResult> GetRoLeCheckLogin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] ref string role)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password, iDRole, iDNhanVien, groupLevel);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, role);
+			role = ((string)(result.GetParameterValue(1)));
+			return ((ISingleResult<GetRoLeCheckLoginResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateToken")]
+		public int updateToken([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(150)")] string idproject, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string token)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, idproject, token);
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CheckLevelUser")]
-		public ISingleResult<CheckLevelUserResult> CheckLevelUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertLoginTime_new")]
+		public int InsertLoginTime_new([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(100)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TimeLogin", DbType="DateTime")] System.Nullable<System.DateTime> timeLogin, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="WindowUser", DbType="NVarChar(100)")] string windowUser, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MachineName", DbType="NVarChar(100)")] string machineName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IPAddress", DbType="NVarChar(100)")] string iPAddress, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(100)")] string token, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string project)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName);
-			return ((ISingleResult<CheckLevelUserResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CheckTimeDeadline")]
-		public ISingleResult<CheckTimeDeadlineResult> CheckTimeDeadline()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<CheckTimeDeadlineResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietTienDoDeJP_EnTry")]
-		public ISingleResult<ChiTietTienDoDeJP_EnTryResult> ChiTietTienDoDeJP_EnTry([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idproject)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname, idproject);
-			return ((ISingleResult<ChiTietTienDoDeJP_EnTryResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietTienDoDeSo_Entry")]
-		public ISingleResult<ChiTietTienDoDeSo_EntryResult> ChiTietTienDoDeSo_Entry([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idproject)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname, idproject);
-			return ((ISingleResult<ChiTietTienDoDeSo_EntryResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietUserDeJP_Entry")]
-		public ISingleResult<ChiTietUserDeJP_EntryResult> ChiTietUserDeJP_Entry([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idproject, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idimage)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idproject, fbatchname, idimage);
-			return ((ISingleResult<ChiTietUserDeJP_EntryResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietUserDeSo_Entry")]
-		public ISingleResult<ChiTietUserDeSo_EntryResult> ChiTietUserDeSo_Entry([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idproject, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idimage)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idproject, fbatchname, idimage);
-			return ((ISingleResult<ChiTietUserDeSo_EntryResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Delete_PhanCong")]
-		public int Delete_PhanCong([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(150)")] string idproject)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, idproject);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DeleteDuAn")]
-		public int DeleteDuAn([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDProject", DbType="NVarChar(150)")] string iDProject)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDProject);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, timeLogin, windowUser, machineName, iPAddress, token, project);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -312,34 +271,6 @@ namespace BaoCaoLuong_12_2017
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
 			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetList_Batch_BaoDeadline")]
-		public ISingleResult<GetList_Batch_BaoDeadlineResult> GetList_Batch_BaoDeadline([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fIdProject)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fIdProject);
-			return ((ISingleResult<GetList_Batch_BaoDeadlineResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetList_Batch_Deadline")]
-		public ISingleResult<GetList_Batch_DeadlineResult> GetList_Batch_Deadline([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDProject", DbType="NVarChar(150)")] string iDProject)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDProject);
-			return ((ISingleResult<GetList_Batch_DeadlineResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetList_Project_UserPerform")]
-		public ISingleResult<GetList_Project_UserPerformResult> GetList_Project_UserPerform([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string username)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
-			return ((ISingleResult<GetList_Project_UserPerformResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetListProject")]
-		public ISingleResult<GetListProjectResult> GetListProject()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<GetListProjectResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetListRole")]
@@ -356,68 +287,10 @@ namespace BaoCaoLuong_12_2017
 			return ((ISingleResult<GetListUserResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetListUser_PhanCong")]
-		public ISingleResult<GetListUser_PhanCongResult> GetListUser_PhanCong([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(150)")] string idproject)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateUsername_NEW")]
+		public int UpdateUsername_NEW([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(100)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Bit")] System.Nullable<bool> notgooduser, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRole", DbType="NVarChar(100)")] string iDRole, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FullName", DbType="NVarChar(100)")] string fullName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GroupLevel", DbType="NVarChar(100)")] string groupLevel, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserEdit", DbType="NVarChar(255)")] string userEdit, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string ip, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string pcName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string doMainName)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idproject);
-			return ((ISingleResult<GetListUser_PhanCongResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetListUserToKiemDinh")]
-		public ISingleResult<GetListUserToKiemDinhResult> GetListUserToKiemDinh()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<GetListUserToKiemDinhResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetRoLeCheckLogin")]
-		public ISingleResult<GetRoLeCheckLoginResult> GetRoLeCheckLogin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] ref string role)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, role);
-			role = ((string)(result.GetParameterValue(1)));
-			return ((ISingleResult<GetRoLeCheckLoginResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetRoLeToKiemDinh")]
-		public ISingleResult<GetRoLeToKiemDinhResult> GetRoLeToKiemDinh([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] ref string role)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, role);
-			role = ((string)(result.GetParameterValue(1)));
-			return ((ISingleResult<GetRoLeToKiemDinhResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Insert_PhanCong")]
-		public int Insert_PhanCong([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(150)")] string idproject)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, idproject);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertLoginTime")]
-		public int InsertLoginTime([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(100)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TimeLogin", DbType="DateTime")] System.Nullable<System.DateTime> timeLogin, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="WindowUser", DbType="NVarChar(100)")] string windowUser, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MachineName", DbType="NVarChar(100)")] string machineName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IPAddress", DbType="NVarChar(100)")] string iPAddress, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(100)")] string token)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, timeLogin, windowUser, machineName, iPAddress, token);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertLoginTime_new")]
-		public int InsertLoginTime_new([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(100)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TimeLogin", DbType="DateTime")] System.Nullable<System.DateTime> timeLogin, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="WindowUser", DbType="NVarChar(100)")] string windowUser, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MachineName", DbType="NVarChar(100)")] string machineName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IPAddress", DbType="NVarChar(100)")] string iPAddress, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(100)")] string token, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string project)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, timeLogin, windowUser, machineName, iPAddress, token, project);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertUsername")]
-		public int InsertUsername([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(100)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRole", DbType="NVarChar(100)")] string iDRole, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NhanVien", DbType="NVarChar(100)")] string nhanVien, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GroupLevel", DbType="NVarChar(100)")] string groupLevel)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password, iDRole, nhanVien, groupLevel);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertUsername_BapCaoLuong")]
-		public int InsertUsername_BapCaoLuong([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(100)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRole", DbType="NVarChar(100)")] string iDRole, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NhanVien", DbType="NVarChar(100)")] string nhanVien, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GroupLevel", DbType="NVarChar(100)")] string groupLevel)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password, iDRole, nhanVien, groupLevel);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password, notgooduser, iDRole, fullName, groupLevel, userEdit, ip, pcName, doMainName);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -428,73 +301,10 @@ namespace BaoCaoLuong_12_2017
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.KiemTraLogin")]
-		public int KiemTraLogin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string password)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.proc_TaoHistoryVersion")]
-		public int proc_TaoHistoryVersion([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(150)")] string idproject, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string version, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(4000)")] string ghichu, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string user)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idproject, version, ghichu, user);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ResetToken")]
-		public int ResetToken([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(150)")] string idproject, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(255)")] string token)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, idproject, token);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThongKeDeJP")]
-		public ISingleResult<ThongKeDeJPResult> ThongKeDeJP([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idproject)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname, idproject);
-			return ((ISingleResult<ThongKeDeJPResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThongKeDeSo")]
-		public ISingleResult<ThongKeDeSoResult> ThongKeDeSo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idproject)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname, idproject);
-			return ((ISingleResult<ThongKeDeSoResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateNotGoodUser")]
-		public int updateNotGoodUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Bit")] System.Nullable<bool> notgooduser)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, notgooduser);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateNotGoodUser_New")]
 		public int updateNotGoodUser_New([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Bit")] System.Nullable<bool> notgooduser, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserEdit", DbType="NVarChar(255)")] string userEdit, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string ip, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string pcName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string doMainName)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, notgooduser, userEdit, ip, pcName, doMainName);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateOutSourceProject")]
-		public int UpdateOutSourceProject([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Project", DbType="NVarChar(255)")] string project, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Flag", DbType="Bit")] System.Nullable<bool> flag)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), project, flag);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdatePassword")]
-		public int UpdatePassword([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PassWordOld", DbType="NVarChar(255)")] string passWordOld, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PassWordNew", DbType="NVarChar(255)")] string passWordNew)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, passWordOld, passWordNew);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateTimeFree")]
-		public int UpdateTimeFree([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(255)")] string token, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> freetime)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), token, freetime);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -512,24 +322,24 @@ namespace BaoCaoLuong_12_2017
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateToken")]
-		public int updateToken([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(150)")] string idproject, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string token)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ResetToken")]
+		public int ResetToken([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(150)")] string idproject, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(255)")] string token)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, idproject, token);
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateUsername")]
-		public int UpdateUsername([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(100)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRole", DbType="NVarChar(100)")] string iDRole, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDNhanVien", DbType="NVarChar(100)")] string iDNhanVien, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GroupLevel", DbType="NVarChar(100)")] string groupLevel)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateTimeFree")]
+		public int UpdateTimeFree([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(255)")] string token, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> freetime)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password, iDRole, iDNhanVien, groupLevel);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), token, freetime);
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateUsername_NEW")]
-		public int UpdateUsername_NEW([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(100)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Bit")] System.Nullable<bool> notgooduser, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRole", DbType="NVarChar(100)")] string iDRole, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FullName", DbType="NVarChar(100)")] string fullName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GroupLevel", DbType="NVarChar(100)")] string groupLevel, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserEdit", DbType="NVarChar(255)")] string userEdit, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string ip, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string pcName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string doMainName)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateOutSourceProject")]
+		public int UpdateOutSourceProject([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Project", DbType="NVarChar(255)")] string project, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Flag", DbType="Bit")] System.Nullable<bool> flag)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password, notgooduser, iDRole, fullName, groupLevel, userEdit, ip, pcName, doMainName);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), project, flag);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -3484,405 +3294,27 @@ namespace BaoCaoLuong_12_2017
 		}
 	}
 	
-	public partial class CheckLevelUserResult
+	public partial class GetRoLeCheckLoginResult
 	{
 		
-		private System.Nullable<bool> _NotGoodUser;
+		private string _Column1;
 		
-		public CheckLevelUserResult()
+		public GetRoLeCheckLoginResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NotGoodUser", DbType="Bit")]
-		public System.Nullable<bool> NotGoodUser
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(100)")]
+		public string Column1
 		{
 			get
 			{
-				return this._NotGoodUser;
+				return this._Column1;
 			}
 			set
 			{
-				if ((this._NotGoodUser != value))
+				if ((this._Column1 != value))
 				{
-					this._NotGoodUser = value;
-				}
-			}
-		}
-	}
-	
-	public partial class CheckTimeDeadlineResult
-	{
-		
-		private string _fIDProject;
-		
-		public CheckTimeDeadlineResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fIDProject", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
-		public string fIDProject
-		{
-			get
-			{
-				return this._fIDProject;
-			}
-			set
-			{
-				if ((this._fIDProject != value))
-				{
-					this._fIDProject = value;
-				}
-			}
-		}
-	}
-	
-	public partial class ChiTietTienDoDeJP_EnTryResult
-	{
-		
-		private string _idimage;
-		
-		private string _Checker;
-		
-		private string _ThongTin;
-		
-		public ChiTietTienDoDeJP_EnTryResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idimage", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
-		public string idimage
-		{
-			get
-			{
-				return this._idimage;
-			}
-			set
-			{
-				if ((this._idimage != value))
-				{
-					this._idimage = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Checker", DbType="NVarChar(250)")]
-		public string Checker
-		{
-			get
-			{
-				return this._Checker;
-			}
-			set
-			{
-				if ((this._Checker != value))
-				{
-					this._Checker = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTin", DbType="NVarChar(250)")]
-		public string ThongTin
-		{
-			get
-			{
-				return this._ThongTin;
-			}
-			set
-			{
-				if ((this._ThongTin != value))
-				{
-					this._ThongTin = value;
-				}
-			}
-		}
-	}
-	
-	public partial class ChiTietTienDoDeSo_EntryResult
-	{
-		
-		private string _idimage;
-		
-		private string _Checker;
-		
-		private string _ThongTin;
-		
-		public ChiTietTienDoDeSo_EntryResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idimage", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
-		public string idimage
-		{
-			get
-			{
-				return this._idimage;
-			}
-			set
-			{
-				if ((this._idimage != value))
-				{
-					this._idimage = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Checker", DbType="NVarChar(250)")]
-		public string Checker
-		{
-			get
-			{
-				return this._Checker;
-			}
-			set
-			{
-				if ((this._Checker != value))
-				{
-					this._Checker = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTin", DbType="NVarChar(250)")]
-		public string ThongTin
-		{
-			get
-			{
-				return this._ThongTin;
-			}
-			set
-			{
-				if ((this._ThongTin != value))
-				{
-					this._ThongTin = value;
-				}
-			}
-		}
-	}
-	
-	public partial class ChiTietUserDeJP_EntryResult
-	{
-		
-		private string _UserName;
-		
-		public ChiTietUserDeJP_EntryResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(250)")]
-		public string UserName
-		{
-			get
-			{
-				return this._UserName;
-			}
-			set
-			{
-				if ((this._UserName != value))
-				{
-					this._UserName = value;
-				}
-			}
-		}
-	}
-	
-	public partial class ChiTietUserDeSo_EntryResult
-	{
-		
-		private string _UserName;
-		
-		public ChiTietUserDeSo_EntryResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(250)")]
-		public string UserName
-		{
-			get
-			{
-				return this._UserName;
-			}
-			set
-			{
-				if ((this._UserName != value))
-				{
-					this._UserName = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetList_Batch_BaoDeadlineResult
-	{
-		
-		private string _fBatchName;
-		
-		public GetList_Batch_BaoDeadlineResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
-		public string fBatchName
-		{
-			get
-			{
-				return this._fBatchName;
-			}
-			set
-			{
-				if ((this._fBatchName != value))
-				{
-					this._fBatchName = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetList_Batch_DeadlineResult
-	{
-		
-		private string _fBatchName;
-		
-		private System.Nullable<System.DateTime> _fTimeStart;
-		
-		private System.Nullable<System.DateTime> _fTimeEnd;
-		
-		private System.Nullable<long> _fDeadlineNotificationTime;
-		
-		public GetList_Batch_DeadlineResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
-		public string fBatchName
-		{
-			get
-			{
-				return this._fBatchName;
-			}
-			set
-			{
-				if ((this._fBatchName != value))
-				{
-					this._fBatchName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fTimeStart", DbType="DateTime")]
-		public System.Nullable<System.DateTime> fTimeStart
-		{
-			get
-			{
-				return this._fTimeStart;
-			}
-			set
-			{
-				if ((this._fTimeStart != value))
-				{
-					this._fTimeStart = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fTimeEnd", DbType="DateTime")]
-		public System.Nullable<System.DateTime> fTimeEnd
-		{
-			get
-			{
-				return this._fTimeEnd;
-			}
-			set
-			{
-				if ((this._fTimeEnd != value))
-				{
-					this._fTimeEnd = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fDeadlineNotificationTime", DbType="BigInt")]
-		public System.Nullable<long> fDeadlineNotificationTime
-		{
-			get
-			{
-				return this._fDeadlineNotificationTime;
-			}
-			set
-			{
-				if ((this._fDeadlineNotificationTime != value))
-				{
-					this._fDeadlineNotificationTime = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetList_Project_UserPerformResult
-	{
-		
-		private string _IDProject;
-		
-		public GetList_Project_UserPerformResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDProject", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
-		public string IDProject
-		{
-			get
-			{
-				return this._IDProject;
-			}
-			set
-			{
-				if ((this._IDProject != value))
-				{
-					this._IDProject = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetListProjectResult
-	{
-		
-		private string _IDProject;
-		
-		private string _MoTaChucNangMoi;
-		
-		public GetListProjectResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDProject", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
-		public string IDProject
-		{
-			get
-			{
-				return this._IDProject;
-			}
-			set
-			{
-				if ((this._IDProject != value))
-				{
-					this._IDProject = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoTaChucNangMoi", DbType="NVarChar(200)")]
-		public string MoTaChucNangMoi
-		{
-			get
-			{
-				return this._MoTaChucNangMoi;
-			}
-			set
-			{
-				if ((this._MoTaChucNangMoi != value))
-				{
-					this._MoTaChucNangMoi = value;
+					this._Column1 = value;
 				}
 			}
 		}
@@ -4061,324 +3493,6 @@ namespace BaoCaoLuong_12_2017
 				if ((this._NotGoodUser != value))
 				{
 					this._NotGoodUser = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetListUser_PhanCongResult
-	{
-		
-		private string _Username;
-		
-		private string _IDRole;
-		
-		private string _FullName;
-		
-		private System.Nullable<bool> _TrangThai;
-		
-		public GetListUser_PhanCongResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string Username
-		{
-			get
-			{
-				return this._Username;
-			}
-			set
-			{
-				if ((this._Username != value))
-				{
-					this._Username = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDRole", DbType="NVarChar(100)")]
-		public string IDRole
-		{
-			get
-			{
-				return this._IDRole;
-			}
-			set
-			{
-				if ((this._IDRole != value))
-				{
-					this._IDRole = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullName", DbType="NVarChar(100)")]
-		public string FullName
-		{
-			get
-			{
-				return this._FullName;
-			}
-			set
-			{
-				if ((this._FullName != value))
-				{
-					this._FullName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrangThai", DbType="Bit")]
-		public System.Nullable<bool> TrangThai
-		{
-			get
-			{
-				return this._TrangThai;
-			}
-			set
-			{
-				if ((this._TrangThai != value))
-				{
-					this._TrangThai = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetListUserToKiemDinhResult
-	{
-		
-		private string _Username;
-		
-		private string _FullName;
-		
-		private string _Password;
-		
-		private string _IDRole;
-		
-		private string _Group_Level;
-		
-		public GetListUserToKiemDinhResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string Username
-		{
-			get
-			{
-				return this._Username;
-			}
-			set
-			{
-				if ((this._Username != value))
-				{
-					this._Username = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullName", DbType="NVarChar(100)")]
-		public string FullName
-		{
-			get
-			{
-				return this._FullName;
-			}
-			set
-			{
-				if ((this._FullName != value))
-				{
-					this._FullName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(100)")]
-		public string Password
-		{
-			get
-			{
-				return this._Password;
-			}
-			set
-			{
-				if ((this._Password != value))
-				{
-					this._Password = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDRole", DbType="NVarChar(100)")]
-		public string IDRole
-		{
-			get
-			{
-				return this._IDRole;
-			}
-			set
-			{
-				if ((this._IDRole != value))
-				{
-					this._IDRole = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Group_Level", DbType="NVarChar(100)")]
-		public string Group_Level
-		{
-			get
-			{
-				return this._Group_Level;
-			}
-			set
-			{
-				if ((this._Group_Level != value))
-				{
-					this._Group_Level = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetRoLeCheckLoginResult
-	{
-		
-		private string _Column1;
-		
-		public GetRoLeCheckLoginResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(100)")]
-		public string Column1
-		{
-			get
-			{
-				return this._Column1;
-			}
-			set
-			{
-				if ((this._Column1 != value))
-				{
-					this._Column1 = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetRoLeToKiemDinhResult
-	{
-		
-		private string _Column1;
-		
-		public GetRoLeToKiemDinhResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(100)")]
-		public string Column1
-		{
-			get
-			{
-				return this._Column1;
-			}
-			set
-			{
-				if ((this._Column1 != value))
-				{
-					this._Column1 = value;
-				}
-			}
-		}
-	}
-	
-	public partial class ThongKeDeJPResult
-	{
-		
-		private string _name;
-		
-		private int _soluong;
-		
-		public ThongKeDeJPResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
-		public string name
-		{
-			get
-			{
-				return this._name;
-			}
-			set
-			{
-				if ((this._name != value))
-				{
-					this._name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int NOT NULL")]
-		public int soluong
-		{
-			get
-			{
-				return this._soluong;
-			}
-			set
-			{
-				if ((this._soluong != value))
-				{
-					this._soluong = value;
-				}
-			}
-		}
-	}
-	
-	public partial class ThongKeDeSoResult
-	{
-		
-		private string _name;
-		
-		private int _soluong;
-		
-		public ThongKeDeSoResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
-		public string name
-		{
-			get
-			{
-				return this._name;
-			}
-			set
-			{
-				if ((this._name != value))
-				{
-					this._name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int NOT NULL")]
-		public int soluong
-		{
-			get
-			{
-				return this._soluong;
-			}
-			set
-			{
-				if ((this._soluong != value))
-				{
-					this._soluong = value;
 				}
 			}
 		}

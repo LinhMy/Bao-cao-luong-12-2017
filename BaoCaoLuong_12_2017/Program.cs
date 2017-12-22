@@ -18,12 +18,12 @@ namespace BaoCaoLuong_12_2017
             Application.SetCompatibleTextRenderingDefault(false);
             BonusSkins.Register();
             //Application.Run(new frmFeedback());
-            //if (new frm_ChangeServer().ShowDialog() != DialogResult.OK)
-            //    return;
-            //bool temp = false;
-            //do
-            //{
-                //temp = false;
+            if (new frm_ChangeServer().ShowDialog() != DialogResult.OK)
+                return;
+            bool temp = false;
+            do
+            {
+                temp = false;
                 frmLogin frLogin = new frmLogin();
 
                 if (frLogin.ShowDialog() == DialogResult.OK)
@@ -33,11 +33,11 @@ namespace BaoCaoLuong_12_2017
                     if (frMain.ShowDialog() == DialogResult.Yes)
                     {
                         frMain.Close();
-                        //temp = true;
+                        temp = true;
                     }
                 }
-            //}
-            //while (temp);
+            }
+            while (temp);
         }
     }
 }
