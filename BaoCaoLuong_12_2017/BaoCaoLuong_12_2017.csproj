@@ -71,12 +71,17 @@
       <HintPath>..\..\..\PhieuKiemDinh\Source\PhieuKiemDinh\PhieuKiemDinh\bin\Debug\DevExpress.XtraVerticalGrid.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="ImageGlass.ImageBox">
-      <HintPath>..\..\..\PhieuKiemDinh\Source\PhieuKiemDinh\PhieuKiemDinh\bin\Debug\ImageGlass.ImageBox.dll</HintPath>
+      <HintPath>DLL\ImageGlass.ImageBox.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>C:\Users\Administrator\Desktop\New folder\Natsu-3item\temp\Santei\MyDLL\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="OFFICE, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>DLL\OFFICE.DLL</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -116,11 +121,23 @@
     <Compile Include="MyForm\frm_ChangeZoom.designer.cs">
       <DependentUpon>frm_ChangeZoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frm_CreateBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_CreateBatch.designer.cs">
+      <DependentUpon>frm_CreateBatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyForm\frm_Main.designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\frm_ManagerBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_ManagerBatch.designer.cs">
+      <DependentUpon>frm_ManagerBatch.cs</DependentUpon>
     </Compile>
     <Compile Include="MyForm\frm_User.cs">
       <SubType>Form</SubType>
@@ -154,8 +171,14 @@
     <EmbeddedResource Include="MyForm\frm_ChangeZoom.resx">
       <DependentUpon>frm_ChangeZoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_CreateBatch.resx">
+      <DependentUpon>frm_CreateBatch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_ManagerBatch.resx">
+      <DependentUpon>frm_ManagerBatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_User.resx">
       <DependentUpon>frm_User.cs</DependentUpon>

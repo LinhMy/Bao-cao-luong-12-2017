@@ -36,24 +36,24 @@ namespace BaoCaoLuong_12_2017
     partial void Inserttbl_MissImage_DeSo(tbl_MissImage_DeSo instance);
     partial void Updatetbl_MissImage_DeSo(tbl_MissImage_DeSo instance);
     partial void Deletetbl_MissImage_DeSo(tbl_MissImage_DeSo instance);
-    partial void Inserttbl_DeJPA(tbl_DeJPA instance);
-    partial void Updatetbl_DeJPA(tbl_DeJPA instance);
-    partial void Deletetbl_DeJPA(tbl_DeJPA instance);
-    partial void Inserttbl_DeJPB(tbl_DeJPB instance);
-    partial void Updatetbl_DeJPB(tbl_DeJPB instance);
-    partial void Deletetbl_DeJPB(tbl_DeJPB instance);
-    partial void Inserttbl_DeJPC(tbl_DeJPC instance);
-    partial void Updatetbl_DeJPC(tbl_DeJPC instance);
-    partial void Deletetbl_DeJPC(tbl_DeJPC instance);
-    partial void Inserttbl_DeSoA(tbl_DeSoA instance);
-    partial void Updatetbl_DeSoA(tbl_DeSoA instance);
-    partial void Deletetbl_DeSoA(tbl_DeSoA instance);
-    partial void Inserttbl_DeSoB(tbl_DeSoB instance);
-    partial void Updatetbl_DeSoB(tbl_DeSoB instance);
-    partial void Deletetbl_DeSoB(tbl_DeSoB instance);
-    partial void Inserttbl_DeSoC(tbl_DeSoC instance);
-    partial void Updatetbl_DeSoC(tbl_DeSoC instance);
-    partial void Deletetbl_DeSoC(tbl_DeSoC instance);
+    partial void Inserttbl_DeJP_CityN(tbl_DeJP_CityN instance);
+    partial void Updatetbl_DeJP_CityN(tbl_DeJP_CityN instance);
+    partial void Deletetbl_DeJP_CityN(tbl_DeJP_CityN instance);
+    partial void Inserttbl_DeJP_CityO(tbl_DeJP_CityO instance);
+    partial void Updatetbl_DeJP_CityO(tbl_DeJP_CityO instance);
+    partial void Deletetbl_DeJP_CityO(tbl_DeJP_CityO instance);
+    partial void Inserttbl_DeJP_City(tbl_DeJP_City instance);
+    partial void Updatetbl_DeJP_City(tbl_DeJP_City instance);
+    partial void Deletetbl_DeJP_City(tbl_DeJP_City instance);
+    partial void Inserttbl_DeSo_CityN(tbl_DeSo_CityN instance);
+    partial void Updatetbl_DeSo_CityN(tbl_DeSo_CityN instance);
+    partial void Deletetbl_DeSo_CityN(tbl_DeSo_CityN instance);
+    partial void Inserttbl_DeSo_CityO(tbl_DeSo_CityO instance);
+    partial void Updatetbl_DeSo_CityO(tbl_DeSo_CityO instance);
+    partial void Deletetbl_DeSo_CityO(tbl_DeSo_CityO instance);
+    partial void Inserttbl_DeSo_City(tbl_DeSo_City instance);
+    partial void Updatetbl_DeSo_City(tbl_DeSo_City instance);
+    partial void Deletetbl_DeSo_City(tbl_DeSo_City instance);
     partial void Inserttbl_Image(tbl_Image instance);
     partial void Updatetbl_Image(tbl_Image instance);
     partial void Deletetbl_Image(tbl_Image instance);
@@ -69,7 +69,7 @@ namespace BaoCaoLuong_12_2017
     #endregion
 		
 		public DataBaoCaoLuong2018DataContext() : 
-				base(global::BaoCaoLuong_12_2017.Properties.Settings.Default.BaoCaoLuong2018ConnectionString, mappingSource)
+				base(global::BaoCaoLuong_12_2017.Properties.Settings.Default.BaoCaoLuong2018ConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -114,51 +114,51 @@ namespace BaoCaoLuong_12_2017
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_DeJPA> tbl_DeJPAs
+		public System.Data.Linq.Table<tbl_DeJP_CityN> tbl_DeJP_CityNs
 		{
 			get
 			{
-				return this.GetTable<tbl_DeJPA>();
+				return this.GetTable<tbl_DeJP_CityN>();
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_DeJPB> tbl_DeJPBs
+		public System.Data.Linq.Table<tbl_DeJP_CityO> tbl_DeJP_CityOs
 		{
 			get
 			{
-				return this.GetTable<tbl_DeJPB>();
+				return this.GetTable<tbl_DeJP_CityO>();
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_DeJPC> tbl_DeJPCs
+		public System.Data.Linq.Table<tbl_DeJP_City> tbl_DeJP_Cities
 		{
 			get
 			{
-				return this.GetTable<tbl_DeJPC>();
+				return this.GetTable<tbl_DeJP_City>();
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_DeSoA> tbl_DeSoAs
+		public System.Data.Linq.Table<tbl_DeSo_CityN> tbl_DeSo_CityNs
 		{
 			get
 			{
-				return this.GetTable<tbl_DeSoA>();
+				return this.GetTable<tbl_DeSo_CityN>();
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_DeSoB> tbl_DeSoBs
+		public System.Data.Linq.Table<tbl_DeSo_CityO> tbl_DeSo_CityOs
 		{
 			get
 			{
-				return this.GetTable<tbl_DeSoB>();
+				return this.GetTable<tbl_DeSo_CityO>();
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_DeSoC> tbl_DeSoCs
+		public System.Data.Linq.Table<tbl_DeSo_City> tbl_DeSo_Cities
 		{
 			get
 			{
-				return this.GetTable<tbl_DeSoC>();
+				return this.GetTable<tbl_DeSo_City>();
 			}
 		}
 		
@@ -192,6 +192,34 @@ namespace BaoCaoLuong_12_2017
 			{
 				return this.GetTable<tbl_MissImage_DeJP>();
 			}
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatch_Full")]
+		public ISingleResult<GetBatch_FullResult> GetBatch_Full()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetBatch_FullResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XoaBatch")]
+		public int XoaBatch([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchID", DbType="NVarChar(255)")] string batchID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateCongKhaiBatch")]
+		public int UpdateCongKhaiBatch([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchID", DbType="NVarChar(100)")] string batchID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> status)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchID, status);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateBatchChiaUser")]
+		public int UpdateBatchChiaUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchID", DbType="NVarChar(100)")] string batchID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> status)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchID, status);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -703,8 +731,8 @@ namespace BaoCaoLuong_12_2017
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DeJPA")]
-	public partial class tbl_DeJPA : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DeJP_CityN")]
+	public partial class tbl_DeJP_CityN : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -791,7 +819,7 @@ namespace BaoCaoLuong_12_2017
     partial void OnDateInputChanged();
     #endregion
 		
-		public tbl_DeJPA()
+		public tbl_DeJP_CityN()
 		{
 			OnCreated();
 		}
@@ -1197,8 +1225,8 @@ namespace BaoCaoLuong_12_2017
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DeJPB")]
-	public partial class tbl_DeJPB : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DeJP_CityO")]
+	public partial class tbl_DeJP_CityO : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -1285,7 +1313,7 @@ namespace BaoCaoLuong_12_2017
     partial void OnDateInputChanged();
     #endregion
 		
-		public tbl_DeJPB()
+		public tbl_DeJP_CityO()
 		{
 			OnCreated();
 		}
@@ -1691,8 +1719,8 @@ namespace BaoCaoLuong_12_2017
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DeJPC")]
-	public partial class tbl_DeJPC : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DeJP_CityS")]
+	public partial class tbl_DeJP_City : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -1779,7 +1807,7 @@ namespace BaoCaoLuong_12_2017
     partial void OnDateInputChanged();
     #endregion
 		
-		public tbl_DeJPC()
+		public tbl_DeJP_City()
 		{
 			OnCreated();
 		}
@@ -2185,8 +2213,8 @@ namespace BaoCaoLuong_12_2017
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DeSoA")]
-	public partial class tbl_DeSoA : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DeSo_CityN")]
+	public partial class tbl_DeSo_CityN : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -2273,7 +2301,7 @@ namespace BaoCaoLuong_12_2017
     partial void OnDateInputChanged();
     #endregion
 		
-		public tbl_DeSoA()
+		public tbl_DeSo_CityN()
 		{
 			OnCreated();
 		}
@@ -2679,8 +2707,8 @@ namespace BaoCaoLuong_12_2017
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DeSoB")]
-	public partial class tbl_DeSoB : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DeSo_CityO")]
+	public partial class tbl_DeSo_CityO : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -2767,7 +2795,7 @@ namespace BaoCaoLuong_12_2017
     partial void OnDateInputChanged();
     #endregion
 		
-		public tbl_DeSoB()
+		public tbl_DeSo_CityO()
 		{
 			OnCreated();
 		}
@@ -3173,8 +3201,8 @@ namespace BaoCaoLuong_12_2017
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DeSoC")]
-	public partial class tbl_DeSoC : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DeSo_CityS")]
+	public partial class tbl_DeSo_City : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -3261,7 +3289,7 @@ namespace BaoCaoLuong_12_2017
     partial void OnDateInputChanged();
     #endregion
 		
-		public tbl_DeSoC()
+		public tbl_DeSo_City()
 		{
 			OnCreated();
 		}
@@ -4751,6 +4779,212 @@ namespace BaoCaoLuong_12_2017
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class GetBatch_FullResult
+	{
+		
+		private string _BatchID;
+		
+		private string _City;
+		
+		private string _BatchName;
+		
+		private System.Nullable<System.DateTime> _DateCreate;
+		
+		private string _UserCreate;
+		
+		private string _PathPicture;
+		
+		private string _Location;
+		
+		private string _NumberImage;
+		
+		private string _BatchType;
+		
+		private System.Nullable<bool> _ChiaUser;
+		
+		private System.Nullable<bool> _CongKhaiBatch;
+		
+		public GetBatch_FullResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchID", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchID
+		{
+			get
+			{
+				return this._BatchID;
+			}
+			set
+			{
+				if ((this._BatchID != value))
+				{
+					this._BatchID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string City
+		{
+			get
+			{
+				return this._City;
+			}
+			set
+			{
+				if ((this._City != value))
+				{
+					this._City = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchName", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchName
+		{
+			get
+			{
+				return this._BatchName;
+			}
+			set
+			{
+				if ((this._BatchName != value))
+				{
+					this._BatchName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCreate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DateCreate
+		{
+			get
+			{
+				return this._DateCreate;
+			}
+			set
+			{
+				if ((this._DateCreate != value))
+				{
+					this._DateCreate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCreate", DbType="NVarChar(255)")]
+		public string UserCreate
+		{
+			get
+			{
+				return this._UserCreate;
+			}
+			set
+			{
+				if ((this._UserCreate != value))
+				{
+					this._UserCreate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PathPicture", DbType="NVarChar(255)")]
+		public string PathPicture
+		{
+			get
+			{
+				return this._PathPicture;
+			}
+			set
+			{
+				if ((this._PathPicture != value))
+				{
+					this._PathPicture = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location", DbType="NVarChar(255)")]
+		public string Location
+		{
+			get
+			{
+				return this._Location;
+			}
+			set
+			{
+				if ((this._Location != value))
+				{
+					this._Location = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumberImage", DbType="NVarChar(255)")]
+		public string NumberImage
+		{
+			get
+			{
+				return this._NumberImage;
+			}
+			set
+			{
+				if ((this._NumberImage != value))
+				{
+					this._NumberImage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchType", DbType="NVarChar(255)")]
+		public string BatchType
+		{
+			get
+			{
+				return this._BatchType;
+			}
+			set
+			{
+				if ((this._BatchType != value))
+				{
+					this._BatchType = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ChiaUser", DbType="Bit")]
+		public System.Nullable<bool> ChiaUser
+		{
+			get
+			{
+				return this._ChiaUser;
+			}
+			set
+			{
+				if ((this._ChiaUser != value))
+				{
+					this._ChiaUser = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CongKhaiBatch", DbType="Bit")]
+		public System.Nullable<bool> CongKhaiBatch
+		{
+			get
+			{
+				return this._CongKhaiBatch;
+			}
+			set
+			{
+				if ((this._CongKhaiBatch != value))
+				{
+					this._CongKhaiBatch = value;
+				}
 			}
 		}
 	}

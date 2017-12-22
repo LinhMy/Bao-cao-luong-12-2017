@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.tp_DeSo = new DevExpress.XtraTab.XtraTabPage();
-          //  this.uC_DESO1 = new PhieuKiemDinh.MyUserControl.uc_DeSo();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btn_Pause = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Submit_Logout = new DevExpress.XtraEditors.SimpleButton();
@@ -93,7 +92,6 @@
             this.uc_PictureBox1 = new BaoCaoLuong_12_2017.MyUserControl.uc_PictureBox();
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.splitMain = new DevExpress.XtraEditors.SplitContainerControl();
-            this.tp_DeSo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -115,7 +113,9 @@
             // 
             // tp_DeSo
             // 
-       
+            this.tp_DeSo.Name = "tp_DeSo";
+            this.tp_DeSo.Size = new System.Drawing.Size(443, 581);
+            // 
             // panelControl2
             // 
             this.panelControl2.Controls.Add(this.btn_Pause);
@@ -681,12 +681,11 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "frm_Main";
-            this.Text = "Phiếu Kiểm Định";
+            this.Text = "Báo Cáo Lương 2018";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Main_FormClosing);
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_Main_KeyDown);
-            this.tp_DeSo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();

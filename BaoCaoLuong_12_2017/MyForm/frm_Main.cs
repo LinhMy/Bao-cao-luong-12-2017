@@ -31,7 +31,7 @@ namespace BaoCaoLuong_12_2017.MyForm
 
         private void btn_QuanLyBatch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           // new frm_ManagerBatch().ShowDialog();
+           new frm_ManagerBatch().ShowDialog();
         }
 
         private void frm_Main_Load(object sender, EventArgs e)

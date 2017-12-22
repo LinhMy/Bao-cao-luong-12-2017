@@ -21,7 +21,9 @@ namespace BaoCaoLuong_12_2017
         public static string Token = "";
         public static string StrIdProject = "BaoCaoLuong";
         public static string StrCheck = "";
-        public static int FreeTime = 0;
+        public static string City = "";
+
+        //public static int FreeTime = 0;
         public static string Version = "1.0.0";
         public static bool FlagChangeSave = true;
         public static string StrPath /*= @"\\10.10.10.248\PhieuKiemDinh$"*/;
