@@ -42,8 +42,8 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cbb_city = new System.Windows.Forms.Label();
+            this.cbb_City = new System.Windows.Forms.ComboBox();
+            this.lb_city = new System.Windows.Forms.Label();
             this.chb_luu = new System.Windows.Forms.CheckBox();
             this.cbb_batchname = new System.Windows.Forms.ComboBox();
             this.txt_role = new DevExpress.XtraEditors.TextEdit();
@@ -193,8 +193,8 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.comboBox1);
-            this.groupControl2.Controls.Add(this.cbb_city);
+            this.groupControl2.Controls.Add(this.cbb_City);
+            this.groupControl2.Controls.Add(this.lb_city);
             this.groupControl2.Controls.Add(this.chb_luu);
             this.groupControl2.Controls.Add(this.cbb_batchname);
             this.groupControl2.Controls.Add(this.txt_role);
@@ -210,22 +210,27 @@
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Login";
             // 
-            // comboBox1
+            // cbb_City
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(105, 130);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(235, 21);
-            this.comboBox1.TabIndex = 9;
+            this.cbb_City.FormattingEnabled = true;
+            this.cbb_City.Items.AddRange(new object[] {
+            "Thành phố A",
+            "Thành phố B",
+            "Thành phố C"});
+            this.cbb_City.Location = new System.Drawing.Point(105, 130);
+            this.cbb_City.Name = "cbb_City";
+            this.cbb_City.Size = new System.Drawing.Size(235, 21);
+            this.cbb_City.TabIndex = 9;
+            this.cbb_City.SelectedIndexChanged += new System.EventHandler(this.cbb_City_SelectedIndexChanged);
             // 
-            // cbb_city
+            // lb_city
             // 
-            this.cbb_city.AutoSize = true;
-            this.cbb_city.Location = new System.Drawing.Point(16, 133);
-            this.cbb_city.Name = "cbb_city";
-            this.cbb_city.Size = new System.Drawing.Size(30, 13);
-            this.cbb_city.TabIndex = 8;
-            this.cbb_city.Text = "City:";
+            this.lb_city.AutoSize = true;
+            this.lb_city.Location = new System.Drawing.Point(16, 133);
+            this.lb_city.Name = "lb_city";
+            this.lb_city.Size = new System.Drawing.Size(30, 13);
+            this.lb_city.TabIndex = 8;
+            this.lb_city.Text = "City:";
             // 
             // chb_luu
             // 
@@ -332,6 +337,8 @@
             // 
             // lb_version
             // 
+            this.lb_version.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lb_version.Appearance.Options.UseForeColor = true;
             this.lb_version.Location = new System.Drawing.Point(381, 64);
             this.lb_version.Name = "lb_version";
             this.lb_version.Size = new System.Drawing.Size(26, 13);
@@ -406,8 +413,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl lb_version;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label cbb_city;
-        public System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lb_city;
+        public System.Windows.Forms.ComboBox cbb_City;
         public DevExpress.XtraEditors.TextEdit txt_ipaddress;
         public DevExpress.XtraEditors.TextEdit txt_userwindow;
         public DevExpress.XtraEditors.TextEdit txt_machine;

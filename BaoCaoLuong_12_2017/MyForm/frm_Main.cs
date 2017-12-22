@@ -56,7 +56,7 @@ namespace BaoCaoLuong_12_2017.MyForm
                 lb_fBatchName.Text = Global.StrBatch;
                 lb_UserName.Text = Global.StrUserName;
                 var checkDisableUser = (from w in Global.DbBpo.tbl_Users where w.Username == Global.StrUserName select w.IsDelete).FirstOrDefault();
-                Global.listdata13.Clear();
+               // Global.listdata13.Clear();
              //   Global.listdata13 = (from w in Global.Db.tbl_Database_Truong13s select w.id3).ToList();
                // Folder = (from w in Global.Db.GetFolder(lb_fBatchName.Text) select w.fPathPicture).FirstOrDefault();
                 //if (checkDisableUser)
@@ -803,7 +803,7 @@ namespace BaoCaoLuong_12_2017.MyForm
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           // new frm_User().ShowDialog();
+            new frm_User().ShowDialog();
         }
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

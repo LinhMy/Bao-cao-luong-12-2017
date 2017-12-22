@@ -19,17 +19,17 @@ namespace BaoCaoLuong_12_2017
         public static string StrBatch = "";
         public static string StrRole = "";
         public static string Token = "";
-        public static string StrIdProject = "PhieuKiemDinh";
+        public static string StrIdProject = "BaoCaoLuong";
         public static string StrCheck = "";
         public static int FreeTime = 0;
-        public static string Version = "1.1.3";
+        public static string Version = "1.0.0";
         public static bool FlagChangeSave = true;
-        public static string StrPath = @"\\10.10.10.248\PhieuKiemDinh$";
+        public static string StrPath /*= @"\\10.10.10.248\PhieuKiemDinh$"*/;
         public static string Webservice;
-        public static List<string> listdata13 = new List<string>();
+       // public static List<string> listdata13 = new List<string>();
         //public static string Webservice = "http://10.10.10.248:8888/phieukiemdinh/";
         //public static KiemDinh_DataDataContext Db;
-        public static DataEntryBPODataContext DbBpo;
+        public static DataEntryBPODataContext DbBpo = new DataEntryBPODataContext();
         
         public static string GetToken(string strUserName)
         {
@@ -63,9 +63,9 @@ namespace BaoCaoLuong_12_2017
         public static void RunUpdateVersion()
         {
             if (Settings.Default.Server == "Đà Nẵng")
-                Process.Start(@"\\10.10.10.254\DE_Viet\2017\PHIEU_KIEM_DINH\Tools");
+                Process.Start(@"\\10.10.10.254\DE_Viet\2017\");
             else
-                Process.Start(@"https://drive.google.com/drive/folders/0BwO0VkvgrRHaeW5meEE4blBHdnc?usp=sharing");
+                Process.Start(/*https://drive.google.com/drive/folders/0BwO0VkvgrRHaeW5meEE4blBHdnc?usp=sharing*/"");
         }
     }
 }
