@@ -129,5 +129,16 @@ namespace BaoCaoLuong_12_2017.Properties {
                 this["Setting"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.10.10.248\\BPOSERVER;Initial Catalog=BaoCaoLuong2018;Persist Securi" +
+            "ty Info=True;User ID=sa;Password=BPO@DN#2013")]
+        public string BaoCaoLuong2018ConnectionString {
+            get {
+                return ((string)(this["BaoCaoLuong2018ConnectionString"]));
+            }
+        }
     }
 }

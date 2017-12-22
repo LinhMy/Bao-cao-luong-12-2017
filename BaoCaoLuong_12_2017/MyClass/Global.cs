@@ -26,9 +26,9 @@ namespace BaoCaoLuong_12_2017
         public static bool FlagChangeSave = true;
         public static string StrPath /*= @"\\10.10.10.248\PhieuKiemDinh$"*/;
         public static string Webservice;
-       // public static List<string> listdata13 = new List<string>();
+        // public static List<string> listdata13 = new List<string>();
         //public static string Webservice = "http://10.10.10.248:8888/phieukiemdinh/";
-        //public static KiemDinh_DataDataContext Db;
+        public static DataBaoCaoLuong2018DataContext Db = new DataBaoCaoLuong2018DataContext();
         public static DataEntryBPODataContext DbBpo = new DataEntryBPODataContext();
         
         public static string GetToken(string strUserName)
