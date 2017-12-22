@@ -19,10 +19,11 @@ namespace BaoCaoLuong_12_2017
         public static string StrBatch = "";
         public static string StrRole = "";
         public static string Token = "";
-        public static string StrIdProject = "BaoCaoLuong";
+        public static string StrIdProject = "BaoCaoLuong2018";
         public static string StrCheck = "";
         public static int FreeTime = 0;
         public static string Version = "1.0.0";
+        public static string StrCity;
         public static bool FlagChangeSave = true;
         public static string StrPath /*= @"\\10.10.10.248\PhieuKiemDinh$"*/;
         public static string Webservice;

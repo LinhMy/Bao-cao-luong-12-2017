@@ -113,6 +113,7 @@ namespace BaoCaoLuong_12_2017.MyForm
                     }
                     Global.Token = Global.GetToken(txt_username.Text);
                     Global.StrBatch = cbb_batchname.Text;
+                    Global.StrCity = cbb_City.Text;
                     Global.StrUserName = txt_username.Text;
                     Global.StrPcName = txt_machine.Text;
                     Global.StrDomainName = txt_userwindow.Text;
