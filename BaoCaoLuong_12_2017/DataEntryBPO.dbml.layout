@@ -122,7 +122,7 @@
         <elementListCompartment Id="7dba6c2d-9fff-49c4-ad24-90bb3e983722" absoluteBounds="0.765, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 1.76044840494792); (3.5 : 1.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 1.76044840494792); (3.5 : 1.76044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataEntryBPODataContext/tbl_Version/tbl_Version_tbl_VersionHistory" />
       <nodes>
         <classShapeMoniker Id="81501f91-b549-4a86-a3fd-b6fee6a77c0b" />

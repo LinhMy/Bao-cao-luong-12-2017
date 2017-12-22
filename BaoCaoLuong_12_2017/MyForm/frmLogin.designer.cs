@@ -214,9 +214,9 @@
             // 
             this.cbb_City.FormattingEnabled = true;
             this.cbb_City.Items.AddRange(new object[] {
-            "Thành phố A",
-            "Thành phố B",
-            "Thành phố C"});
+            "CityO",
+            "CityS",
+            "CityN"});
             this.cbb_City.Location = new System.Drawing.Point(105, 130);
             this.cbb_City.Name = "cbb_City";
             this.cbb_City.Size = new System.Drawing.Size(235, 21);

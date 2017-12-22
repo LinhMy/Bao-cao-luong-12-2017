@@ -39,7 +39,7 @@ namespace BaoCaoLuong_12_2017.MyForm
             }
             lb_ngay.Text = DateTime.Now.ToShortDateString();
             lb_gio.Text = DateTime.Now.ToShortTimeString();
-
+            cbb_City.SelectedIndex = 0;
             if (Settings.Default.Check)
             {
                 txt_username.Text = Settings.Default.username;
@@ -85,11 +85,11 @@ namespace BaoCaoLuong_12_2017.MyForm
             {
                 if (GetInfo())
                 {
-                    //if(Global.CheckOutSource(txt_role.Text)==true)
-                    //{
-                    //    MessageBox.Show("Hiện tại dự án chưa có nhu cầu về nguồn nhân lực bên ngoài");
-                    //    return;
-                    //}
+                    if (Global.CheckOutSource(txt_role.Text) == true)
+                    {
+                        MessageBox.Show("Hiện tại dự án chưa có nhu cầu về nguồn nhân lực bên ngoài");
+                        return;
+                    }
                     if (string.IsNullOrEmpty(cbb_batchname.Text))
                     {
                         if (MessageBox.Show("Không có batch nào được chọn. Bạn vẫn muốn đăng nhập?", "Thông báo!", MessageBoxButtons.YesNo) == DialogResult.No)
@@ -171,7 +171,7 @@ namespace BaoCaoLuong_12_2017.MyForm
         {
             cbb_batchname.DataSource = null;
             GetInfo();
-           // cbb_City_SelectedIndexChanged(null,null);
+            cbb_City_SelectedIndexChanged(null,null);
 
             //var ktUser = (from w in Global.DbBpo.tbl_Users where w.Username == txt_username.Text select w.NotGoodUser).FirstOrDefault();
             //if (txt_role.Text == "DESO")
@@ -207,7 +207,7 @@ namespace BaoCaoLuong_12_2017.MyForm
         {
             cbb_batchname.DataSource = null;
             GetInfo();
-          //  cbb_City_SelectedIndexChanged(null, null);
+            cbb_City_SelectedIndexChanged(null, null);
             //cbb_batchname.DataSource = null;
             //GetInfo();
             //var ktUser = (from w in Global.DbBpo.tbl_Users where w.Username == txt_username.Text select w.NotGoodUser).FirstOrDefault();
@@ -258,40 +258,55 @@ namespace BaoCaoLuong_12_2017.MyForm
         {
             cbb_batchname.DataSource = null;
             GetInfo();
-          //  var ktUser = (from w in Global.DbBpo.tbl_Users where w.Username == txt_username.Text select w.NotGoodUser).FirstOrDefault();
+            var ktUser = (from w in Global.DbBpo.tbl_Users where w.Username == txt_username.Text select w.NotGoodUser).FirstOrDefault();
 
             if (txt_role.Text == "DESO")
             {
-                //if (ktUser == false)
-                //{
-                // cbb_batchname.DataSource = Global.Db.GetBatNotFinishDeSo_Good(txt_username.Text, cbb_City.Text);
-                cbb_batchname.DisplayMember = "fbatchname";
+                if (ktUser == false)
+                {
+                    cbb_batchname.DataSource = Global.Db.GetBatNotFinishDeSo_Good(txt_username.Text, cbb_City.Text);
+                    cbb_batchname.DisplayMember = "fbatchname";
                     cbb_batchname.ValueMember = "fbatchname";
-                //}
-                //else if (ktUser == true)
-                //{
-                //    cbb_batchname.DataSource = Global.Db.GetBatNotFinishDeSo_NotGood(txt_username.Text);
-                //    cbb_batchname.DisplayMember = "fbatchname";
-                //    cbb_batchname.ValueMember = "fbatchname";
-                //}
+                }
+                else if (ktUser == true)
+                {
+                    cbb_batchname.DataSource = Global.Db.GetBatNotFinishDeSo_NotGood(txt_username.Text,cbb_City.Text);
+                    cbb_batchname.DisplayMember = "BatchID";
+                    cbb_batchname.ValueMember = "BatchID";
+                }
             }
             else if (txt_role.Text=="DEJP")
             {
-                // cbb_batchname.DataSource = Global.Db.GetBatNotFinishDeSo_Good(txt_username.Text, cbb_City.Text);
-                cbb_batchname.DisplayMember = "fbatchname";
-                cbb_batchname.ValueMember = "fbatchname";
+                if (ktUser == false)
+                {
+                    cbb_batchname.DataSource = Global.Db.GetBatNotFinishDeJP_Good(txt_username.Text, cbb_City.Text);
+                    cbb_batchname.DisplayMember = "BatchID";
+                    cbb_batchname.ValueMember = "BatchID";
+                }
+                else if (ktUser == true)
+                {
+                    cbb_batchname.DataSource = Global.Db.GetBatNotFinishDeJP_NotGood(txt_username.Text,cbb_City.Text);
+                    cbb_batchname.DisplayMember = "BatchID";
+                    cbb_batchname.ValueMember = "BatchID";
+                }
             }
             else if (txt_role.Text == "CHECKERDESO")
             {
-                //  cbb_batchname.DataSource = (from w in Global.Db.GetBatNotFinishCheckerDeSo(txt_username.Text, cbb_City.Text) select w.fBatchName).ToList();
-                cbb_batchname.DisplayMember = "fBatchName";
-                cbb_batchname.ValueMember = "fBatchName";
+                cbb_batchname.DataSource = (from w in Global.Db.GetBatNotFinishCheckerDeSo(txt_username.Text, cbb_City.Text) select w.BatchID).ToList();
+                cbb_batchname.DisplayMember = "BatchID";
+                cbb_batchname.ValueMember = "BatchID";
+            }
+            else if (txt_role.Text == "CHECKERDEJP")
+            {
+                cbb_batchname.DataSource = (from w in Global.Db.GetBatNotFinishCheckerDeJP(txt_username.Text, cbb_City.Text) select w.BatchID).ToList();
+                cbb_batchname.DisplayMember = "BatchID";
+                cbb_batchname.ValueMember = "BatchID";
             }
             else if (txt_role.Text == "ADMIN")
             {
-                //  cbb_batchname.DataSource = Global.Db.GetBatch(cbb_City.Text);
-                cbb_batchname.DisplayMember = "fBatchName";
-                cbb_batchname.ValueMember = "fBatchName";
+                cbb_batchname.DataSource = Global.Db.GetBatch(cbb_City.Text);
+                cbb_batchname.DisplayMember = "BatchID";
+                cbb_batchname.ValueMember = "BatchID";
             }
         }
     }
