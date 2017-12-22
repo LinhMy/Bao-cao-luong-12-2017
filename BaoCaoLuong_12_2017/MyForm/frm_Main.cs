@@ -808,7 +808,7 @@ namespace BaoCaoLuong_12_2017.MyForm
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           // new frm_ChangePassword().ShowDialog();
+            new frm_ChangePassword().ShowDialog();
         }
 
         private void frm_Main_FormClosing(object sender, FormClosingEventArgs e)

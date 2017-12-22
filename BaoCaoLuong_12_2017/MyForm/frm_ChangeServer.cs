@@ -46,7 +46,7 @@ namespace BaoCaoLuong_12_2017.MyForm
                 {
                     Settings.Default.Server = "Đà Nẵng";
                     Settings.Default.Save();
-                    Global.Webservice = "http://10.10.10.248:8888/phieukiemdinh/";
+                    Global.Webservice = "http://10.10.10.248:8888/BaoCaoLuong2018";
                     Global.Db = new DataBaoCaoLuong2018DataContext(@"Data Source=10.10.10.248\BPOSERVER;Initial Catalog=BaoCaoLuong2018;Persist Security Info=True;User ID=baocaoluong2018;Password=123@123a");
                     Global.Db.CommandTimeout = 5 * 60; // 5 Mins
                     Global.DbBpo = new DataEntryBPODataContext(@"Data Source=10.10.10.248;Initial Catalog=DatabaseDataEntryBPO;Persist Security Info=True;User ID=bpoentry;Password=123@123a");
@@ -55,10 +55,10 @@ namespace BaoCaoLuong_12_2017.MyForm
                 {
                     Settings.Default.Server = "Khác";
                     Settings.Default.Save();
-                    Global.Webservice = "http://117.2.142.10:3604/phieukiemdinh/";
-                    Global.Db = new DataBaoCaoLuong2018DataContext(@"Data Source=117.2.142.10,3607;Initial Catalog=BaoCaoLuong2018;Persist Security Info=True;Network Library=DBMSSOCN;User ID=baocaoluong2018;Password=123@123a");
+                    Global.Webservice = "http://117.2.142.10:3606/BaoCaoLuong2018";
+                    Global.Db = new DataBaoCaoLuong2018DataContext(@"Data Source=117.2.142.10,3605;Initial Catalog=BaoCaoLuong2018;Persist Security Info=True;Network Library=DBMSSOCN;User ID=baocaoluong2018;Password=123@123a");
                     Global.Db.CommandTimeout = 5 * 60; // 5 Mins
-                    Global.DbBpo = new DataEntryBPODataContext(@"Data Source=117.2.142.10,3607;Initial Catalog=DatabaseDataEntryBPO;Persist Security Info=True;Network Library=DBMSSOCN;User ID=bpoentry;Password=123@123a");
+                    Global.DbBpo = new DataEntryBPODataContext(@"Data Source=117.2.142.10,3605;Initial Catalog=DatabaseDataEntryBPO;Persist Security Info=True;Network Library=DBMSSOCN;User ID=bpoentry;Password=123@123a");
                 }
             }
             catch (Exception i) { MessageBox.Show(i.Message + ""); }
