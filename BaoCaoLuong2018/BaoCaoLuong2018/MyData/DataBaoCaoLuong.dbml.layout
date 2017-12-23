@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15, 15.125" name="DataBaoCaoLuong">
+  <DataContextMoniker Name="/DataBaoCaoLuongDataContext" />
+  <nestedChildShapes>
+    <classShape Id="729c0457-b10c-40c3-866d-475854950770" absoluteBounds="0.75, 0.75, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/DataBaoCaoLuongDataContext/tbl_Batch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="672c58b2-cd03-493b-a7e4-ab99baa0c0fb" absoluteBounds="0.765, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c53f37a5-068b-4e09-bfe5-f76f9019c02e" absoluteBounds="3.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataBaoCaoLuongDataContext/tbl_MissImage_DeSo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a13ef5c8-5f08-4d62-9fa1-ded388268a8f" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e9755573-2f92-4fa1-848a-27d5fd065849" absoluteBounds="3.75, 3.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/DataBaoCaoLuongDataContext/tbl_DeJP_CityN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71fb063a-e107-4498-924d-8c9d9269ffa7" absoluteBounds="3.765, 4.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a33be71-ba3f-4781-813b-877ec7f3883f" absoluteBounds="6.75, 0.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/DataBaoCaoLuongDataContext/tbl_DeJP_CityO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84c5ffd2-16ab-4a7f-afc8-0ffa6ae25cac" absoluteBounds="6.765, 1.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="59a237c6-83b3-4724-9474-83b6deb6b52d" absoluteBounds="6.75, 6.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/DataBaoCaoLuongDataContext/tbl_DeJP_City" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f8997b1-ce90-441f-b4eb-e265e11a10bd" absoluteBounds="6.765, 7.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c361a5b6-f4e9-409a-94db-f150c794bad1" absoluteBounds="9.75, 0.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/DataBaoCaoLuongDataContext/tbl_DeSo_CityN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="251bcd8c-b05f-48e3-9e24-efa088823884" absoluteBounds="9.765, 1.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fda52107-a2f9-437c-848f-0806172037bb" absoluteBounds="0.75, 9.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/DataBaoCaoLuongDataContext/tbl_DeSo_CityO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b15a1bde-7c86-4afc-8c91-81986aad6572" absoluteBounds="0.765, 10.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b11b3f93-c5f4-4400-b8c9-0b19d6b678fc" absoluteBounds="9.75, 6.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/DataBaoCaoLuongDataContext/tbl_DeSo_City" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f3da33d-bcfa-410e-8a21-bc321e733172" absoluteBounds="9.765, 7.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3a0241c5-cd41-42c0-90d8-f65291a8de5f" absoluteBounds="12.75, 0.75, 2, 5.0400211588541666">
+      <DataClassMoniker Name="/DataBaoCaoLuongDataContext/tbl_Image" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1ad81e5-6a86-4cf7-b2cc-5d341b41a9ec" absoluteBounds="12.765, 1.21, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c268afed-4382-43ae-aaf8-dc51909fdce6" absoluteBounds="3.75, 12.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataBaoCaoLuongDataContext/tbl_MissCheck_DeJP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="675dc2a6-1774-4234-bbfa-246e8805557d" absoluteBounds="3.765, 13.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="abf163bd-541b-4e42-b783-3463220431e2" absoluteBounds="12.75, 6.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataBaoCaoLuongDataContext/tbl_MissCheck_DeSo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="912237fd-7de8-4e18-851c-b3b6971b09bc" absoluteBounds="12.765, 7.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f76ae31e-7d36-40c2-ace9-d808b20385f3" absoluteBounds="6.75, 12.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataBaoCaoLuongDataContext/tbl_MissImage_DeJP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13551525-7ea6-4e78-9ee7-a6819bff21a8" absoluteBounds="6.765, 13.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
