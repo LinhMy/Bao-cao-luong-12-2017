@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BaoCaoLuong2018" Class="DataBaoCaoLuong2018DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.10.248\BPOSERVER;Initial Catalog=BaoCaoLuong2018;Persist Security Info=True;User ID=sa" SettingsObjectName="BaoCaoLuong_12_2017.Properties.Settings" SettingsPropertyName="BaoCaoLuong2018ConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.10.248;Initial Catalog=BaoCaoLuong2018;Persist Security Info=True;User ID=sa" SettingsObjectName="BaoCaoLuong_12_2017.Properties.Settings" SettingsPropertyName="BaoCaoLuong2018ConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tbl_Batch" Member="tbl_Batches">
     <Type Name="tbl_Batch">
       <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -26,8 +26,8 @@
       <Column Name="End_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_DeJPA" Member="tbl_DeJPAs">
-    <Type Name="tbl_DeJPA">
+  <Table Name="dbo.tbl_DeJP_CityN" Member="tbl_DeJP_CityNs">
+    <Type Name="tbl_DeJP_CityN">
       <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IDImage" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -49,8 +49,8 @@
       <Column Name="DateInput" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_DeJPB" Member="tbl_DeJPBs">
-    <Type Name="tbl_DeJPB">
+  <Table Name="dbo.tbl_DeJP_CityO" Member="tbl_DeJP_CityOs">
+    <Type Name="tbl_DeJP_CityO">
       <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IDImage" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -72,8 +72,8 @@
       <Column Name="DateInput" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_DeJPC" Member="tbl_DeJPCs">
-    <Type Name="tbl_DeJPC">
+  <Table Name="dbo.tbl_DeJP_CityS" Member="tbl_DeJP_Cities">
+    <Type Name="tbl_DeJP_City">
       <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IDImage" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -95,8 +95,8 @@
       <Column Name="DateInput" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_DeSoA" Member="tbl_DeSoAs">
-    <Type Name="tbl_DeSoA">
+  <Table Name="dbo.tbl_DeSo_CityN" Member="tbl_DeSo_CityNs">
+    <Type Name="tbl_DeSo_CityN">
       <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IDImage" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -118,8 +118,8 @@
       <Column Name="DateInput" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_DeSoB" Member="tbl_DeSoBs">
-    <Type Name="tbl_DeSoB">
+  <Table Name="dbo.tbl_DeSo_CityO" Member="tbl_DeSo_CityOs">
+    <Type Name="tbl_DeSo_CityO">
       <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IDImage" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -141,8 +141,8 @@
       <Column Name="DateInput" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_DeSoC" Member="tbl_DeSoCs">
-    <Type Name="tbl_DeSoC">
+  <Table Name="dbo.tbl_DeSo_CityS" Member="tbl_DeSo_Cities">
+    <Type Name="tbl_DeSo_City">
       <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IDImage" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -169,21 +169,25 @@
       <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="IDImage" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="UserNameDeSo" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="UserNameDeSo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="ReadImageDeSo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CheckedDeSo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CheckedDeSo_QC" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CheckedDeJP" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CheckedDeJP_QC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CheckedDeSo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CheckedDeSo_QC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CheckedDeJP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CheckedDeJP_QC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="UserNameDeJP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="ReadImageDeJP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="TienDoDeSo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="TienDoDeJP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="FlagReadDeSo_Good" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="UserNameGood" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="FlagReadDeSo_NotGood" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="UserNameNotGood" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="CheckQC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FlagReadDeSo_Good" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FlagReadDeSo_NotGood" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FlagReadDeJP_Good" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FlagReadDeJP_NotGood" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserNameDeSoGood" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="UserNameDeSoNotGood" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="UserNameDeJPGood" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="UserNameDeJPNotGood" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CheckQC" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_MissCheck_DeJP" Member="tbl_MissCheck_DeJPs">
@@ -235,27 +239,9 @@
       <Column Name="CongKhaiBatch" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.GetBatch_Full" Method="GetBatch_Full">
-    <ElementType Name="GetBatch_FullResult">
-      <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="City" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="BatchName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="UserCreate" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="PathPicture" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Location" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="NumberImage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="BatchType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="ChiaUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="CongKhaiBatch" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GetBatNotFinishCheckerDeSo" Method="GetBatNotFinishCheckerDeSo">
-    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="city" Type="System.String" DbType="NVarChar(100)" />
-    <ElementType Name="GetBatNotFinishCheckerDeSoResult">
-      <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
-    </ElementType>
+  <Function Name="dbo.XoaBatch" Method="XoaBatch">
+    <Parameter Name="BatchID" Parameter="batchID" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.GetBatNotFinishCheckerDeJP" Method="GetBatNotFinishCheckerDeJP">
     <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
@@ -264,17 +250,10 @@
       <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.GetBatNotFinishDeSo_NotGood" Method="GetBatNotFinishDeSo_NotGood">
-    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
+  <Function Name="dbo.GetBatNotFinishCheckerDeSo" Method="GetBatNotFinishCheckerDeSo">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="city" Type="System.String" DbType="NVarChar(100)" />
-    <ElementType Name="GetBatNotFinishDeSo_NotGoodResult">
-      <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GetBatNotFinishDeSo_Good" Method="GetBatNotFinishDeSo_Good">
-    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
-    <Parameter Name="city" Type="System.String" DbType="NVarChar(100)" />
-    <ElementType Name="GetBatNotFinishDeSo_GoodResult">
+    <ElementType Name="GetBatNotFinishCheckerDeSoResult">
       <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
@@ -290,6 +269,111 @@
     <Parameter Name="city" Type="System.String" DbType="NVarChar(100)" />
     <ElementType Name="GetBatNotFinishDeJP_NotGoodResult">
       <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatNotFinishDeSo_Good" Method="GetBatNotFinishDeSo_Good">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="city" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="GetBatNotFinishDeSo_GoodResult">
+      <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatNotFinishDeSo_NotGood" Method="GetBatNotFinishDeSo_NotGood">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="city" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="GetBatNotFinishDeSo_NotGoodResult">
+      <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpdateBatchChiaUser" Method="UpdateBatchChiaUser">
+    <Parameter Name="BatchID" Parameter="batchID" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateCongKhaiBatch" Method="UpdateCongKhaiBatch">
+    <Parameter Name="BatchID" Parameter="batchID" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="status" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetBatch_Full" Method="GetBatch_Full">
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetBatch_FullResult">
+      <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="BatchName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserCreate" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PathPicture" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NumberImage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BatchType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ChiaUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CongKhaiBatch" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CheckBatchChiaUser" Method="CheckBatchChiaUser">
+    <Parameter Name="Batch" Parameter="batch" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="CheckBatchChiaUserResult">
+      <Column Name="ChiaUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetSoLuongPhieu" Method="GetSoLuongPhieu">
+    <Parameter Name="Batch" Parameter="batch" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="User" Parameter="user" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetSoLuongPhieuResult">
+      <Column Name="SoPhieuCon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoPhieuNhap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetImage_MissImage" Method="GetImage_MissImage">
+    <Parameter Name="BatchID" Parameter="batchID" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="User" Parameter="user" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetImage_MissImageResult">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BatchID" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="IDImage" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Submit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Start_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="End_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BatchID1" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="BatchName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserCreate" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PathPicture" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NumberImage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BatchType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ChiaUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CongKhaiBatch" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetImage_Group_Good" Method="GetImage_Group_Good">
+    <Parameter Name="BatchID" Parameter="batchID" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetImage_Group_GoodResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetImage_Group_Notgood" Method="GetImage_Group_Notgood">
+    <Parameter Name="BatchID" Parameter="batchID" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetImage_Group_NotgoodResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LayHinhMoi_DeSo" Method="LayHinhMoi_DeSo">
+    <Parameter Name="BatchID" Parameter="batchID" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="City" Parameter="city" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="LayHinhMoi_DeSoResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.ThongKeTienDo" Method="ThongKeTienDo">

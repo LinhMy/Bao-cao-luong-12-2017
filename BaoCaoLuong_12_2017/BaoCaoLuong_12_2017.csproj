@@ -79,12 +79,17 @@
       <HintPath>..\..\..\PhieuKiemDinh\Source\PhieuKiemDinh\PhieuKiemDinh\bin\Debug\DevExpress.XtraVerticalGrid.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="ImageGlass.ImageBox">
-      <HintPath>..\..\..\PhieuKiemDinh\Source\PhieuKiemDinh\PhieuKiemDinh\bin\Debug\ImageGlass.ImageBox.dll</HintPath>
+      <HintPath>DLL\ImageGlass.ImageBox.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>C:\Users\Administrator\Desktop\New folder\Natsu-3item\temp\Santei\MyDLL\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="OFFICE, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>DLL\OFFICE.DLL</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -124,6 +129,12 @@
     <Compile Include="MyForm\frmLogin.designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frm_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_ChangePassword.designer.cs">
+      <DependentUpon>frm_ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\FrmTienDo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,17 +159,35 @@
     <Compile Include="MyForm\frm_ChangeZoom.designer.cs">
       <DependentUpon>frm_ChangeZoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frm_CreateBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_CreateBatch.designer.cs">
+      <DependentUpon>frm_CreateBatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyForm\frm_Main.designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frm_ManagerBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_ManagerBatch.designer.cs">
+      <DependentUpon>frm_ManagerBatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frm_User.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyForm\frm_User.designer.cs">
       <DependentUpon>frm_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\CityO_Loai1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\CityO_Loai1.Designer.cs">
+      <DependentUpon>CityO_Loai1.cs</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\uc_PictureBox.cs">
       <SubType>UserControl</SubType>
@@ -174,23 +203,17 @@
       <LastGenOutput>DataBaoCaoLuong2018.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="DataBaoCaoLuong2018.dbml.layout">
+      <DependentUpon>DataBaoCaoLuong2018.dbml</DependentUpon>
+    </None>
     <None Include="DataEntryBPO.dbml.layout">
       <DependentUpon>DataEntryBPO.dbml</DependentUpon>
     </None>
     <None Include="DataBaoCaoLuong2018.dbml.layout">
       <DependentUpon>DataBaoCaoLuong2018.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="MyForm\FrmFreeTime.resx">
-      <DependentUpon>FrmFreeTime.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyForm\FrmTienDo.resx">
-      <DependentUpon>FrmTienDo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyForm\frm_ChangePassword.resx">
-      <DependentUpon>frm_ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_ChangeServer.resx">
       <DependentUpon>frm_ChangeServer.cs</DependentUpon>
@@ -198,11 +221,20 @@
     <EmbeddedResource Include="MyForm\frm_ChangeZoom.resx">
       <DependentUpon>frm_ChangeZoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_CreateBatch.resx">
+      <DependentUpon>frm_CreateBatch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_ManagerBatch.resx">
+      <DependentUpon>frm_ManagerBatch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_User.resx">
       <DependentUpon>frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\CityO_Loai1.resx">
+      <DependentUpon>CityO_Loai1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\uc_PictureBox.resx">
       <DependentUpon>uc_PictureBox.cs</DependentUpon>

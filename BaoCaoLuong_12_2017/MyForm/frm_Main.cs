@@ -31,20 +31,19 @@ namespace BaoCaoLuong_12_2017.MyForm
 
         private void btn_QuanLyBatch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           // new frm_ManagerBatch().ShowDialog();
+           new frm_ManagerBatch().ShowDialog();
         }
 
         private void frm_Main_Load(object sender, EventArgs e)
         {
             try
             {
-                Global.FreeTime = 0;
                 ChiaUser = -1;
                 LevelUser = -1;
                 Global.FlagChangeSave = false;
                 UserLookAndFeel.Default.SkinName = Settings.Default.ApplicationSkinName;
-                xtraTabControl1.TabPages.Remove(tp_DeSo);
-                //splitMain.SplitterPosition = Settings.Default.PositionSplitMain;
+                tab_CityO_Loai1.PageVisible = false;
+                splitMain.SplitterPosition = Settings.Default.PositionSplitMain;
                 lb_IdImage.Text = "";
 
                 menu_QuanLy.Enabled = false;
@@ -56,60 +55,62 @@ namespace BaoCaoLuong_12_2017.MyForm
                 lb_fBatchName.Text = Global.StrBatch;
                 lb_UserName.Text = Global.StrUserName;
                 var checkDisableUser = (from w in Global.DbBpo.tbl_Users where w.Username == Global.StrUserName select w.IsDelete).FirstOrDefault();
-               // Global.listdata13.Clear();
-             //   Global.listdata13 = (from w in Global.Db.tbl_Database_Truong13s select w.id3).ToList();
-               // Folder = (from w in Global.Db.GetFolder(lb_fBatchName.Text) select w.fPathPicture).FirstOrDefault();
-                //if (checkDisableUser)
-                //{
-                //    MessageBox.Show("Tài khoản này đã vô hiệu hóa. Vui lòng liên hệ với Admin");
-                //    DialogResult = DialogResult.Yes;
-                //}
-                //if (Global.StrRole == "DESO")
-                //{
-                //    Global.FlagChangeSave = true;
-                //  //  var ktBatch = (from w in Global.Db.CheckBatchChiaUser(Global.StrBatch) select w.ChiaUser).FirstOrDefault();
-                //  ////  if (ktBatch == true)
-                //  //  {
-                //  //      ChiaUser = 1;
-                //  //  }
-                //    else
-                //    {
-                //        ChiaUser = 0;
-                //    }
-                //    var ktUser = (from w in Global.DbBpo.CheckLevelUser(Global.StrUserName) select w.NotGoodUser).FirstOrDefault();
-                //    if (ktUser == true)
-                //        LevelUser = 0;
-                //    else if (ktUser == false)
-                //        LevelUser = 1;
-                //    //lb_TongPhieu.Text = (from w in Global.Db.tbl_Batches where w.fBatchName == Global.StrBatch select w.SoLuongHinh).FirstOrDefault();
-
-                //    setValue();
-                //    xtraTabControl1.TabPages.Add(tp_DeSo);
-                //    menu_QuanLy.Enabled = false;
-                //    btn_Check.Enabled = false;
-                //    btn_Submit.Enabled = true;
-                //}
-                //else if (Global.StrRole == "ADMIN")
-                //{
-                //    menu_QuanLy.Enabled = true;
-                //    btn_Check.Enabled = true;
-                //    btn_Submit.Enabled = false;
-                //    btn_Submit_Logout.Enabled = false;
-                //    FlagLoad = true;
-                //    bool? OutSource = (from w in Global.DbBpo.tbl_Versions where w.IDProject == Global.StrIdProject select w.OutSource).FirstOrDefault();
-                //    if (OutSource == true)
-                //        ckOutSource.EditValue = true;
-                //    else
-                //        ckOutSource.EditValue = false;
-                //    FlagLoad = false;
-                //}
-                //else if (Global.StrRole == "CHECKERDESO")
-                //{
-                //    menu_QuanLy.Enabled = false;
-                //    btn_Check.Enabled = true;
-                //    btn_Submit.Enabled = false;
-                //    btn_Submit_Logout.Enabled = false;
-                //}
+                //Global.listdata13.Clear();
+                //Global.listdata13 = (from w in Global.Db.tbl_Database_Truong13s select w.id3).ToList();
+                //Folder = (from w in Global.Db.GetFolder(lb_fBatchName.Text) select w.fPathPicture).FirstOrDefault();
+                if (checkDisableUser)
+                {
+                    MessageBox.Show("Tài khoản này đã vô hiệu hóa. Vui lòng liên hệ với Admin");
+                    DialogResult = DialogResult.Yes;
+                }
+                if (Global.StrRole == "DESO")
+                {
+                    Global.FlagChangeSave = true;
+                    var ktBatch = (from w in Global.Db.CheckBatchChiaUser(Global.StrBatch,Global.StrCity) select w.ChiaUser).FirstOrDefault();
+                    if (ktBatch == true)
+                    {
+                        ChiaUser = 1;
+                    }
+                    else
+                    {
+                        ChiaUser = 0;
+                    }
+                    var ktUser = (from w in Global.DbBpo.CheckLevelUser(Global.StrUserName) select w.NotGoodUser).FirstOrDefault();
+                    if (ktUser == true)
+                        LevelUser = 0;
+                    else if (ktUser == false)
+                        LevelUser = 1;
+                    lb_TongPhieu.Text = (from w in Global.Db.tbl_Batches where w.BatchID == Global.StrBatch &w.City==Global.StrCity select w.NumberImage).FirstOrDefault();
+                    setValue();
+                    if(Global.StrCity=="CityO")
+                    {
+                        tab_CityO_Loai1.PageVisible=true;
+                    }
+                    menu_QuanLy.Enabled = false;
+                    btn_Check.Enabled = false;
+                    btn_Submit.Enabled = true;
+                }
+                else if (Global.StrRole == "ADMIN")
+                {
+                    menu_QuanLy.Enabled = true;
+                    btn_Check.Enabled = true;
+                    btn_Submit.Enabled = false;
+                    btn_Submit_Logout.Enabled = false;
+                    FlagLoad = true;
+                    bool? OutSource = (from w in Global.DbBpo.tbl_Versions where w.IDProject == Global.StrIdProject select w.OutSource).FirstOrDefault();
+                    if (OutSource == true)
+                        ckOutSource.EditValue = true;
+                    else
+                        ckOutSource.EditValue = false;
+                    FlagLoad = false;
+                }
+                else if (Global.StrRole == "CHECKERDESO")
+                {
+                    menu_QuanLy.Enabled = false;
+                    btn_Check.Enabled = true;
+                    btn_Submit.Enabled = false;
+                    btn_Submit_Logout.Enabled = false;
+                }
             }
             catch
             {
@@ -117,322 +118,272 @@ namespace BaoCaoLuong_12_2017.MyForm
                 DialogResult = DialogResult.Yes;
             }
         }
-
         private void setValue()
         {
-            //if (Global.StrRole == "DESO")
-            //{
-            //    lb_SoPhieuCon.Text = (from w in Global.Db.tbl_Images where w.ReadImageDeSoNhap < 2 && w.fBatchName == Global.StrBatch && (w.UserNameDeSoNhap != Global.StrUserName || w.UserNameDeSoNhap == null || w.UserNameDeSoNhap == "") select w.IdImage).Count().ToString();
-            //    lb_SoPhieuNhap.Text = (from w in Global.Db.tbl_MissImage_DeSos where w.UserName == Global.StrUserName && w.fBatchName == Global.StrBatch select w.IdImage).Count().ToString();
-            //}
+            if (Global.StrRole == "DESO")
+            {
+                var a=(from w in Global.Db.GetSoLuongPhieu(Global.StrBatch, Global.StrCity, Global.StrUserName)select new { w.SoPhieuCon, w.SoPhieuNhap }).FirstOrDefault();
+                lb_SoPhieuCon.Text = a.SoPhieuCon+"";
+                lb_SoPhieuNhap.Text = a.SoPhieuNhap + "";
+            }
         }
-
-        private string[] strTrans = null;
+        
         private string getFilename = "";
 
         private string GetImage()
         {
-            //lb_IdImage.Text = "";
-            //strTrans = null;
-            //getFilename = "";
-            //if (Global.StrRole=="DESO")
-            //{
-            //    if (ChiaUser==1)  //Batch có chia User nhập
-            //    {
-            //        if (LevelUser==1) //User Level Good
-            //        {
-            //           // getFilename = (from w in Global.Db.tbl_MissImage_DeSos where w.fBatchName == lb_fBatchName.Text && w.UserName == lb_UserName.Text && w.Submit == 0 select w.IdImage).FirstOrDefault();
-            //            if (string.IsNullOrEmpty(getFilename))
-            //            {
-            //                try
-            //                {
-            //                  ///  getFilename = (from w in Global.Db.GetImage_Group_Good(lb_fBatchName.Text, lb_UserName.Text) select w.Column1).FirstOrDefault();
-            //                    if (string.IsNullOrEmpty(getFilename))
-            //                    {
-            //                        return "NULL";
-            //                    }
-            //                    lb_IdImage.Text = getFilename;
-            //                    strTrans = getFilename.Split('.');
-            //                    uC_DESO1.txt_TruongSo01.Text = strTrans[0];
-            //                    uc_PictureBox1.imageBox1.Image = null;
-            //                    if (uc_PictureBox1.LoadImage(Global.Webservice + Folder + @"\" + lb_fBatchName.Text + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
-            //                    {
-            //                        uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
-            //                        return "Error";
-            //                    }
-            //                    //Settings.Default.Truong3 = "";
-            //                    //Settings.Default.Truong4 = "";
-            //                    //Settings.Default.Truong5 = "";
-            //                    //Settings.Default.Truong6 = "";
-            //                    //Settings.Default.Truong7 = "";
-            //                    //Settings.Default.Truong8_1 = "";
-            //                    //Settings.Default.Truong8_2 = "";
-            //                    //Settings.Default.Truong9 = "";
-            //                    //Settings.Default.Truong10 = "";
-            //                    //Settings.Default.Truong11 = "";
-            //                    //Settings.Default.Truong12 = "";
-            //                    //Settings.Default.Truong13 = "";
-            //                    //Settings.Default.Truong14 = "";
-            //                    ////Settings.Default.FlagError = "";
-            //                    //Settings.Default.fBatchName = Global.StrBatch;
-            //                    //Settings.Default.IdImage = lb_IdImage.Text;
-            //                    //Settings.Default.UserInput = Global.StrUserName;
-            //                    Settings.Default.Save();
-            //                }
-            //                catch (Exception)
-            //                {
-            //                    return "NULL";
-            //                }
-            //            }
-            //            else
-            //            {
-            //                lb_IdImage.Text = getFilename;
-            //                strTrans = getFilename.Split('.');
-            //                uC_DESO1.txt_TruongSo01.Text = strTrans[0];
-            //                uc_PictureBox1.imageBox1.Image = null;
-            //                if (uc_PictureBox1.LoadImage(Global.Webservice + Folder + @"\" + lb_fBatchName.Text + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
-            //                {
-            //                    uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
-            //                    return "Error";
-            //                }
-            //                //if (Settings.Default.fBatchName == Global.StrBatch & Settings.Default.IdImage == lb_IdImage.Text & Settings.Default.UserInput.ToUpper() == Global.StrUserName.ToUpper())
-            //                //{
-            //                //    uC_DESO1.txt_TruongSo03.Text = Settings.Default.Truong3;
-            //                //    uC_DESO1.txt_TruongSo04.Text = Settings.Default.Truong4;
-            //                //    uC_DESO1.txt_TruongSo05.Text = Settings.Default.Truong5;
-            //                //    uC_DESO1.txt_TruongSo06.Text = Settings.Default.Truong6;
-            //                //    uC_DESO1.txt_TruongSo07.Text = Settings.Default.Truong7;
-            //                //    uC_DESO1.txt_TruongSo08_1.Text = Settings.Default.Truong8_1;
-            //                //    uC_DESO1.txt_TruongSo08_2.Text = Settings.Default.Truong8_2;
-            //                //    uC_DESO1.txt_TruongSo09.Text = Settings.Default.Truong9;
-            //                //    uC_DESO1.txt_TruongSo10.Text = Settings.Default.Truong10;
-            //                //    uC_DESO1.txt_TruongSo11.Text = Settings.Default.Truong11;
-            //                //    uC_DESO1.txt_TruongSo12.Text = Settings.Default.Truong12;
-            //                //    uC_DESO1.txt_TruongSo13.Text = Settings.Default.Truong13;
-            //                //    uC_DESO1.txt_TruongSo14.Text = Settings.Default.Truong14;
-            //                //    uC_DESO1.txt_TruongSo13_Leave(null, null);
-            //                //    //uC_DESO1.txt_FlagError.Text = Settings.Default.FlagError;
-            //                //}
-            //                //else
-            //                //{
-            //                //    Settings.Default.fBatchName = Global.StrBatch;
-            //                //    Settings.Default.IdImage = lb_IdImage.Text;
-            //                //    Settings.Default.UserInput = Global.StrUserName;
-            //                //    Settings.Default.Truong3 = "";
-            //                //    Settings.Default.Truong4 = "";
-            //                //    Settings.Default.Truong5 = "";
-            //                //    Settings.Default.Truong6 = "";
-            //                //    Settings.Default.Truong7 = "";
-            //                //    Settings.Default.Truong8_1 = "";
-            //                //    Settings.Default.Truong8_2 = "";
-            //                //    Settings.Default.Truong9 = "";
-            //                //    Settings.Default.Truong10 = "";
-            //                //    Settings.Default.Truong11 = "";
-            //                //    Settings.Default.Truong12 = "";
-            //                //    Settings.Default.Truong13 = "";
-            //                //    Settings.Default.Truong14 = "";
-            //                //   // Settings.Default.FlagError = "";
-            //                //    Settings.Default.Save();
-            //                //}
-            //            }
-            //        }
-            //        else if (LevelUser == 0) //User Level Not Good
-            //        {
-            //            //getFilename = (from w in Global.Db.tbl_MissImage_DeSos where w.fBatchName == lb_fBatchName.Text && w.UserName == lb_UserName.Text && w.Submit == 0 select w.IdImage).FirstOrDefault();
-            //            //if (string.IsNullOrEmpty(getFilename))
-            //            //{
-            //            //    try
-            //            //    {
-            //            //        var getFilename = (from w in Global.Db.GetImage_Group_Notgood(lb_fBatchName.Text, lb_UserName.Text) select w.Column1).FirstOrDefault();
-            //            //        if (string.IsNullOrEmpty(getFilename))
-            //            //        {
-            //            //            return "NULL";
-            //            //        }
-            //            //        lb_IdImage.Text = getFilename;
-            //            //        strTrans = getFilename.Split('.');
-            //            //        uC_DESO1.txt_TruongSo01.Text = strTrans[0];
-            //            //        uc_PictureBox1.imageBox1.Image = null;
-            //            //        if (uc_PictureBox1.LoadImage(Global.Webservice + Folder + @"\" + lb_fBatchName.Text + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
-            //            //        {
-            //            //            uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
-            //            //            return "Error";
-            //            //        }
-            //            //        Settings.Default.Truong3 = "";
-            //            //        Settings.Default.Truong4 = "";
-            //            //        Settings.Default.Truong5 = "";
-            //            //        Settings.Default.Truong6 = "";
-            //            //        Settings.Default.Truong7 = "";
-            //            //        Settings.Default.Truong8_1 = "";
-            //            //        Settings.Default.Truong8_2 = "";
-            //            //        Settings.Default.Truong9 = "";
-            //            //        Settings.Default.Truong10 = "";
-            //            //        Settings.Default.Truong11 = "";
-            //            //        Settings.Default.Truong12 = "";
-            //            //        Settings.Default.Truong13 = "";
-            //            //        Settings.Default.Truong14 = "";
-            //            //       // Settings.Default.FlagError = "";
-            //            //        Settings.Default.fBatchName = Global.StrBatch;
-            //            //        Settings.Default.IdImage = lb_IdImage.Text;
-            //            //        Settings.Default.UserInput = Global.StrUserName;
-            //                    Settings.Default.Save();
-            //                }
-            //                catch (Exception)
-            //                {
-            //                    return "NULL";
-            //                }
-            //            }
-            //            else
-            //            {
-            //                //lb_IdImage.Text = getFilename;
-            //                //strTrans = getFilename.Split('.');
-            //                uC_DESO1.txt_TruongSo01.Text = strTrans[0];
-            //                uc_PictureBox1.imageBox1.Image = null;
-            //                if (uc_PictureBox1.LoadImage(Global.Webservice + Folder + @"\" + lb_fBatchName.Text + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
-            //                {
-            //                    uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
-            //                    return "Error";
-            //                }
-            //                //if (Settings.Default.fBatchName == Global.StrBatch & Settings.Default.IdImage == lb_IdImage.Text & Settings.Default.UserInput.ToUpper() == Global.StrUserName.ToUpper())
-            //                //{
-            //                //    uC_DESO1.txt_TruongSo03.Text = Settings.Default.Truong3;
-            //                //    uC_DESO1.txt_TruongSo04.Text = Settings.Default.Truong4;
-            //                //    uC_DESO1.txt_TruongSo05.Text = Settings.Default.Truong5;
-            //                //    uC_DESO1.txt_TruongSo06.Text = Settings.Default.Truong6;
-            //                //    uC_DESO1.txt_TruongSo07.Text = Settings.Default.Truong7;
-            //                //    uC_DESO1.txt_TruongSo08_1.Text = Settings.Default.Truong8_1;
-            //                //    uC_DESO1.txt_TruongSo08_2.Text = Settings.Default.Truong8_2;
-            //                //    uC_DESO1.txt_TruongSo09.Text = Settings.Default.Truong9;
-            //                //    uC_DESO1.txt_TruongSo10.Text = Settings.Default.Truong10;
-            //                //    uC_DESO1.txt_TruongSo11.Text = Settings.Default.Truong11;
-            //                //    uC_DESO1.txt_TruongSo12.Text = Settings.Default.Truong12;
-            //                //    uC_DESO1.txt_TruongSo13.Text = Settings.Default.Truong13;
-            //                //    uC_DESO1.txt_TruongSo14.Text = Settings.Default.Truong14;
-            //                //    uC_DESO1.txt_TruongSo13_Leave(null, null);
-            //                //    // uC_DESO1.txt_FlagError.Text = Settings.Default.FlagError;
-            //                //}
-            //                //else
-            //                //{
-            //                //    Settings.Default.fBatchName = Global.StrBatch;
-            //                //    Settings.Default.IdImage = lb_IdImage.Text;
-            //                //    Settings.Default.UserInput = Global.StrUserName;
-            //                //    Settings.Default.Truong3 = "";
-            //                //    Settings.Default.Truong4 = "";
-            //                //    Settings.Default.Truong5 = "";
-            //                //    Settings.Default.Truong6 = "";
-            //                //    Settings.Default.Truong7 = "";
-            //                //    Settings.Default.Truong8_1 = "";
-            //                //    Settings.Default.Truong8_2 = "";
-            //                //    Settings.Default.Truong9 = "";
-            //                //    Settings.Default.Truong10 = "";
-            //                //    Settings.Default.Truong11 = "";
-            //                //    Settings.Default.Truong12 = "";
-            //                //    Settings.Default.Truong13 = "";
-            //                //    Settings.Default.Truong14 = "";
-            //                //    //Settings.Default.FlagError = "";
-            //                //    Settings.Default.Save();
-            //                //}
-            //            }
-            //        }
-            //    }
-            //    else if (ChiaUser == 0)  //Batch không chia user
-            //    {
-            //       getFilename = (from w in Global.Db.tbl_MissImage_DeSos where w.fBatchName == lb_fBatchName.Text && w.UserName == lb_UserName.Text && w.Submit == 0 select w.IdImage).FirstOrDefault();
-            //        if (string.IsNullOrEmpty(getFilename))
-            //        {
-            //            try
-            //            {
-            //                var getFilename = (from w in Global.Db.LayHinhMoi_DeSo(lb_fBatchName.Text, lb_UserName.Text) select w.Column1).FirstOrDefault();
-            //                if (string.IsNullOrEmpty(getFilename))
-            //                {
-            //                    return "NULL";
-            //                }
-            //                lb_IdImage.Text = getFilename;
-            //                strTrans = getFilename.Split('.');
-            //                uC_DESO1.txt_TruongSo01.Text = strTrans[0];
-            //                uc_PictureBox1.imageBox1.Image = null;
-            //                if (uc_PictureBox1.LoadImage(Global.Webservice + Folder + @"\" + lb_fBatchName.Text + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
-            //                {
-            //                    uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
-            //                    return "Error";
-            //                }
-            //                Settings.Default.Truong3 = "";
-            //                Settings.Default.Truong4 = "";
-            //                Settings.Default.Truong5 = "";
-            //                Settings.Default.Truong6 = "";
-            //                Settings.Default.Truong7 = "";
-            //                Settings.Default.Truong8_1 = "";
-            //                Settings.Default.Truong8_2 = "";
-            //                Settings.Default.Truong9 = "";
-            //                Settings.Default.Truong10 = "";
-            //                Settings.Default.Truong11 = "";
-            //                Settings.Default.Truong12 = "";
-            //                Settings.Default.Truong13 = "";
-            //                Settings.Default.Truong14 = "";
-            //               // Settings.Default.FlagError = "";
-            //                Settings.Default.fBatchName = Global.StrBatch;
-            //                Settings.Default.IdImage = lb_IdImage.Text;
-            //                Settings.Default.UserInput = Global.StrUserName;
-            //                Settings.Default.Save();
-            //            }
-            //            catch (Exception)
-            //            {
-            //                return "NULL";
-            //            }
-            //        }
-            //        else
-            //        {
-            //            lb_IdImage.Text = getFilename;
-            //            strTrans = getFilename.Split('.');
-            //            uC_DESO1.txt_TruongSo01.Text = strTrans[0];
-            //            uc_PictureBox1.imageBox1.Image = null;
-            //            if (uc_PictureBox1.LoadImage(Global.Webservice + Folder + @"\" + lb_fBatchName.Text + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
-            //            {
-            //                uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
-            //                return "Error";
-            //            }
-            //            if (Settings.Default.fBatchName == Global.StrBatch & Settings.Default.IdImage == lb_IdImage.Text & Settings.Default.UserInput.ToUpper() == Global.StrUserName.ToUpper())
-            //            {
-            //                uC_DESO1.txt_TruongSo03.Text = Settings.Default.Truong3;
-            //                uC_DESO1.txt_TruongSo04.Text = Settings.Default.Truong4;
-            //                uC_DESO1.txt_TruongSo05.Text = Settings.Default.Truong5;
-            //                uC_DESO1.txt_TruongSo06.Text = Settings.Default.Truong6;
-            //                uC_DESO1.txt_TruongSo07.Text = Settings.Default.Truong7;
-            //                uC_DESO1.txt_TruongSo08_1.Text = Settings.Default.Truong8_1;
-            //                uC_DESO1.txt_TruongSo08_2.Text = Settings.Default.Truong8_2;
-            //                uC_DESO1.txt_TruongSo09.Text = Settings.Default.Truong9;
-            //                uC_DESO1.txt_TruongSo10.Text = Settings.Default.Truong10;
-            //                uC_DESO1.txt_TruongSo11.Text = Settings.Default.Truong11;
-            //                uC_DESO1.txt_TruongSo12.Text = Settings.Default.Truong12;
-            //                uC_DESO1.txt_TruongSo13.Text = Settings.Default.Truong13;
-            //                uC_DESO1.txt_TruongSo14.Text = Settings.Default.Truong14;
-            //                uC_DESO1.txt_TruongSo13_Leave(null, null);
-            //                // uC_DESO1.txt_FlagError.Text = Settings.Default.FlagError;
-            //            }
-            //            else
-            //            {
-            //                Settings.Default.fBatchName = Global.StrBatch;
-            //                Settings.Default.IdImage = lb_IdImage.Text;
-            //                Settings.Default.UserInput = Global.StrUserName;
-            //                Settings.Default.Truong3 = "";
-            //                Settings.Default.Truong4 = "";
-            //                Settings.Default.Truong5 = "";
-            //                Settings.Default.Truong6 = "";
-            //                Settings.Default.Truong7 = "";
-            //                Settings.Default.Truong8_1 = "";
-            //                Settings.Default.Truong8_2 = "";
-            //                Settings.Default.Truong9 = "";
-            //                Settings.Default.Truong10 = "";
-            //                Settings.Default.Truong11 = "";
-            //                Settings.Default.Truong12 = "";
-            //                Settings.Default.Truong13 = "";
-            //                Settings.Default.Truong14 = "";
-            //               // Settings.Default.FlagError = "";
-            //                Settings.Default.Save();
-            //            }
-            //        }
-            //    }
-            //    uC_DESO1.txt_TruongSo03.Focus();
-            //}
+            lb_IdImage.Text = "";
+            getFilename = "";
+            if (Global.StrRole == "DESO")
+            {
+                if (ChiaUser == 1)  //Batch có chia User nhập
+                {
+                    if (LevelUser == 1) //User Level Good
+                    {
+                        getFilename = (from w in Global.Db.GetImage_MissImage(Global.StrBatch, Global.StrUserName, Global.StrCity) select w.IDImage).FirstOrDefault();
+                        if (string.IsNullOrEmpty(getFilename))
+                        {
+                            try
+                            {
+                                getFilename = (from w in Global.Db.GetImage_Group_Good(lb_fBatchName.Text, lb_UserName.Text, Global.StrCity) select w.Column1).FirstOrDefault();
+                                if (string.IsNullOrEmpty(getFilename))
+                                {
+                                    return "NULL";
+                                }
+                                lb_IdImage.Text = getFilename;
+                                uc_PictureBox1.imageBox1.Image = null;
+                                if (uc_PictureBox1.LoadImage(Global.Webservice + lb_fBatchName.Text + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
+                                {
+                                    uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
+                                    return "Error";
+                                }
+                                Settings.Default.City = Global.StrBatch;
+                                Settings.Default.BatchID = Global.StrBatch;
+                                Settings.Default.ImageID = lb_IdImage.Text;
+                                Settings.Default.UserInput = Global.StrUserName;
+                                Settings.Default.Truong18 = "";
+                                Settings.Default.Truong19 = "";
+                                Settings.Default.Truong21 = "";
+                                Settings.Default.Truong22 = "";
+                                Settings.Default.Truong23 = "";
+                                Settings.Default.Truong24 = "";
+                                Settings.Default.Truong25 = "";
+                                Settings.Default.Truong26 = "";
+                                Settings.Default.Truong27 = "";
+                                Settings.Default.QC = false;
+                                Settings.Default.Save();
+                            }
+                            catch (Exception)
+                            {
+                                return "NULL";
+                            }
+                        }
+                        else
+                        {
+                            lb_IdImage.Text = getFilename;
+                            uc_PictureBox1.imageBox1.Image = null;
+                            if (uc_PictureBox1.LoadImage(Global.Webservice + lb_fBatchName.Text + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
+                            {
+                                uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
+                                return "Error";
+                            }
+                            if (Settings.Default.BatchID == Global.StrBatch & Settings.Default.ImageID == lb_IdImage.Text & Settings.Default.City == Global.StrCity & Settings.Default.UserInput.ToUpper() == Global.StrUserName.ToUpper())
+                            {
+                                uC_CityO_Loai11.txt_Truong_018.Text = Settings.Default.Truong18;
+                                uC_CityO_Loai11.txt_Truong_019.Text = Settings.Default.Truong19;
+                                uC_CityO_Loai11.txt_Truong_021.Text = Settings.Default.Truong21;
+                                uC_CityO_Loai11.txt_Truong_022.Text = Settings.Default.Truong22;
+                                uC_CityO_Loai11.txt_Truong_023.Text = Settings.Default.Truong23;
+                                uC_CityO_Loai11.txt_Truong_024.Text = Settings.Default.Truong24;
+                                uC_CityO_Loai11.txt_Truong_025.Text = Settings.Default.Truong25;
+                                uC_CityO_Loai11.txt_Truong_026.Text = Settings.Default.Truong26;
+                                uC_CityO_Loai11.txt_Truong_027.Text = Settings.Default.Truong27;
+                            }
+                            else
+                            {
+                                Settings.Default.City = Global.StrBatch;
+                                Settings.Default.BatchID = Global.StrBatch;
+                                Settings.Default.ImageID = lb_IdImage.Text;
+                                Settings.Default.UserInput = Global.StrUserName;
+                                Settings.Default.Truong18 = "";
+                                Settings.Default.Truong19 = "";
+                                Settings.Default.Truong21 = "";
+                                Settings.Default.Truong22 = "";
+                                Settings.Default.Truong23 = "";
+                                Settings.Default.Truong24 = "";
+                                Settings.Default.Truong25 = "";
+                                Settings.Default.Truong26 = "";
+                                Settings.Default.Truong27 = "";
+                                Settings.Default.QC = false;
+                                Settings.Default.Save();
+                            }
+                        }
+                    }
+                    else if (LevelUser == 0) //User Level Not Good
+                    {
+                        getFilename = (from w in Global.Db.GetImage_MissImage(Global.StrBatch, Global.StrUserName, Global.StrCity) select w.IDImage).FirstOrDefault();
+                        if (string.IsNullOrEmpty(getFilename))
+                        {
+                            try
+                            {
+                                var getFilename = (from w in Global.Db.GetImage_Group_Notgood(lb_fBatchName.Text, lb_UserName.Text,Global.StrCity) select w.Column1).FirstOrDefault();
+                                if (string.IsNullOrEmpty(getFilename))
+                                {
+                                    return "NULL";
+                                }
+                                lb_IdImage.Text = getFilename;
+                                uc_PictureBox1.imageBox1.Image = null;
+                                if (uc_PictureBox1.LoadImage(Global.Webservice + lb_fBatchName.Text + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
+                                {
+                                    uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
+                                    return "Error";
+                                }
+                                Settings.Default.City = Global.StrBatch;
+                                Settings.Default.BatchID = Global.StrBatch;
+                                Settings.Default.ImageID = lb_IdImage.Text;
+                                Settings.Default.UserInput = Global.StrUserName;
+                                Settings.Default.Truong18 = "";
+                                Settings.Default.Truong19 = "";
+                                Settings.Default.Truong21 = "";
+                                Settings.Default.Truong22 = "";
+                                Settings.Default.Truong23 = "";
+                                Settings.Default.Truong24 = "";
+                                Settings.Default.Truong25 = "";
+                                Settings.Default.Truong26 = "";
+                                Settings.Default.Truong27 = "";
+                                Settings.Default.QC = false;
+                                Settings.Default.Save();
+                            }
+                            catch (Exception)
+                            {
+                                return "NULL";
+                            }
+                        }
+                        else
+                        {
+                            lb_IdImage.Text = getFilename;
+                            uc_PictureBox1.imageBox1.Image = null;
+                            if (uc_PictureBox1.LoadImage(Global.Webservice + lb_fBatchName.Text + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
+                            {
+                                uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
+                                return "Error";
+                            }
+                            if (Settings.Default.BatchID == Global.StrBatch & Settings.Default.ImageID == lb_IdImage.Text & Settings.Default.City == Global.StrCity & Settings.Default.UserInput.ToUpper() == Global.StrUserName.ToUpper())
+                            {
+                                uC_CityO_Loai11.txt_Truong_018.Text = Settings.Default.Truong18;
+                                uC_CityO_Loai11.txt_Truong_019.Text = Settings.Default.Truong19;
+                                uC_CityO_Loai11.txt_Truong_021.Text = Settings.Default.Truong21;
+                                uC_CityO_Loai11.txt_Truong_022.Text = Settings.Default.Truong22;
+                                uC_CityO_Loai11.txt_Truong_023.Text = Settings.Default.Truong23;
+                                uC_CityO_Loai11.txt_Truong_024.Text = Settings.Default.Truong24;
+                                uC_CityO_Loai11.txt_Truong_025.Text = Settings.Default.Truong25;
+                                uC_CityO_Loai11.txt_Truong_026.Text = Settings.Default.Truong26;
+                                uC_CityO_Loai11.txt_Truong_027.Text = Settings.Default.Truong27;
+                            }
+                            else
+                            {
+                                Settings.Default.City = Global.StrBatch;
+                                Settings.Default.BatchID = Global.StrBatch;
+                                Settings.Default.ImageID = lb_IdImage.Text;
+                                Settings.Default.UserInput = Global.StrUserName;
+                                Settings.Default.Truong18 = "";
+                                Settings.Default.Truong19 = "";
+                                Settings.Default.Truong21 = "";
+                                Settings.Default.Truong22 = "";
+                                Settings.Default.Truong23 = "";
+                                Settings.Default.Truong24 = "";
+                                Settings.Default.Truong25 = "";
+                                Settings.Default.Truong26 = "";
+                                Settings.Default.Truong27 = "";
+                                Settings.Default.QC = false;
+                                Settings.Default.Save();
+                            }
+                        }
+                    }
+                }
+                else if (ChiaUser == 0)  //Batch không chia user
+                {
+                    getFilename = (from w in Global.Db.GetImage_MissImage(Global.StrBatch, Global.StrUserName, Global.StrCity) select w.IDImage).FirstOrDefault();
+                    if (string.IsNullOrEmpty(getFilename))
+                    {
+                        try
+                        {
+                            var getFilename = (from w in Global.Db.LayHinhMoi_DeSo(lb_fBatchName.Text, lb_UserName.Text,Global.StrCity) select w.Column1).FirstOrDefault();
+                            if (string.IsNullOrEmpty(getFilename))
+                            {
+                                return "NULL";
+                            }
+                            lb_IdImage.Text = getFilename;
+                            uc_PictureBox1.imageBox1.Image = null;
+                            if (uc_PictureBox1.LoadImage(Global.Webservice + lb_fBatchName.Text + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
+                            {
+                                uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
+                                return "Error";
+                            }
+                            Settings.Default.City = Global.StrBatch;
+                            Settings.Default.BatchID = Global.StrBatch;
+                            Settings.Default.ImageID = lb_IdImage.Text;
+                            Settings.Default.UserInput = Global.StrUserName;
+                            Settings.Default.Truong18 = "";
+                            Settings.Default.Truong19 = "";
+                            Settings.Default.Truong21 = "";
+                            Settings.Default.Truong22 = "";
+                            Settings.Default.Truong23 = "";
+                            Settings.Default.Truong24 = "";
+                            Settings.Default.Truong25 = "";
+                            Settings.Default.Truong26 = "";
+                            Settings.Default.Truong27 = "";
+                            Settings.Default.QC = false;
+                            Settings.Default.Save();
+                        }
+                        catch (Exception)
+                        {
+                            return "NULL";
+                        }
+                    }
+                    else
+                    {
+                        lb_IdImage.Text = getFilename;
+                        uc_PictureBox1.imageBox1.Image = null;
+                        if (uc_PictureBox1.LoadImage(Global.Webservice + Folder + @"\" + lb_fBatchName.Text + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
+                        {
+                            uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
+                            return "Error";
+                        }
+                        if (Settings.Default.BatchID == Global.StrBatch & Settings.Default.ImageID == lb_IdImage.Text & Settings.Default.City == Global.StrCity & Settings.Default.UserInput.ToUpper() == Global.StrUserName.ToUpper())
+                        {
+                            uC_CityO_Loai11.txt_Truong_018.Text = Settings.Default.Truong18;
+                            uC_CityO_Loai11.txt_Truong_019.Text = Settings.Default.Truong19;
+                            uC_CityO_Loai11.txt_Truong_021.Text = Settings.Default.Truong21;
+                            uC_CityO_Loai11.txt_Truong_022.Text = Settings.Default.Truong22;
+                            uC_CityO_Loai11.txt_Truong_023.Text = Settings.Default.Truong23;
+                            uC_CityO_Loai11.txt_Truong_024.Text = Settings.Default.Truong24;
+                            uC_CityO_Loai11.txt_Truong_025.Text = Settings.Default.Truong25;
+                            uC_CityO_Loai11.txt_Truong_026.Text = Settings.Default.Truong26;
+                            uC_CityO_Loai11.txt_Truong_027.Text = Settings.Default.Truong27;
+                        }
+                        else
+                        {
+                            Settings.Default.City = Global.StrBatch;
+                            Settings.Default.BatchID = Global.StrBatch;
+                            Settings.Default.ImageID = lb_IdImage.Text;
+                            Settings.Default.UserInput = Global.StrUserName;
+                            Settings.Default.Truong18 = "";
+                            Settings.Default.Truong19 = "";
+                            Settings.Default.Truong21 = "";
+                            Settings.Default.Truong22 = "";
+                            Settings.Default.Truong23 = "";
+                            Settings.Default.Truong24 = "";
+                            Settings.Default.Truong25 = "";
+                            Settings.Default.Truong26 = "";
+                            Settings.Default.Truong27 = "";
+                            Settings.Default.QC = false;
+                            Settings.Default.Save();
+                        }
+                    }
+                }
+                uC_CityO_Loai11.txt_Truong_018.Focus();
+            }
             return "ok";
         }
 
@@ -777,7 +728,7 @@ namespace BaoCaoLuong_12_2017.MyForm
             if (e.KeyCode == Keys.Escape)
             {
                 //new FrmFreeTime().ShowDialog();
-                Global.DbBpo.UpdateTimeFree(Global.Token, Global.FreeTime);
+                //Global.DbBpo.UpdateTimeFree(Global.Token, Global.FreeTime);
             }
         }
         
@@ -808,7 +759,7 @@ namespace BaoCaoLuong_12_2017.MyForm
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frm_ChangePassword().ShowDialog();
+           new frm_ChangePassword().ShowDialog();
         }
 
         private void frm_Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -826,8 +777,8 @@ namespace BaoCaoLuong_12_2017.MyForm
 
         private void splitMain_SplitterPositionChanged(object sender, EventArgs e)
         {
-          //  Settings.Default.PositionSplitMain = splitMain.SplitterPosition;
-          //  Settings.Default.Save();
+            Settings.Default.PositionSplitMain = splitMain.SplitterPosition;
+            Settings.Default.Save();
         }
 
         private void btn_Pause_Click(object sender, EventArgs e)

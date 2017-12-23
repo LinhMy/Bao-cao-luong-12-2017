@@ -21,12 +21,11 @@ namespace BaoCaoLuong_12_2017
         public static string Token = "";
         public static string StrIdProject = "BaoCaoLuong2018";
         public static string StrCheck = "";
-        public static int FreeTime = 0;
+        
         public static string Version = "1.0.0";
-        public static string StrCity;
+        public static string StrCity="";
         public static bool FlagChangeSave = true;
         public static string StrPath = @"\\192.168.165.10\BaoCaoLuong2018$";
-        // public static List<string> listdata13 = new List<string>();
         public static string Webservice;
         public static DataBaoCaoLuong2018DataContext Db;
         public static DataEntryBPODataContext DbBpo;
@@ -63,9 +62,9 @@ namespace BaoCaoLuong_12_2017
         public static void RunUpdateVersion()
         {
             if (Settings.Default.Server == "Đà Nẵng")
-                Process.Start(@"\\10.10.10.254\DE_Viet\2017\BaoCaoLuong2018_CityO");
+                Process.Start(@"\\10.10.10.254\DE_Viet\2017\");
             else
-                Process.Start(/*https://drive.google.com/drive/folders/0BwO0VkvgrRHaeW5meEE4blBHdnc?usp=sharing*/"");
+                Process.Start("https://drive.google.com/drive/folders/0BwO0VkvgrRHaeW5meEE4blBHdnc?usp=sharing");
         }
     }
 }
