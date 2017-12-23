@@ -201,18 +201,11 @@ namespace BaoCaoLuong_12_2017
 			return ((ISingleResult<GetBatchResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatch_Full")]
-		public ISingleResult<GetBatch_FullResult> GetBatch_Full()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XoaBatch")]
+		public int XoaBatch([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchID", DbType="NVarChar(255)")] string batchID)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<GetBatch_FullResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinishCheckerDeSo")]
-		public ISingleResult<GetBatNotFinishCheckerDeSoResult> GetBatNotFinishCheckerDeSo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string city)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, city);
-			return ((ISingleResult<GetBatNotFinishCheckerDeSoResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchID);
+			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinishCheckerDeJP")]
@@ -222,18 +215,11 @@ namespace BaoCaoLuong_12_2017
 			return ((ISingleResult<GetBatNotFinishCheckerDeJPResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinishDeSo_NotGood")]
-		public ISingleResult<GetBatNotFinishDeSo_NotGoodResult> GetBatNotFinishDeSo_NotGood([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string city)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinishCheckerDeSo")]
+		public ISingleResult<GetBatNotFinishCheckerDeSoResult> GetBatNotFinishCheckerDeSo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string city)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, city);
-			return ((ISingleResult<GetBatNotFinishDeSo_NotGoodResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinishDeSo_Good")]
-		public ISingleResult<GetBatNotFinishDeSo_GoodResult> GetBatNotFinishDeSo_Good([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string city)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, city);
-			return ((ISingleResult<GetBatNotFinishDeSo_GoodResult>)(result.ReturnValue));
+			return ((ISingleResult<GetBatNotFinishCheckerDeSoResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinishDeJP_Good")]
@@ -249,20 +235,25 @@ namespace BaoCaoLuong_12_2017
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, city);
 			return ((ISingleResult<GetBatNotFinishDeJP_NotGoodResult>)(result.ReturnValue));
 		}
-	}
-	
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatch_Full")]
-		public ISingleResult<GetBatch_FullResult> GetBatch_Full()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinishDeSo_Good")]
+		public ISingleResult<GetBatNotFinishDeSo_GoodResult> GetBatNotFinishDeSo_Good([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string city)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<GetBatch_FullResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, city);
+			return ((ISingleResult<GetBatNotFinishDeSo_GoodResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XoaBatch")]
-		public int XoaBatch([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchID", DbType="NVarChar(255)")] string batchID)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinishDeSo_NotGood")]
+		public ISingleResult<GetBatNotFinishDeSo_NotGoodResult> GetBatNotFinishDeSo_NotGood([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string city)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchID);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, city);
+			return ((ISingleResult<GetBatNotFinishDeSo_NotGoodResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateBatchChiaUser")]
+		public int UpdateBatchChiaUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchID", DbType="NVarChar(100)")] string batchID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> status)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchID, status);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -273,11 +264,53 @@ namespace BaoCaoLuong_12_2017
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateBatchChiaUser")]
-		public int UpdateBatchChiaUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchID", DbType="NVarChar(100)")] string batchID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> status)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatch_Full")]
+		public ISingleResult<GetBatch_FullResult> GetBatch_Full([global::System.Data.Linq.Mapping.ParameterAttribute(Name="City", DbType="NVarChar(255)")] string city)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchID, status);
-			return ((int)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), city);
+			return ((ISingleResult<GetBatch_FullResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CheckBatchChiaUser")]
+		public ISingleResult<CheckBatchChiaUserResult> CheckBatchChiaUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Batch", DbType="NVarChar(255)")] string batch, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City", DbType="NVarChar(255)")] string city)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batch, city);
+			return ((ISingleResult<CheckBatchChiaUserResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetSoLuongPhieu")]
+		public ISingleResult<GetSoLuongPhieuResult> GetSoLuongPhieu([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Batch", DbType="NVarChar(255)")] string batch, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City", DbType="NVarChar(255)")] string city, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="User", DbType="NVarChar(255)")] string user)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batch, city, user);
+			return ((ISingleResult<GetSoLuongPhieuResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetImage_MissImage")]
+		public ISingleResult<GetImage_MissImageResult> GetImage_MissImage([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchID", DbType="NVarChar(255)")] string batchID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="User", DbType="NVarChar(255)")] string user, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City", DbType="NVarChar(255)")] string city)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchID, user, city);
+			return ((ISingleResult<GetImage_MissImageResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetImage_Group_Good")]
+		public ISingleResult<GetImage_Group_GoodResult> GetImage_Group_Good([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchID", DbType="NVarChar(255)")] string batchID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City", DbType="NVarChar(255)")] string city)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchID, username, city);
+			return ((ISingleResult<GetImage_Group_GoodResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetImage_Group_Notgood")]
+		public ISingleResult<GetImage_Group_NotgoodResult> GetImage_Group_Notgood([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchID", DbType="NVarChar(255)")] string batchID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City", DbType="NVarChar(255)")] string city)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchID, username, city);
+			return ((ISingleResult<GetImage_Group_NotgoodResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.LayHinhMoi_DeSo")]
+		public ISingleResult<LayHinhMoi_DeSoResult> LayHinhMoi_DeSo([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchID", DbType="NVarChar(255)")] string batchID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City", DbType="NVarChar(255)")] string city)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchID, username, city);
+			return ((ISingleResult<LayHinhMoi_DeSoResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -3769,13 +3802,13 @@ namespace BaoCaoLuong_12_2017
 		
 		private int _ReadImageDeSo;
 		
-		private System.Nullable<int> _CheckedDeSo;
+		private int _CheckedDeSo;
 		
-		private System.Nullable<int> _CheckedDeSo_QC;
+		private int _CheckedDeSo_QC;
 		
-		private System.Nullable<int> _CheckedDeJP;
+		private int _CheckedDeJP;
 		
-		private System.Nullable<int> _CheckedDeJP_QC;
+		private int _CheckedDeJP_QC;
 		
 		private string _UserNameDeJP;
 		
@@ -3785,15 +3818,23 @@ namespace BaoCaoLuong_12_2017
 		
 		private string _TienDoDeJP;
 		
-		private System.Nullable<int> _FlagReadDeSo_Good;
+		private int _FlagReadDeSo_Good;
 		
-		private string _UserNameGood;
+		private int _FlagReadDeSo_NotGood;
 		
-		private System.Nullable<int> _FlagReadDeSo_NotGood;
+		private int _FlagReadDeJP_Good;
 		
-		private string _UserNameNotGood;
+		private int _FlagReadDeJP_NotGood;
 		
-		private System.Nullable<bool> _CheckQC;
+		private string _UserNameDeSoGood;
+		
+		private string _UserNameDeSoNotGood;
+		
+		private string _UserNameDeJPGood;
+		
+		private string _UserNameDeJPNotGood;
+		
+		private bool _CheckQC;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3809,13 +3850,13 @@ namespace BaoCaoLuong_12_2017
     partial void OnUserNameDeSoChanged();
     partial void OnReadImageDeSoChanging(int value);
     partial void OnReadImageDeSoChanged();
-    partial void OnCheckedDeSoChanging(System.Nullable<int> value);
+    partial void OnCheckedDeSoChanging(int value);
     partial void OnCheckedDeSoChanged();
-    partial void OnCheckedDeSo_QCChanging(System.Nullable<int> value);
+    partial void OnCheckedDeSo_QCChanging(int value);
     partial void OnCheckedDeSo_QCChanged();
-    partial void OnCheckedDeJPChanging(System.Nullable<int> value);
+    partial void OnCheckedDeJPChanging(int value);
     partial void OnCheckedDeJPChanged();
-    partial void OnCheckedDeJP_QCChanging(System.Nullable<int> value);
+    partial void OnCheckedDeJP_QCChanging(int value);
     partial void OnCheckedDeJP_QCChanged();
     partial void OnUserNameDeJPChanging(string value);
     partial void OnUserNameDeJPChanged();
@@ -3825,15 +3866,23 @@ namespace BaoCaoLuong_12_2017
     partial void OnTienDoDeSoChanged();
     partial void OnTienDoDeJPChanging(string value);
     partial void OnTienDoDeJPChanged();
-    partial void OnFlagReadDeSo_GoodChanging(System.Nullable<int> value);
+    partial void OnFlagReadDeSo_GoodChanging(int value);
     partial void OnFlagReadDeSo_GoodChanged();
-    partial void OnUserNameGoodChanging(string value);
-    partial void OnUserNameGoodChanged();
-    partial void OnFlagReadDeSo_NotGoodChanging(System.Nullable<int> value);
+    partial void OnFlagReadDeSo_NotGoodChanging(int value);
     partial void OnFlagReadDeSo_NotGoodChanged();
-    partial void OnUserNameNotGoodChanging(string value);
-    partial void OnUserNameNotGoodChanged();
-    partial void OnCheckQCChanging(System.Nullable<bool> value);
+    partial void OnFlagReadDeJP_GoodChanging(int value);
+    partial void OnFlagReadDeJP_GoodChanged();
+    partial void OnFlagReadDeJP_NotGoodChanging(int value);
+    partial void OnFlagReadDeJP_NotGoodChanged();
+    partial void OnUserNameDeSoGoodChanging(string value);
+    partial void OnUserNameDeSoGoodChanged();
+    partial void OnUserNameDeSoNotGoodChanging(string value);
+    partial void OnUserNameDeSoNotGoodChanged();
+    partial void OnUserNameDeJPGoodChanging(string value);
+    partial void OnUserNameDeJPGoodChanged();
+    partial void OnUserNameDeJPNotGoodChanging(string value);
+    partial void OnUserNameDeJPNotGoodChanged();
+    partial void OnCheckQCChanging(bool value);
     partial void OnCheckQCChanged();
     #endregion
 		
@@ -3902,7 +3951,7 @@ namespace BaoCaoLuong_12_2017
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameDeSo", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameDeSo", DbType="NVarChar(255)")]
 		public string UserNameDeSo
 		{
 			get
@@ -3942,8 +3991,8 @@ namespace BaoCaoLuong_12_2017
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckedDeSo", DbType="Int")]
-		public System.Nullable<int> CheckedDeSo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckedDeSo", DbType="Int NOT NULL")]
+		public int CheckedDeSo
 		{
 			get
 			{
@@ -3962,8 +4011,8 @@ namespace BaoCaoLuong_12_2017
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckedDeSo_QC", DbType="Int")]
-		public System.Nullable<int> CheckedDeSo_QC
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckedDeSo_QC", DbType="Int NOT NULL")]
+		public int CheckedDeSo_QC
 		{
 			get
 			{
@@ -3982,8 +4031,8 @@ namespace BaoCaoLuong_12_2017
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckedDeJP", DbType="Int")]
-		public System.Nullable<int> CheckedDeJP
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckedDeJP", DbType="Int NOT NULL")]
+		public int CheckedDeJP
 		{
 			get
 			{
@@ -4002,8 +4051,8 @@ namespace BaoCaoLuong_12_2017
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckedDeJP_QC", DbType="Int")]
-		public System.Nullable<int> CheckedDeJP_QC
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckedDeJP_QC", DbType="Int NOT NULL")]
+		public int CheckedDeJP_QC
 		{
 			get
 			{
@@ -4102,8 +4151,8 @@ namespace BaoCaoLuong_12_2017
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FlagReadDeSo_Good", DbType="Int")]
-		public System.Nullable<int> FlagReadDeSo_Good
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FlagReadDeSo_Good", DbType="Int NOT NULL")]
+		public int FlagReadDeSo_Good
 		{
 			get
 			{
@@ -4122,28 +4171,8 @@ namespace BaoCaoLuong_12_2017
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameGood", DbType="NVarChar(255)")]
-		public string UserNameGood
-		{
-			get
-			{
-				return this._UserNameGood;
-			}
-			set
-			{
-				if ((this._UserNameGood != value))
-				{
-					this.OnUserNameGoodChanging(value);
-					this.SendPropertyChanging();
-					this._UserNameGood = value;
-					this.SendPropertyChanged("UserNameGood");
-					this.OnUserNameGoodChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FlagReadDeSo_NotGood", DbType="Int")]
-		public System.Nullable<int> FlagReadDeSo_NotGood
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FlagReadDeSo_NotGood", DbType="Int NOT NULL")]
+		public int FlagReadDeSo_NotGood
 		{
 			get
 			{
@@ -4162,28 +4191,128 @@ namespace BaoCaoLuong_12_2017
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameNotGood", DbType="NVarChar(255)")]
-		public string UserNameNotGood
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FlagReadDeJP_Good", DbType="Int NOT NULL")]
+		public int FlagReadDeJP_Good
 		{
 			get
 			{
-				return this._UserNameNotGood;
+				return this._FlagReadDeJP_Good;
 			}
 			set
 			{
-				if ((this._UserNameNotGood != value))
+				if ((this._FlagReadDeJP_Good != value))
 				{
-					this.OnUserNameNotGoodChanging(value);
+					this.OnFlagReadDeJP_GoodChanging(value);
 					this.SendPropertyChanging();
-					this._UserNameNotGood = value;
-					this.SendPropertyChanged("UserNameNotGood");
-					this.OnUserNameNotGoodChanged();
+					this._FlagReadDeJP_Good = value;
+					this.SendPropertyChanged("FlagReadDeJP_Good");
+					this.OnFlagReadDeJP_GoodChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckQC", DbType="Bit")]
-		public System.Nullable<bool> CheckQC
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FlagReadDeJP_NotGood", DbType="Int NOT NULL")]
+		public int FlagReadDeJP_NotGood
+		{
+			get
+			{
+				return this._FlagReadDeJP_NotGood;
+			}
+			set
+			{
+				if ((this._FlagReadDeJP_NotGood != value))
+				{
+					this.OnFlagReadDeJP_NotGoodChanging(value);
+					this.SendPropertyChanging();
+					this._FlagReadDeJP_NotGood = value;
+					this.SendPropertyChanged("FlagReadDeJP_NotGood");
+					this.OnFlagReadDeJP_NotGoodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameDeSoGood", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string UserNameDeSoGood
+		{
+			get
+			{
+				return this._UserNameDeSoGood;
+			}
+			set
+			{
+				if ((this._UserNameDeSoGood != value))
+				{
+					this.OnUserNameDeSoGoodChanging(value);
+					this.SendPropertyChanging();
+					this._UserNameDeSoGood = value;
+					this.SendPropertyChanged("UserNameDeSoGood");
+					this.OnUserNameDeSoGoodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameDeSoNotGood", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string UserNameDeSoNotGood
+		{
+			get
+			{
+				return this._UserNameDeSoNotGood;
+			}
+			set
+			{
+				if ((this._UserNameDeSoNotGood != value))
+				{
+					this.OnUserNameDeSoNotGoodChanging(value);
+					this.SendPropertyChanging();
+					this._UserNameDeSoNotGood = value;
+					this.SendPropertyChanged("UserNameDeSoNotGood");
+					this.OnUserNameDeSoNotGoodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameDeJPGood", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string UserNameDeJPGood
+		{
+			get
+			{
+				return this._UserNameDeJPGood;
+			}
+			set
+			{
+				if ((this._UserNameDeJPGood != value))
+				{
+					this.OnUserNameDeJPGoodChanging(value);
+					this.SendPropertyChanging();
+					this._UserNameDeJPGood = value;
+					this.SendPropertyChanged("UserNameDeJPGood");
+					this.OnUserNameDeJPGoodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameDeJPNotGood", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string UserNameDeJPNotGood
+		{
+			get
+			{
+				return this._UserNameDeJPNotGood;
+			}
+			set
+			{
+				if ((this._UserNameDeJPNotGood != value))
+				{
+					this.OnUserNameDeJPNotGoodChanging(value);
+					this.SendPropertyChanging();
+					this._UserNameDeJPNotGood = value;
+					this.SendPropertyChanged("UserNameDeJPNotGood");
+					this.OnUserNameDeJPNotGoodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckQC", DbType="Bit NOT NULL")]
+		public bool CheckQC
 		{
 			get
 			{
@@ -4837,6 +4966,1054 @@ namespace BaoCaoLuong_12_2017
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class GetBatchResult
+	{
+		
+		private string _BatchID;
+		
+		private string _City;
+		
+		private string _BatchName;
+		
+		private System.Nullable<System.DateTime> _DateCreate;
+		
+		private string _UserCreate;
+		
+		private string _PathPicture;
+		
+		private string _Location;
+		
+		private string _NumberImage;
+		
+		private string _BatchType;
+		
+		private System.Nullable<bool> _ChiaUser;
+		
+		private System.Nullable<bool> _CongKhaiBatch;
+		
+		public GetBatchResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchID", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchID
+		{
+			get
+			{
+				return this._BatchID;
+			}
+			set
+			{
+				if ((this._BatchID != value))
+				{
+					this._BatchID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string City
+		{
+			get
+			{
+				return this._City;
+			}
+			set
+			{
+				if ((this._City != value))
+				{
+					this._City = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchName", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchName
+		{
+			get
+			{
+				return this._BatchName;
+			}
+			set
+			{
+				if ((this._BatchName != value))
+				{
+					this._BatchName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCreate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DateCreate
+		{
+			get
+			{
+				return this._DateCreate;
+			}
+			set
+			{
+				if ((this._DateCreate != value))
+				{
+					this._DateCreate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCreate", DbType="NVarChar(255)")]
+		public string UserCreate
+		{
+			get
+			{
+				return this._UserCreate;
+			}
+			set
+			{
+				if ((this._UserCreate != value))
+				{
+					this._UserCreate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PathPicture", DbType="NVarChar(255)")]
+		public string PathPicture
+		{
+			get
+			{
+				return this._PathPicture;
+			}
+			set
+			{
+				if ((this._PathPicture != value))
+				{
+					this._PathPicture = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location", DbType="NVarChar(255)")]
+		public string Location
+		{
+			get
+			{
+				return this._Location;
+			}
+			set
+			{
+				if ((this._Location != value))
+				{
+					this._Location = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumberImage", DbType="NVarChar(255)")]
+		public string NumberImage
+		{
+			get
+			{
+				return this._NumberImage;
+			}
+			set
+			{
+				if ((this._NumberImage != value))
+				{
+					this._NumberImage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchType", DbType="NVarChar(255)")]
+		public string BatchType
+		{
+			get
+			{
+				return this._BatchType;
+			}
+			set
+			{
+				if ((this._BatchType != value))
+				{
+					this._BatchType = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ChiaUser", DbType="Bit")]
+		public System.Nullable<bool> ChiaUser
+		{
+			get
+			{
+				return this._ChiaUser;
+			}
+			set
+			{
+				if ((this._ChiaUser != value))
+				{
+					this._ChiaUser = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CongKhaiBatch", DbType="Bit")]
+		public System.Nullable<bool> CongKhaiBatch
+		{
+			get
+			{
+				return this._CongKhaiBatch;
+			}
+			set
+			{
+				if ((this._CongKhaiBatch != value))
+				{
+					this._CongKhaiBatch = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatNotFinishCheckerDeJPResult
+	{
+		
+		private string _BatchID;
+		
+		public GetBatNotFinishCheckerDeJPResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchID", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchID
+		{
+			get
+			{
+				return this._BatchID;
+			}
+			set
+			{
+				if ((this._BatchID != value))
+				{
+					this._BatchID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatNotFinishCheckerDeSoResult
+	{
+		
+		private string _BatchID;
+		
+		public GetBatNotFinishCheckerDeSoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchID", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchID
+		{
+			get
+			{
+				return this._BatchID;
+			}
+			set
+			{
+				if ((this._BatchID != value))
+				{
+					this._BatchID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatNotFinishDeJP_GoodResult
+	{
+		
+		private string _BatchID;
+		
+		public GetBatNotFinishDeJP_GoodResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchID", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchID
+		{
+			get
+			{
+				return this._BatchID;
+			}
+			set
+			{
+				if ((this._BatchID != value))
+				{
+					this._BatchID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatNotFinishDeJP_NotGoodResult
+	{
+		
+		private string _BatchID;
+		
+		public GetBatNotFinishDeJP_NotGoodResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchID", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchID
+		{
+			get
+			{
+				return this._BatchID;
+			}
+			set
+			{
+				if ((this._BatchID != value))
+				{
+					this._BatchID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatNotFinishDeSo_GoodResult
+	{
+		
+		private string _BatchID;
+		
+		public GetBatNotFinishDeSo_GoodResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchID", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchID
+		{
+			get
+			{
+				return this._BatchID;
+			}
+			set
+			{
+				if ((this._BatchID != value))
+				{
+					this._BatchID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatNotFinishDeSo_NotGoodResult
+	{
+		
+		private string _BatchID;
+		
+		public GetBatNotFinishDeSo_NotGoodResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchID", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchID
+		{
+			get
+			{
+				return this._BatchID;
+			}
+			set
+			{
+				if ((this._BatchID != value))
+				{
+					this._BatchID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatch_FullResult
+	{
+		
+		private string _BatchID;
+		
+		private string _City;
+		
+		private string _BatchName;
+		
+		private System.Nullable<System.DateTime> _DateCreate;
+		
+		private string _UserCreate;
+		
+		private string _PathPicture;
+		
+		private string _Location;
+		
+		private string _NumberImage;
+		
+		private string _BatchType;
+		
+		private System.Nullable<bool> _ChiaUser;
+		
+		private System.Nullable<bool> _CongKhaiBatch;
+		
+		public GetBatch_FullResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchID", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchID
+		{
+			get
+			{
+				return this._BatchID;
+			}
+			set
+			{
+				if ((this._BatchID != value))
+				{
+					this._BatchID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string City
+		{
+			get
+			{
+				return this._City;
+			}
+			set
+			{
+				if ((this._City != value))
+				{
+					this._City = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchName", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchName
+		{
+			get
+			{
+				return this._BatchName;
+			}
+			set
+			{
+				if ((this._BatchName != value))
+				{
+					this._BatchName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCreate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DateCreate
+		{
+			get
+			{
+				return this._DateCreate;
+			}
+			set
+			{
+				if ((this._DateCreate != value))
+				{
+					this._DateCreate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCreate", DbType="NVarChar(255)")]
+		public string UserCreate
+		{
+			get
+			{
+				return this._UserCreate;
+			}
+			set
+			{
+				if ((this._UserCreate != value))
+				{
+					this._UserCreate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PathPicture", DbType="NVarChar(255)")]
+		public string PathPicture
+		{
+			get
+			{
+				return this._PathPicture;
+			}
+			set
+			{
+				if ((this._PathPicture != value))
+				{
+					this._PathPicture = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location", DbType="NVarChar(255)")]
+		public string Location
+		{
+			get
+			{
+				return this._Location;
+			}
+			set
+			{
+				if ((this._Location != value))
+				{
+					this._Location = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumberImage", DbType="NVarChar(255)")]
+		public string NumberImage
+		{
+			get
+			{
+				return this._NumberImage;
+			}
+			set
+			{
+				if ((this._NumberImage != value))
+				{
+					this._NumberImage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchType", DbType="NVarChar(255)")]
+		public string BatchType
+		{
+			get
+			{
+				return this._BatchType;
+			}
+			set
+			{
+				if ((this._BatchType != value))
+				{
+					this._BatchType = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ChiaUser", DbType="Bit")]
+		public System.Nullable<bool> ChiaUser
+		{
+			get
+			{
+				return this._ChiaUser;
+			}
+			set
+			{
+				if ((this._ChiaUser != value))
+				{
+					this._ChiaUser = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CongKhaiBatch", DbType="Bit")]
+		public System.Nullable<bool> CongKhaiBatch
+		{
+			get
+			{
+				return this._CongKhaiBatch;
+			}
+			set
+			{
+				if ((this._CongKhaiBatch != value))
+				{
+					this._CongKhaiBatch = value;
+				}
+			}
+		}
+	}
+	
+	public partial class CheckBatchChiaUserResult
+	{
+		
+		private System.Nullable<bool> _ChiaUser;
+		
+		public CheckBatchChiaUserResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ChiaUser", DbType="Bit")]
+		public System.Nullable<bool> ChiaUser
+		{
+			get
+			{
+				return this._ChiaUser;
+			}
+			set
+			{
+				if ((this._ChiaUser != value))
+				{
+					this._ChiaUser = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetSoLuongPhieuResult
+	{
+		
+		private System.Nullable<int> _SoPhieuCon;
+		
+		private System.Nullable<int> _SoPhieuNhap;
+		
+		public GetSoLuongPhieuResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoPhieuCon", DbType="Int")]
+		public System.Nullable<int> SoPhieuCon
+		{
+			get
+			{
+				return this._SoPhieuCon;
+			}
+			set
+			{
+				if ((this._SoPhieuCon != value))
+				{
+					this._SoPhieuCon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoPhieuNhap", DbType="Int")]
+		public System.Nullable<int> SoPhieuNhap
+		{
+			get
+			{
+				return this._SoPhieuNhap;
+			}
+			set
+			{
+				if ((this._SoPhieuNhap != value))
+				{
+					this._SoPhieuNhap = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetImage_MissImageResult
+	{
+		
+		private long _ID;
+		
+		private string _BatchID;
+		
+		private string _IDImage;
+		
+		private string _UserName;
+		
+		private System.Nullable<bool> _Submit;
+		
+		private System.Nullable<System.DateTime> _Start_Date;
+		
+		private System.Nullable<System.DateTime> _End_Date;
+		
+		private string _BatchID1;
+		
+		private string _City;
+		
+		private string _BatchName;
+		
+		private System.Nullable<System.DateTime> _DateCreate;
+		
+		private string _UserCreate;
+		
+		private string _PathPicture;
+		
+		private string _Location;
+		
+		private string _NumberImage;
+		
+		private string _BatchType;
+		
+		private System.Nullable<bool> _ChiaUser;
+		
+		private System.Nullable<bool> _CongKhaiBatch;
+		
+		public GetImage_MissImageResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="BigInt NOT NULL")]
+		public long ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchID", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchID
+		{
+			get
+			{
+				return this._BatchID;
+			}
+			set
+			{
+				if ((this._BatchID != value))
+				{
+					this._BatchID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDImage", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string IDImage
+		{
+			get
+			{
+				return this._IDImage;
+			}
+			set
+			{
+				if ((this._IDImage != value))
+				{
+					this._IDImage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Submit", DbType="Bit")]
+		public System.Nullable<bool> Submit
+		{
+			get
+			{
+				return this._Submit;
+			}
+			set
+			{
+				if ((this._Submit != value))
+				{
+					this._Submit = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Start_Date", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Start_Date
+		{
+			get
+			{
+				return this._Start_Date;
+			}
+			set
+			{
+				if ((this._Start_Date != value))
+				{
+					this._Start_Date = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_End_Date", DbType="DateTime")]
+		public System.Nullable<System.DateTime> End_Date
+		{
+			get
+			{
+				return this._End_Date;
+			}
+			set
+			{
+				if ((this._End_Date != value))
+				{
+					this._End_Date = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchID1", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchID1
+		{
+			get
+			{
+				return this._BatchID1;
+			}
+			set
+			{
+				if ((this._BatchID1 != value))
+				{
+					this._BatchID1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string City
+		{
+			get
+			{
+				return this._City;
+			}
+			set
+			{
+				if ((this._City != value))
+				{
+					this._City = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchName", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string BatchName
+		{
+			get
+			{
+				return this._BatchName;
+			}
+			set
+			{
+				if ((this._BatchName != value))
+				{
+					this._BatchName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCreate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DateCreate
+		{
+			get
+			{
+				return this._DateCreate;
+			}
+			set
+			{
+				if ((this._DateCreate != value))
+				{
+					this._DateCreate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCreate", DbType="NVarChar(255)")]
+		public string UserCreate
+		{
+			get
+			{
+				return this._UserCreate;
+			}
+			set
+			{
+				if ((this._UserCreate != value))
+				{
+					this._UserCreate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PathPicture", DbType="NVarChar(255)")]
+		public string PathPicture
+		{
+			get
+			{
+				return this._PathPicture;
+			}
+			set
+			{
+				if ((this._PathPicture != value))
+				{
+					this._PathPicture = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location", DbType="NVarChar(255)")]
+		public string Location
+		{
+			get
+			{
+				return this._Location;
+			}
+			set
+			{
+				if ((this._Location != value))
+				{
+					this._Location = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumberImage", DbType="NVarChar(255)")]
+		public string NumberImage
+		{
+			get
+			{
+				return this._NumberImage;
+			}
+			set
+			{
+				if ((this._NumberImage != value))
+				{
+					this._NumberImage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchType", DbType="NVarChar(255)")]
+		public string BatchType
+		{
+			get
+			{
+				return this._BatchType;
+			}
+			set
+			{
+				if ((this._BatchType != value))
+				{
+					this._BatchType = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ChiaUser", DbType="Bit")]
+		public System.Nullable<bool> ChiaUser
+		{
+			get
+			{
+				return this._ChiaUser;
+			}
+			set
+			{
+				if ((this._ChiaUser != value))
+				{
+					this._ChiaUser = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CongKhaiBatch", DbType="Bit")]
+		public System.Nullable<bool> CongKhaiBatch
+		{
+			get
+			{
+				return this._CongKhaiBatch;
+			}
+			set
+			{
+				if ((this._CongKhaiBatch != value))
+				{
+					this._CongKhaiBatch = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetImage_Group_GoodResult
+	{
+		
+		private string _Column1;
+		
+		public GetImage_Group_GoodResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(255)")]
+		public string Column1
+		{
+			get
+			{
+				return this._Column1;
+			}
+			set
+			{
+				if ((this._Column1 != value))
+				{
+					this._Column1 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetImage_Group_NotgoodResult
+	{
+		
+		private string _Column1;
+		
+		public GetImage_Group_NotgoodResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(255)")]
+		public string Column1
+		{
+			get
+			{
+				return this._Column1;
+			}
+			set
+			{
+				if ((this._Column1 != value))
+				{
+					this._Column1 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class LayHinhMoi_DeSoResult
+	{
+		
+		private string _Column1;
+		
+		public LayHinhMoi_DeSoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(255)")]
+		public string Column1
+		{
+			get
+			{
+				return this._Column1;
+			}
+			set
+			{
+				if ((this._Column1 != value))
+				{
+					this._Column1 = value;
+				}
 			}
 		}
 	}

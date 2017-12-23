@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Base;
+using System.IO;
 
 namespace BaoCaoLuong_12_2017.MyForm
 {
@@ -18,6 +19,13 @@ namespace BaoCaoLuong_12_2017.MyForm
 
         private void frm_ManagerBatch_Load(object sender, EventArgs e)
         {
+            cbb_City.Items.Add(new { Text = "", Value = "" });
+            cbb_City.Items.Add(new { Text = "CityN", Value = "CityS" });
+            cbb_City.Items.Add(new { Text = "CityO", Value = "CityO" });
+            cbb_City.Items.Add(new { Text = "CityS", Value = "CityS" });
+            cbb_City.DisplayMember = "Text";
+            cbb_City.ValueMember = "Value";
+            cbb_City.SelectedText = Global.StrCity;
             refresh();
         }
 
@@ -38,17 +46,19 @@ namespace BaoCaoLuong_12_2017.MyForm
 
         private void refresh()
         {
-            gridControl1.DataSource = (from var in Global.Db.GetBatch_Full() select var).ToList();
+            gridControl1.DataSource = (from var in Global.Db.GetBatch_Full(cbb_City.Text) select var).ToList();
         }
         
         private void btn_Xoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             string BatchID = gridView1.GetFocusedRowCellValue("BatchID").ToString();
-            DialogResult dlr = (MessageBox.Show("Bạn đang thực hiện xóa batch: " + BatchID + "\nYes = xóa batch này \nNo = không thực hiện xóa", "Thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Warning,MessageBoxDefaultButton.Button2));
+            DialogResult dlr = (MessageBox.Show("Bạn đang thực hiện xóa batch: " + gridView1.GetFocusedRowCellValue("BatchName").ToString() + "\nYes = xóa batch này \nNo = không thực hiện xóa", "Thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Warning,MessageBoxDefaultButton.Button2));
             if (dlr == DialogResult.Yes)
             {
                 try
                 {
+                    string temp = Global.StrPath + "\\" + BatchID;
+                    Directory.Delete(temp, true);
                     Global.Db.XoaBatch(BatchID);
                     MessageBox.Show("Đã xóa batch thành công!");
                 }
@@ -62,7 +72,9 @@ namespace BaoCaoLuong_12_2017.MyForm
 
         private void btn_TaoBatch_Click(object sender, EventArgs e)
         {
-            new frm_CreateBatch().ShowDialog();
+            frm_CreateBatch a =new frm_CreateBatch();
+            a.City = cbb_City.Text;
+            a.ShowDialog();
             refresh();
         }
 
@@ -73,7 +85,7 @@ namespace BaoCaoLuong_12_2017.MyForm
             foreach (var rowHandle in gridView1.GetSelectedRows())
             {
                 i += 1;
-                string BatchID = gridView1.GetRowCellValue(rowHandle, "BatchID").ToString();
+                string BatchID = gridView1.GetRowCellValue(rowHandle, "BatchName").ToString();
                 s += BatchID + "\n";
             }
             if (i <= 0)
@@ -88,6 +100,8 @@ namespace BaoCaoLuong_12_2017.MyForm
                 foreach (var rowHandle in gridView1.GetSelectedRows())
                 {
                     string BatchID = gridView1.GetRowCellValue(rowHandle, "BatchID").ToString();
+                    string temp = Global.StrPath + "\\" + BatchID;
+                    Directory.Delete(temp, true);
                     Global.Db.XoaBatch(BatchID);
                 }
             }
@@ -151,6 +165,23 @@ namespace BaoCaoLuong_12_2017.MyForm
             {
                 MessageBox.Show("Lỗi : " + i.Message);
             }
+        }
+
+        private void cbb_City_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar != 3)
+                e.Handled = true;
+        }
+
+        private void cbb_City_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete)
+                cbb_City.Text = "";
+        }
+
+        private void cbb_City_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            refresh();
         }
     }
 }

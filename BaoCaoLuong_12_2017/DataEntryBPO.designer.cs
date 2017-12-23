@@ -342,6 +342,20 @@ namespace BaoCaoLuong_12_2017
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), project, flag);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdatePassword")]
+		public int UpdatePassword([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PassWordOld", DbType="NVarChar(255)")] string passWordOld, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PassWordNew", DbType="NVarChar(255)")] string passWordNew)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, passWordOld, passWordNew);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CheckLevelUser")]
+		public ISingleResult<CheckLevelUserResult> CheckLevelUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName);
+			return ((ISingleResult<CheckLevelUserResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ContentChatSocket")]
@@ -3479,6 +3493,32 @@ namespace BaoCaoLuong_12_2017
 					this._Group_Level = value;
 				}
 			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NotGoodUser", DbType="Bit")]
+		public System.Nullable<bool> NotGoodUser
+		{
+			get
+			{
+				return this._NotGoodUser;
+			}
+			set
+			{
+				if ((this._NotGoodUser != value))
+				{
+					this._NotGoodUser = value;
+				}
+			}
+		}
+	}
+	
+	public partial class CheckLevelUserResult
+	{
+		
+		private System.Nullable<bool> _NotGoodUser;
+		
+		public CheckLevelUserResult()
+		{
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NotGoodUser", DbType="Bit")]

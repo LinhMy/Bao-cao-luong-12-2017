@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.tp_DeSo = new DevExpress.XtraTab.XtraTabPage();
+            this.pn_Main = new DevExpress.XtraTab.XtraTabControl();
+            this.tab_CityO_Loai1 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btn_Pause = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Submit_Logout = new DevExpress.XtraEditors.SimpleButton();
@@ -92,6 +95,11 @@
             this.uc_PictureBox1 = new BaoCaoLuong_12_2017.MyUserControl.uc_PictureBox();
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.splitMain = new DevExpress.XtraEditors.SplitContainerControl();
+            this.uC_CityO_Loai11 = new BaoCaoLuong_12_2017.MyUserControl.UC_CityO_Loai1();
+            this.tp_DeSo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pn_Main)).BeginInit();
+            this.pn_Main.SuspendLayout();
+            this.tab_CityO_Loai1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -113,8 +121,34 @@
             // 
             // tp_DeSo
             // 
+            this.tp_DeSo.Controls.Add(this.pn_Main);
             this.tp_DeSo.Name = "tp_DeSo";
-            this.tp_DeSo.Size = new System.Drawing.Size(443, 581);
+            this.tp_DeSo.Size = new System.Drawing.Size(309, 581);
+            // 
+            // pn_Main
+            // 
+            this.pn_Main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_Main.Location = new System.Drawing.Point(0, 0);
+            this.pn_Main.Name = "pn_Main";
+            this.pn_Main.SelectedTabPage = this.tab_CityO_Loai1;
+            this.pn_Main.Size = new System.Drawing.Size(309, 581);
+            this.pn_Main.TabIndex = 0;
+            this.pn_Main.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.tab_CityO_Loai1,
+            this.xtraTabPage2});
+            // 
+            // tab_CityO_Loai1
+            // 
+            this.tab_CityO_Loai1.Controls.Add(this.uC_CityO_Loai11);
+            this.tab_CityO_Loai1.Name = "tab_CityO_Loai1";
+            this.tab_CityO_Loai1.Size = new System.Drawing.Size(303, 553);
+            this.tab_CityO_Loai1.Text = "CityO Loại 1";
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(303, 553);
+            this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // panelControl2
             // 
@@ -124,13 +158,13 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl2.Location = new System.Drawing.Point(2, 589);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(449, 30);
+            this.panelControl2.Size = new System.Drawing.Size(315, 30);
             this.panelControl2.TabIndex = 1;
             // 
             // btn_Pause
             // 
             this.btn_Pause.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Pause.Location = new System.Drawing.Point(286, 2);
+            this.btn_Pause.Location = new System.Drawing.Point(219, 2);
             this.btn_Pause.Name = "btn_Pause";
             this.btn_Pause.Size = new System.Drawing.Size(75, 25);
             this.btn_Pause.TabIndex = 3;
@@ -142,7 +176,7 @@
             this.btn_Submit_Logout.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Submit_Logout.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Submit_Logout.Appearance.Options.UseFont = true;
-            this.btn_Submit_Logout.Location = new System.Drawing.Point(177, 2);
+            this.btn_Submit_Logout.Location = new System.Drawing.Point(110, 2);
             this.btn_Submit_Logout.Name = "btn_Submit_Logout";
             this.btn_Submit_Logout.Size = new System.Drawing.Size(106, 25);
             this.btn_Submit_Logout.TabIndex = 2;
@@ -154,7 +188,7 @@
             this.btn_Submit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Submit.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Submit.Appearance.Options.UseFont = true;
-            this.btn_Submit.Location = new System.Drawing.Point(98, 2);
+            this.btn_Submit.Location = new System.Drawing.Point(31, 2);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(74, 25);
             this.btn_Submit.TabIndex = 1;
@@ -168,7 +202,7 @@
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.tp_DeSo;
             this.xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
-            this.xtraTabControl1.Size = new System.Drawing.Size(449, 587);
+            this.xtraTabControl1.Size = new System.Drawing.Size(315, 587);
             this.xtraTabControl1.TabIndex = 1;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tp_DeSo});
@@ -181,7 +215,7 @@
             this.panel_Right.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Right.Location = new System.Drawing.Point(0, 0);
             this.panel_Right.Name = "panel_Right";
-            this.panel_Right.Size = new System.Drawing.Size(453, 621);
+            this.panel_Right.Size = new System.Drawing.Size(319, 621);
             this.panel_Right.TabIndex = 18;
             // 
             // labelControl1
@@ -635,7 +669,7 @@
             this.uc_PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.uc_PictureBox1.Name = "uc_PictureBox1";
-            this.uc_PictureBox1.Size = new System.Drawing.Size(717, 621);
+            this.uc_PictureBox1.Size = new System.Drawing.Size(851, 621);
             this.uc_PictureBox1.TabIndex = 24;
             // 
             // bar1
@@ -662,10 +696,17 @@
             this.splitMain.Panel2.Controls.Add(this.panel_Right);
             this.splitMain.Panel2.Text = "Panel2";
             this.splitMain.Size = new System.Drawing.Size(1175, 621);
-            this.splitMain.SplitterPosition = 453;
+            this.splitMain.SplitterPosition = 319;
             this.splitMain.TabIndex = 34;
             this.splitMain.Text = "splitContainerControl1";
             this.splitMain.SplitterPositionChanged += new System.EventHandler(this.splitMain_SplitterPositionChanged);
+            // 
+            // uC_CityO_Loai11
+            // 
+            this.uC_CityO_Loai11.Location = new System.Drawing.Point(17, 34);
+            this.uC_CityO_Loai11.Name = "uC_CityO_Loai11";
+            this.uC_CityO_Loai11.Size = new System.Drawing.Size(291, 256);
+            this.uC_CityO_Loai11.TabIndex = 0;
             // 
             // frm_Main
             // 
@@ -686,6 +727,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Main_FormClosing);
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_Main_KeyDown);
+            this.tp_DeSo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pn_Main)).EndInit();
+            this.pn_Main.ResumeLayout(false);
+            this.tab_CityO_Loai1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
@@ -774,5 +819,9 @@
         private DevExpress.XtraBars.BarButtonItem btn_RefreshImageNotInput;
         private DevExpress.XtraBars.BarEditItem ckOutSource;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraTab.XtraTabControl pn_Main;
+        private DevExpress.XtraTab.XtraTabPage tab_CityO_Loai1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private MyUserControl.UC_CityO_Loai1 uC_CityO_Loai11;
     }
 }

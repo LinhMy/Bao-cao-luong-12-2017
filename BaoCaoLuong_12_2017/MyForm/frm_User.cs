@@ -135,6 +135,8 @@ namespace BaoCaoLuong_12_2017.MyForm
         {
             try
             {
+                if (e.RowHandle < 0)
+                    return;
                 string username = gridView1.GetFocusedRowCellValue("Username").ToString();
                 if (e.Column.FieldName == "NotGoodUser")
                 {

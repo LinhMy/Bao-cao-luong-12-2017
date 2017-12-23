@@ -154,7 +154,7 @@
             this.txt_PathFolder.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_PathFolder.Properties.Appearance.Options.UseFont = true;
             this.txt_PathFolder.Size = new System.Drawing.Size(582, 22);
-            this.txt_PathFolder.TabIndex = 2;
+            this.txt_PathFolder.TabIndex = 3;
             this.txt_PathFolder.EditValueChanged += new System.EventHandler(this.txt_PathFolder_EditValueChanged);
             // 
             // txt_Location
@@ -164,7 +164,7 @@
             this.txt_Location.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Location.Properties.Appearance.Options.UseFont = true;
             this.txt_Location.Size = new System.Drawing.Size(582, 22);
-            this.txt_Location.TabIndex = 2;
+            this.txt_Location.TabIndex = 4;
             // 
             // txt_UserCreate
             // 
@@ -174,7 +174,7 @@
             this.txt_UserCreate.Properties.Appearance.Options.UseFont = true;
             this.txt_UserCreate.Properties.ReadOnly = true;
             this.txt_UserCreate.Size = new System.Drawing.Size(400, 22);
-            this.txt_UserCreate.TabIndex = 2;
+            this.txt_UserCreate.TabIndex = 5;
             // 
             // txt_DateCreate
             // 
@@ -184,7 +184,7 @@
             this.txt_DateCreate.Properties.Appearance.Options.UseFont = true;
             this.txt_DateCreate.Properties.ReadOnly = true;
             this.txt_DateCreate.Size = new System.Drawing.Size(400, 22);
-            this.txt_DateCreate.TabIndex = 2;
+            this.txt_DateCreate.TabIndex = 6;
             // 
             // txt_ImagePath
             // 
@@ -194,7 +194,7 @@
             this.txt_ImagePath.Properties.Appearance.Options.UseFont = true;
             this.txt_ImagePath.Properties.ReadOnly = true;
             this.txt_ImagePath.Size = new System.Drawing.Size(582, 22);
-            this.txt_ImagePath.TabIndex = 2;
+            this.txt_ImagePath.TabIndex = 7;
             // 
             // btn_Browser
             // 
@@ -202,8 +202,8 @@
             this.btn_Browser.Appearance.Options.UseFont = true;
             this.btn_Browser.Location = new System.Drawing.Point(756, 94);
             this.btn_Browser.Name = "btn_Browser";
-            this.btn_Browser.Size = new System.Drawing.Size(85, 23);
-            this.btn_Browser.TabIndex = 3;
+            this.btn_Browser.Size = new System.Drawing.Size(92, 23);
+            this.btn_Browser.TabIndex = 10;
             this.btn_Browser.Text = "Browser...";
             this.btn_Browser.Click += new System.EventHandler(this.btn_Browser_Click);
             // 
@@ -213,8 +213,8 @@
             this.btn_BrowserImage.Appearance.Options.UseFont = true;
             this.btn_BrowserImage.Location = new System.Drawing.Point(756, 216);
             this.btn_BrowserImage.Name = "btn_BrowserImage";
-            this.btn_BrowserImage.Size = new System.Drawing.Size(85, 23);
-            this.btn_BrowserImage.TabIndex = 3;
+            this.btn_BrowserImage.Size = new System.Drawing.Size(92, 23);
+            this.btn_BrowserImage.TabIndex = 11;
             this.btn_BrowserImage.Text = "Chọn Image...";
             this.btn_BrowserImage.Click += new System.EventHandler(this.btn_BrowserImage_Click);
             // 
@@ -225,7 +225,7 @@
             this.btn_CreateBatch.Location = new System.Drawing.Point(345, 318);
             this.btn_CreateBatch.Name = "btn_CreateBatch";
             this.btn_CreateBatch.Size = new System.Drawing.Size(164, 44);
-            this.btn_CreateBatch.TabIndex = 4;
+            this.btn_CreateBatch.TabIndex = 12;
             this.btn_CreateBatch.Text = "Tạo Batch";
             this.btn_CreateBatch.Click += new System.EventHandler(this.btn_CreateBatch_Click);
             // 
@@ -253,7 +253,7 @@
             this.lb_SoLuongHinh.Location = new System.Drawing.Point(158, 248);
             this.lb_SoLuongHinh.Name = "lb_SoLuongHinh";
             this.lb_SoLuongHinh.Size = new System.Drawing.Size(0, 19);
-            this.lb_SoLuongHinh.TabIndex = 6;
+            this.lb_SoLuongHinh.TabIndex = 1;
             // 
             // txt_LoaiPhieu
             // 
@@ -263,7 +263,7 @@
             this.txt_LoaiPhieu.Location = new System.Drawing.Point(153, 278);
             this.txt_LoaiPhieu.Name = "txt_LoaiPhieu";
             this.txt_LoaiPhieu.Size = new System.Drawing.Size(100, 24);
-            this.txt_LoaiPhieu.TabIndex = 7;
+            this.txt_LoaiPhieu.TabIndex = 8;
             // 
             // lb_SobatchHoanThanh
             // 
@@ -272,7 +272,7 @@
             this.lb_SobatchHoanThanh.Location = new System.Drawing.Point(105, 340);
             this.lb_SobatchHoanThanh.Name = "lb_SobatchHoanThanh";
             this.lb_SobatchHoanThanh.Size = new System.Drawing.Size(0, 16);
-            this.lb_SobatchHoanThanh.TabIndex = 13;
+            this.lb_SobatchHoanThanh.TabIndex = 1;
             // 
             // panel1
             // 
@@ -290,7 +290,7 @@
             this.progressBar1.Location = new System.Drawing.Point(0, 0);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(860, 25);
-            this.progressBar1.TabIndex = 1;
+            this.progressBar1.TabIndex = 0;
             // 
             // label1
             // 
@@ -299,7 +299,7 @@
             this.label1.Location = new System.Drawing.Point(28, 340);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
-            this.label1.TabIndex = 15;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Batch Số :";
             // 
             // lb_SoImageDaHoanThanh
@@ -309,7 +309,7 @@
             this.lb_SoImageDaHoanThanh.Location = new System.Drawing.Point(124, 340);
             this.lb_SoImageDaHoanThanh.Name = "lb_SoImageDaHoanThanh";
             this.lb_SoImageDaHoanThanh.Size = new System.Drawing.Size(0, 16);
-            this.lb_SoImageDaHoanThanh.TabIndex = 16;
+            this.lb_SoImageDaHoanThanh.TabIndex = 1;
             // 
             // chk_ChiaUser
             // 
@@ -317,7 +317,7 @@
             this.chk_ChiaUser.Location = new System.Drawing.Point(622, 68);
             this.chk_ChiaUser.Name = "chk_ChiaUser";
             this.chk_ChiaUser.Size = new System.Drawing.Size(72, 17);
-            this.chk_ChiaUser.TabIndex = 17;
+            this.chk_ChiaUser.TabIndex = 9;
             this.chk_ChiaUser.Text = "Chia User";
             this.chk_ChiaUser.UseVisualStyleBackColor = true;
             // 

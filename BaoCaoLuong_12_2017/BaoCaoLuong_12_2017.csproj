@@ -115,6 +115,18 @@
     <Compile Include="MyForm\frmLogin.designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frm_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_ChangePassword.designer.cs">
+      <DependentUpon>frm_ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\frm_ChangeServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_ChangeServer.designer.cs">
+      <DependentUpon>frm_ChangeServer.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frm_ChangeZoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     <Compile Include="MyForm\frm_User.designer.cs">
       <DependentUpon>frm_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\CityO_Loai1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\CityO_Loai1.Designer.cs">
+      <DependentUpon>CityO_Loai1.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\uc_PictureBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,6 +186,12 @@
     <EmbeddedResource Include="MyForm\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_ChangePassword.resx">
+      <DependentUpon>frm_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_ChangeServer.resx">
+      <DependentUpon>frm_ChangeServer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_ChangeZoom.resx">
       <DependentUpon>frm_ChangeZoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_User.resx">
       <DependentUpon>frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\CityO_Loai1.resx">
+      <DependentUpon>CityO_Loai1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\uc_PictureBox.resx">
       <DependentUpon>uc_PictureBox.cs</DependentUpon>
