@@ -177,11 +177,11 @@
       <LastGenOutput>DataBaoCaoLuong2018.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataEntryBPO.dbml.layout">
-      <DependentUpon>DataEntryBPO.dbml</DependentUpon>
-    </None>
     <None Include="DataBaoCaoLuong2018.dbml.layout">
       <DependentUpon>DataBaoCaoLuong2018.dbml</DependentUpon>
+    </None>
+    <None Include="DataEntryBPO.dbml.layout">
+      <DependentUpon>DataEntryBPO.dbml</DependentUpon>
     </None>
     <EmbeddedResource Include="MyForm\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
