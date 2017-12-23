@@ -349,6 +349,14 @@ namespace BaoCaoLuong_12_2017
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, passWordOld, passWordNew);
 			return ((int)(result.ReturnValue));
 		}
+	}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdatePassword")]
+		public int UpdatePassword([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PassWordOld", DbType="NVarChar(255)")] string passWordOld, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PassWordNew", DbType="NVarChar(255)")] string passWordNew)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, passWordOld, passWordNew);
+			return ((int)(result.ReturnValue));
+		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CheckLevelUser")]
 		public ISingleResult<CheckLevelUserResult> CheckLevelUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName)

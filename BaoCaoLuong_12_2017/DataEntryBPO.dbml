@@ -326,6 +326,12 @@
     <Parameter Name="PassWordNew" Parameter="passWordNew" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.UpdatePassword" Method="UpdatePassword">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="PassWordOld" Parameter="passWordOld" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="PassWordNew" Parameter="passWordNew" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.CheckLevelUser" Method="CheckLevelUser">
     <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
     <ElementType Name="CheckLevelUserResult">

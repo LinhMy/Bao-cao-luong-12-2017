@@ -55,14 +55,14 @@ namespace BaoCaoLuong_12_2017
         public static bool CheckOutSource(string Role)
         {
             bool? OutSource = (from w in DbBpo.tbl_Versions where w.IDProject == StrIdProject select w.OutSource).FirstOrDefault();
-            if (OutSource == false && Settings.Default.Server == "Khác" && Role == "DESO")
+            if (OutSource == false && Settings.Default.Server == "Khác" && (Role == "DESO"|| Role=="DEJP"))
                 return true;
             return false;
         }
         public static void RunUpdateVersion()
         {
             if (Settings.Default.Server == "Đà Nẵng")
-                Process.Start(@"\\10.10.10.254\DE_Viet\2017\BaoCaoLuong2018_CityO\");
+                Process.Start(@"\\10.10.10.254\DE_Viet\2017\");
             else
                 Process.Start("https://drive.google.com/drive/folders/0BwO0VkvgrRHaeW5meEE4blBHdnc?usp=sharing");
         }

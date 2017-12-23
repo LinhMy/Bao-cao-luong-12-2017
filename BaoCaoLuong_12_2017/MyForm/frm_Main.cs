@@ -739,7 +739,7 @@ namespace BaoCaoLuong_12_2017.MyForm
 
         private void btn_TienDo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           // new FrmTienDo().ShowDialog();
+            new FrmTienDo().ShowDialog();
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -783,8 +783,8 @@ namespace BaoCaoLuong_12_2017.MyForm
 
         private void btn_Pause_Click(object sender, EventArgs e)
         {
-          //  new FrmFreeTime().ShowDialog();
-            //Global.DbBpo.UpdateTimeFree(Global.Token, Global.FreeTime);
+            new FrmFreeTime().ShowDialog();
+            Global.DbBpo.UpdateTimeFree(Global.Token, Global.FreeTime);
         }
 
         private void lb_IdImage_Click(object sender, EventArgs e)
