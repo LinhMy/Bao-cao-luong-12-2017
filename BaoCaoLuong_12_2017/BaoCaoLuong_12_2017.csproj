@@ -37,6 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\PhieuKiemDinh\Source\NewSource2017\PhieuKiemDinh102017-master\PhieuKiemDinh\PhieuKiemDinh\bin\Debug\DevExpress.Charts.v17.1.Core.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Data.v17.1" />
     <Reference Include="DevExpress.Utils.v17.1" />
     <Reference Include="DevExpress.Sparkline.v17.1.Core" />
@@ -47,6 +51,10 @@
     <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\PhieuKiemDinh\Source\PhieuKiemDinh\PhieuKiemDinh\bin\Debug\DevExpress.XtraCharts.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\PhieuKiemDinh\Source\NewSource2017\PhieuKiemDinh102017-master\PhieuKiemDinh\PhieuKiemDinh\bin\Debug\DevExpress.XtraCharts.v17.1.UI.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -104,11 +112,29 @@
     <Compile Include="MyClass\ClsLogin.cs" />
     <Compile Include="MyClass\Global.cs" />
     <Compile Include="MyClass\HashMD5.cs" />
+    <Compile Include="MyForm\FrmFreeTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\FrmFreeTime.designer.cs">
+      <DependentUpon>FrmFreeTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyForm\frmLogin.designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\FrmTienDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\FrmTienDo.designer.cs">
+      <DependentUpon>FrmTienDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\frm_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_ChangePassword.designer.cs">
+      <DependentUpon>frm_ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="MyForm\frm_ChangeServer.cs">
       <SubType>Form</SubType>
@@ -154,8 +180,17 @@
     <None Include="DataBaoCaoLuong2018.dbml.layout">
       <DependentUpon>DataBaoCaoLuong2018.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="MyForm\FrmFreeTime.resx">
+      <DependentUpon>FrmFreeTime.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\FrmTienDo.resx">
+      <DependentUpon>FrmTienDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_ChangePassword.resx">
+      <DependentUpon>frm_ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_ChangeServer.resx">
       <DependentUpon>frm_ChangeServer.cs</DependentUpon>

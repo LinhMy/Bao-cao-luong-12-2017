@@ -150,7 +150,7 @@
             // 
             // btn_ChiTiet
             // 
-            this.btn_ChiTiet.Location = new System.Drawing.Point(550, 35);
+            this.btn_ChiTiet.Location = new System.Drawing.Point(551, 35);
             this.btn_ChiTiet.Name = "btn_ChiTiet";
             this.btn_ChiTiet.Size = new System.Drawing.Size(75, 23);
             this.btn_ChiTiet.TabIndex = 2;
