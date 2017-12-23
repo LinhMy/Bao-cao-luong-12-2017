@@ -266,8 +266,8 @@ namespace BaoCaoLuong_12_2017.MyForm
                 if (ktUser == false)
                 {
                     cbb_batchname.DataSource = Global.Db.GetBatNotFinishDeSo_Good(txt_username.Text, cbb_City.Text);
-                    cbb_batchname.DisplayMember = "fbatchname";
-                    cbb_batchname.ValueMember = "fbatchname";
+                    cbb_batchname.DisplayMember = "BatchID";
+                    cbb_batchname.ValueMember = "BatchID";
                 }
                 else if (ktUser == true)
                 {

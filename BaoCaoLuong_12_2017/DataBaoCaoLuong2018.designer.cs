@@ -249,6 +249,20 @@ namespace BaoCaoLuong_12_2017
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, city);
 			return ((ISingleResult<GetBatNotFinishDeJP_NotGoodResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThongKeTienDo")]
+		public ISingleResult<ThongKeTienDoResult> ThongKeTienDo([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchID", DbType="NVarChar(255)")] string batchID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchID);
+			return ((ISingleResult<ThongKeTienDoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThongKeTienDoAll")]
+		public ISingleResult<ThongKeTienDoAllResult> ThongKeTienDoAll()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<ThongKeTienDoAllResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Batch")]
@@ -5374,6 +5388,94 @@ namespace BaoCaoLuong_12_2017
 				if ((this._BatchID != value))
 				{
 					this._BatchID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ThongKeTienDoResult
+	{
+		
+		private string _name;
+		
+		private int _soluong;
+		
+		public ThongKeTienDoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int NOT NULL")]
+		public int soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this._soluong = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ThongKeTienDoAllResult
+	{
+		
+		private string _name;
+		
+		private int _soluong;
+		
+		public ThongKeTienDoAllResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int NOT NULL")]
+		public int soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this._soluong = value;
 				}
 			}
 		}

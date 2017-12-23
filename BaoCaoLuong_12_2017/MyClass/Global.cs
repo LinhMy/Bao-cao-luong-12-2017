@@ -25,7 +25,7 @@ namespace BaoCaoLuong_12_2017
         public static string Version = "1.0.0";
         public static string StrCity;
         public static bool FlagChangeSave = true;
-        public static string StrPath = @"\\10.10.10.248\BaoCaoLuong2018$";
+        public static string StrPath = @"\\192.168.165.10\BaoCaoLuong2018$";
         // public static List<string> listdata13 = new List<string>();
         public static string Webservice;
         public static DataBaoCaoLuong2018DataContext Db;
@@ -56,14 +56,14 @@ namespace BaoCaoLuong_12_2017
         public static bool CheckOutSource(string Role)
         {
             bool? OutSource = (from w in DbBpo.tbl_Versions where w.IDProject == StrIdProject select w.OutSource).FirstOrDefault();
-            if (OutSource == false && Settings.Default.Server == "Khác" && Role == "DESO")
+            if (OutSource == false && Settings.Default.Server == "Khác" && (Role == "DESO"|| Role=="DEJP"))
                 return true;
             return false;
         }
         public static void RunUpdateVersion()
         {
             if (Settings.Default.Server == "Đà Nẵng")
-                Process.Start(@"\\10.10.10.254\DE_Viet\2017\");
+                Process.Start(@"\\10.10.10.254\DE_Viet\2017\BaoCaoLuong2018_CityO");
             else
                 Process.Start(/*https://drive.google.com/drive/folders/0BwO0VkvgrRHaeW5meEE4blBHdnc?usp=sharing*/"");
         }

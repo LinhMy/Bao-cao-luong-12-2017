@@ -17,7 +17,7 @@ namespace BaoCaoLuong_12_2017
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             BonusSkins.Register();
-            //Application.Run(new frmFeedback());
+            Application.Run(new FrmTienDo());
             if (new frm_ChangeServer().ShowDialog() != DialogResult.OK)
                 return;
             bool temp = false;
