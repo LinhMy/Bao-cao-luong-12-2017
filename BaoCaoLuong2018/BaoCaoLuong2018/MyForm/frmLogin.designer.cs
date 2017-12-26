@@ -101,7 +101,7 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(371, 168);
             this.groupControl1.TabIndex = 10;
-            this.groupControl1.Text = "Information";
+            this.groupControl1.Text = "Thông tin PC:";
             // 
             // lb_gio
             // 
@@ -117,11 +117,11 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(259, 138);
+            this.labelControl10.Location = new System.Drawing.Point(260, 141);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(22, 13);
+            this.labelControl10.Size = new System.Drawing.Size(19, 13);
             this.labelControl10.TabIndex = 2;
-            this.labelControl10.Text = "Giờ :";
+            this.labelControl10.Text = "Giờ:";
             // 
             // lb_ngay
             // 
@@ -137,11 +137,11 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(147, 138);
+            this.labelControl8.Location = new System.Drawing.Point(148, 139);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(32, 13);
+            this.labelControl8.Size = new System.Drawing.Size(29, 13);
             this.labelControl8.TabIndex = 2;
-            this.labelControl8.Text = "Ngày :";
+            this.labelControl8.Text = "Ngày:";
             // 
             // txt_ipaddress
             // 
@@ -171,25 +171,25 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(17, 105);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(59, 13);
+            this.labelControl3.Size = new System.Drawing.Size(49, 13);
             this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "IP Address :";
+            this.labelControl3.Text = "Địa chỉ IP:";
             // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(17, 69);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(70, 13);
+            this.labelControl2.Size = new System.Drawing.Size(47, 13);
             this.labelControl2.TabIndex = 0;
-            this.labelControl2.Text = "User Window :";
+            this.labelControl2.Text = "Windows:";
             // 
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(19, 33);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(73, 13);
+            this.labelControl1.Size = new System.Drawing.Size(45, 13);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Machine Name:";
+            this.labelControl1.Text = "Tên Máy:";
             // 
             // groupControl2
             // 
@@ -208,44 +208,46 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(371, 197);
             this.groupControl2.TabIndex = 1;
-            this.groupControl2.Text = "Login";
+            this.groupControl2.Text = "Thông tin đăng nhập:";
             // 
             // cbb_City
             // 
+            this.cbb_City.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_City.FormattingEnabled = true;
             this.cbb_City.Items.AddRange(new object[] {
             "CityN",
             "CityO",
             "CityS"});
-            this.cbb_City.Location = new System.Drawing.Point(105, 130);
+            this.cbb_City.Location = new System.Drawing.Point(102, 124);
             this.cbb_City.Name = "cbb_City";
             this.cbb_City.Size = new System.Drawing.Size(235, 21);
-            this.cbb_City.TabIndex = 9;
+            this.cbb_City.TabIndex = 6;
             this.cbb_City.SelectedIndexChanged += new System.EventHandler(this.cbb_City_SelectedIndexChanged);
             // 
             // lb_city
             // 
             this.lb_city.AutoSize = true;
-            this.lb_city.Location = new System.Drawing.Point(16, 133);
+            this.lb_city.Location = new System.Drawing.Point(16, 127);
             this.lb_city.Name = "lb_city";
-            this.lb_city.Size = new System.Drawing.Size(30, 13);
+            this.lb_city.Size = new System.Drawing.Size(62, 13);
             this.lb_city.TabIndex = 8;
-            this.lb_city.Text = "City:";
+            this.lb_city.Text = "Thành phố:";
             // 
             // chb_luu
             // 
             this.chb_luu.AutoSize = true;
-            this.chb_luu.Location = new System.Drawing.Point(304, 65);
+            this.chb_luu.Location = new System.Drawing.Point(301, 65);
             this.chb_luu.Name = "chb_luu";
             this.chb_luu.Size = new System.Drawing.Size(44, 17);
-            this.chb_luu.TabIndex = 5;
+            this.chb_luu.TabIndex = 4;
             this.chb_luu.Text = "&Lưu";
             this.chb_luu.UseVisualStyleBackColor = true;
             // 
             // cbb_batchname
             // 
+            this.cbb_batchname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_batchname.FormattingEnabled = true;
-            this.cbb_batchname.Location = new System.Drawing.Point(105, 163);
+            this.cbb_batchname.Location = new System.Drawing.Point(102, 157);
             this.cbb_batchname.Name = "cbb_batchname";
             this.cbb_batchname.Size = new System.Drawing.Size(235, 21);
             this.cbb_batchname.TabIndex = 7;
@@ -254,16 +256,16 @@
             // txt_role
             // 
             this.txt_role.EditValue = "";
-            this.txt_role.Location = new System.Drawing.Point(105, 98);
+            this.txt_role.Location = new System.Drawing.Point(102, 93);
             this.txt_role.Name = "txt_role";
             this.txt_role.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_role.Properties.ReadOnly = true;
             this.txt_role.Size = new System.Drawing.Size(235, 20);
-            this.txt_role.TabIndex = 6;
+            this.txt_role.TabIndex = 5;
             // 
             // txt_password
             // 
-            this.txt_password.Location = new System.Drawing.Point(105, 62);
+            this.txt_password.Location = new System.Drawing.Point(102, 62);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(193, 20);
             this.txt_password.TabIndex = 3;
@@ -271,7 +273,7 @@
             // 
             // txt_username
             // 
-            this.txt_username.Location = new System.Drawing.Point(105, 32);
+            this.txt_username.Location = new System.Drawing.Point(102, 32);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(235, 20);
             this.txt_username.TabIndex = 2;
@@ -279,38 +281,40 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(19, 169);
+            this.labelControl7.Location = new System.Drawing.Point(19, 163);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(58, 13);
+            this.labelControl7.Size = new System.Drawing.Size(52, 13);
             this.labelControl7.TabIndex = 0;
-            this.labelControl7.Text = "BatchName:";
+            this.labelControl7.Text = "Tên Batch:";
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(19, 101);
+            this.labelControl6.Location = new System.Drawing.Point(19, 96);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(28, 13);
+            this.labelControl6.Size = new System.Drawing.Size(35, 13);
             this.labelControl6.TabIndex = 0;
-            this.labelControl6.Text = "Role :";
+            this.labelControl6.Text = "Vai trò:";
             // 
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(17, 65);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(53, 13);
+            this.labelControl5.Size = new System.Drawing.Size(48, 13);
             this.labelControl5.TabIndex = 0;
-            this.labelControl5.Text = "Password :";
+            this.labelControl5.Text = "Mật khẩu:";
             // 
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(17, 37);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(56, 13);
+            this.labelControl4.Size = new System.Drawing.Size(76, 13);
             this.labelControl4.TabIndex = 0;
-            this.labelControl4.Text = "UserName :";
+            this.labelControl4.Text = "Tên đăng nhập:";
             // 
             // btn_login
             // 
+            this.btn_login.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.Appearance.Options.UseFont = true;
             this.btn_login.Location = new System.Drawing.Point(244, 460);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(75, 23);
@@ -320,6 +324,8 @@
             // 
             // btn_thoat
             // 
+            this.btn_thoat.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thoat.Appearance.Options.UseFont = true;
             this.btn_thoat.Location = new System.Drawing.Point(340, 460);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(75, 23);
@@ -329,11 +335,11 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(331, 64);
+            this.labelControl9.Location = new System.Drawing.Point(327, 64);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(42, 13);
+            this.labelControl9.Size = new System.Drawing.Size(51, 13);
             this.labelControl9.TabIndex = 3;
-            this.labelControl9.Text = "Version :";
+            this.labelControl9.Text = "Phiên bản:";
             // 
             // lb_version
             // 
