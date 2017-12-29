@@ -102,7 +102,7 @@
             // 
             this.lb_City.AutoSize = true;
             this.lb_City.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.lb_City.Location = new System.Drawing.Point(72, 23);
+            this.lb_City.Location = new System.Drawing.Point(71, 23);
             this.lb_City.Name = "lb_City";
             this.lb_City.Size = new System.Drawing.Size(35, 17);
             this.lb_City.TabIndex = 9;
