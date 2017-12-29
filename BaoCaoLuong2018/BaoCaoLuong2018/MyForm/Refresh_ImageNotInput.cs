@@ -26,7 +26,7 @@ namespace BaoCaoLuong2018.MyForm
             else
                 minute = int.Parse(txt_MinuteSo.Text);
             gridControl1.DataSource = Global.Db.GetImageNotSubmitDeSo(minute);
-            gridControl2.DataSource = Global.Db.GetImageNotSubmitDeJP(int.Parse(txt_MinuteJP.Text));
+            gridControl2.DataSource = Global.Db.GetImageNotSubmitDeJP(string.IsNullOrEmpty(txt_MinuteJP.Text)? 10 :int.Parse(txt_MinuteJP.Text));
         }
 
         private void Refresh_ImageNotInput_Load(object sender, EventArgs e)

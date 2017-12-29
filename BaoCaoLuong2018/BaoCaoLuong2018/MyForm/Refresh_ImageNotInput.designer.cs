@@ -62,6 +62,8 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BatchID2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.City = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.City2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tp_DeSo.SuspendLayout();
@@ -179,6 +181,7 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.City,
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
@@ -204,7 +207,7 @@
             this.gridColumn1.FieldName = "BatchName";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.VisibleIndex = 2;
             // 
             // gridColumn2
             // 
@@ -218,7 +221,7 @@
             this.gridColumn2.FieldName = "IdImage";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.VisibleIndex = 3;
             // 
             // gridColumn3
             // 
@@ -232,7 +235,7 @@
             this.gridColumn3.FieldName = "UserName";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
+            this.gridColumn3.VisibleIndex = 4;
             // 
             // gridColumn4
             // 
@@ -245,10 +248,10 @@
             this.gridColumn4.Caption = "Thời gian lấy";
             this.gridColumn4.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.gridColumn4.FieldName = "DateInput";
+            this.gridColumn4.FieldName = "Start_Date";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.VisibleIndex = 5;
             // 
             // gridColumn5
             // 
@@ -262,7 +265,7 @@
             this.gridColumn5.FieldName = "TimeRange";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.VisibleIndex = 6;
             // 
             // BatchID
             // 
@@ -355,6 +358,7 @@
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.City2,
             this.gridColumn6,
             this.gridColumn7,
             this.gridColumn8,
@@ -380,7 +384,7 @@
             this.gridColumn6.FieldName = "BatchName";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 1;
+            this.gridColumn6.VisibleIndex = 2;
             // 
             // gridColumn7
             // 
@@ -394,7 +398,7 @@
             this.gridColumn7.FieldName = "IdImage";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 2;
+            this.gridColumn7.VisibleIndex = 3;
             // 
             // gridColumn8
             // 
@@ -408,7 +412,7 @@
             this.gridColumn8.FieldName = "UserName";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 3;
+            this.gridColumn8.VisibleIndex = 4;
             // 
             // gridColumn9
             // 
@@ -421,10 +425,10 @@
             this.gridColumn9.Caption = "Thời gian lấy";
             this.gridColumn9.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
             this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.gridColumn9.FieldName = "DateInput";
+            this.gridColumn9.FieldName = "Start_Date";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 4;
+            this.gridColumn9.VisibleIndex = 5;
             // 
             // gridColumn10
             // 
@@ -438,7 +442,7 @@
             this.gridColumn10.FieldName = "TimeRange";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 5;
+            this.gridColumn10.VisibleIndex = 6;
             // 
             // BatchID2
             // 
@@ -451,6 +455,22 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 30000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // City
+            // 
+            this.City.Caption = "City";
+            this.City.FieldName = "City";
+            this.City.Name = "City";
+            this.City.Visible = true;
+            this.City.VisibleIndex = 1;
+            // 
+            // City2
+            // 
+            this.City2.Caption = "City";
+            this.City2.FieldName = "City";
+            this.City2.Name = "City2";
+            this.City2.Visible = true;
+            this.City2.VisibleIndex = 1;
             // 
             // Refresh_ImageNotInput
             // 
@@ -512,5 +532,7 @@
         private System.Windows.Forms.TextBox txt_MinuteJP;
         private System.Windows.Forms.Button bt_AllCapNhat;
         private System.Windows.Forms.Button bt_CapNhat;
+        private DevExpress.XtraGrid.Columns.GridColumn City;
+        private DevExpress.XtraGrid.Columns.GridColumn City2;
     }
 }

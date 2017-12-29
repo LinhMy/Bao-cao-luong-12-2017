@@ -57,7 +57,6 @@
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.UserNameNoGood = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.UserNameGood = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -291,7 +290,7 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemPopupContainerEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1078, 618);
+            this.gridControl1.Size = new System.Drawing.Size(1078, 610);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -363,8 +362,7 @@
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.UserNameNoGood,
-            this.UserNameGood});
+            this.UserNameNoGood});
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.ReadOnly = true;
@@ -373,19 +371,11 @@
             // 
             // UserNameNoGood
             // 
-            this.UserNameNoGood.Caption = "User NoGood";
-            this.UserNameNoGood.FieldName = "UserNameNoGood";
+            this.UserNameNoGood.Caption = "User";
+            this.UserNameNoGood.FieldName = "UserName";
             this.UserNameNoGood.Name = "UserNameNoGood";
             this.UserNameNoGood.Visible = true;
             this.UserNameNoGood.VisibleIndex = 0;
-            // 
-            // UserNameGood
-            // 
-            this.UserNameGood.Caption = "User Good";
-            this.UserNameGood.FieldName = "UserNameGood";
-            this.UserNameGood.Name = "UserNameGood";
-            this.UserNameGood.Visible = true;
-            this.UserNameGood.VisibleIndex = 1;
             // 
             // gridColumn5
             // 
@@ -424,7 +414,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1078, 750);
+            this.ClientSize = new System.Drawing.Size(1078, 742);
             this.Controls.Add(this.popupContainerControl1);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl1);
@@ -471,7 +461,6 @@
         private DevExpress.XtraEditors.PopupContainerControl popupContainerControl1;
         private DevExpress.XtraGrid.GridControl gridControl2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraGrid.Columns.GridColumn UserNameGood;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
