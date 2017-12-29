@@ -155,7 +155,11 @@ namespace BaoCaoLuong2018.MyForm
                         Location = txt_ImagePath.Text,
                         NumberImage = soluonghinh.ToString(),
                         ChiaUser = chk_ChiaUser.Checked ? true : false,
-                        CongKhaiBatch = false
+                        CongKhaiBatch = false,
+                        Truong_005 = txt_Truong_005.Text,
+                        Truong_006 = txt_Truong_006.Text,
+                        Truong_016 = txt_Truong_016.Text,
+                        Truong_017 = txt_Truong_017.Text,
                     };
                     Global.Db.tbl_Batches.InsertOnSubmit(fBatch);
                     Global.Db.SubmitChanges();
@@ -396,6 +400,11 @@ namespace BaoCaoLuong2018.MyForm
             closePending = false;
         }
         private bool flag = false;
+
+        private void txt_ImagePath_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     public static class ModifyProgressBarColor
     {

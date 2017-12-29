@@ -18,6 +18,7 @@ namespace BaoCaoLuong2018
         public static string StrPcName = "";
         public static string StrDomainName = "";
         public static string StrBatch = "";
+        public static string StrBatchID = "";
         public static string StrRole = "";
         public static string Token = "";
         public static string StrIdProject = "BaoCaoLuong2018";

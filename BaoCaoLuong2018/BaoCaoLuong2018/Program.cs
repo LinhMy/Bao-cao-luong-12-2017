@@ -24,23 +24,22 @@ namespace BaoCaoLuong2018
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
             //Application.Run(new FrmTienDo());
+            if (new frm_ChangeServer().ShowDialog() != DialogResult.OK)
+                return;
             bool temp = false;
             do
             {
                 temp = false;
-                frm_ChangeServer changeserver = new frm_ChangeServer();
-                if (changeserver.ShowDialog() == DialogResult.OK)
+                
+                frmLogin frLogin = new frmLogin();
+                if (frLogin.ShowDialog() == DialogResult.OK)
                 {
-                    frmLogin frLogin = new frmLogin();
-                    if (frLogin.ShowDialog() == DialogResult.OK)
-                    {
-                        frm_Main frMain = new frm_Main();
+                    frm_Main frMain = new frm_Main();
 
-                        if (frMain.ShowDialog() == DialogResult.Yes)
-                        {
-                            frMain.Close();
-                            temp = true;
-                        }
+                    if (frMain.ShowDialog() == DialogResult.Yes)
+                    {
+                        frMain.Close();
+                        temp = true;
                     }
                 }
             }

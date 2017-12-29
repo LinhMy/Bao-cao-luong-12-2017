@@ -37,6 +37,7 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,7 +48,6 @@
             this.btn_TaoBatch = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbb_City = new System.Windows.Forms.ComboBox();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Xoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -107,8 +107,6 @@
             this.BatchID.Caption = "Batch ID";
             this.BatchID.FieldName = "BatchID";
             this.BatchID.Name = "BatchID";
-            this.BatchID.Visible = true;
-            this.BatchID.VisibleIndex = 1;
             // 
             // gridColumn2
             // 
@@ -117,8 +115,8 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 5;
-            this.gridColumn2.Width = 202;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 139;
             // 
             // gridColumn1
             // 
@@ -127,6 +125,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
+            this.gridColumn1.Width = 63;
             // 
             // gridColumn9
             // 
@@ -136,16 +135,28 @@
             this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 3;
+            this.gridColumn9.Width = 103;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Folder Location";
+            this.gridColumn10.FieldName = "Location";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 4;
+            this.gridColumn10.Width = 103;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Ngày tạo";
+            this.gridColumn5.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
+            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn5.FieldName = "DateCreate";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 6;
-            this.gridColumn5.Width = 141;
+            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.Width = 106;
             // 
             // gridColumn3
             // 
@@ -154,8 +165,8 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 7;
-            this.gridColumn3.Width = 110;
+            this.gridColumn3.VisibleIndex = 6;
+            this.gridColumn3.Width = 83;
             // 
             // gridColumn4
             // 
@@ -164,8 +175,8 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 8;
-            this.gridColumn4.Width = 95;
+            this.gridColumn4.VisibleIndex = 7;
+            this.gridColumn4.Width = 71;
             // 
             // gridColumn6
             // 
@@ -173,8 +184,8 @@
             this.gridColumn6.FieldName = "ChiaUser";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 9;
-            this.gridColumn6.Width = 77;
+            this.gridColumn6.VisibleIndex = 8;
+            this.gridColumn6.Width = 57;
             // 
             // gridColumn8
             // 
@@ -182,8 +193,8 @@
             this.gridColumn8.FieldName = "CongKhaiBatch";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 10;
-            this.gridColumn8.Width = 83;
+            this.gridColumn8.VisibleIndex = 9;
+            this.gridColumn8.Width = 61;
             // 
             // gridColumn7
             // 
@@ -191,8 +202,8 @@
             this.gridColumn7.ColumnEdit = this.btn_Xoa;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 11;
-            this.gridColumn7.Width = 87;
+            this.gridColumn7.VisibleIndex = 10;
+            this.gridColumn7.Width = 68;
             // 
             // btn_xoabatch
             // 
@@ -239,14 +250,6 @@
             this.cbb_City.SelectedIndexChanged += new System.EventHandler(this.cbb_City_SelectedIndexChanged);
             this.cbb_City.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbb_City_KeyDown);
             this.cbb_City.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbb_City_KeyPress);
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Caption = "Folder Location";
-            this.gridColumn10.FieldName = "Location";
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 4;
             // 
             // frm_ManagerBatch
             // 

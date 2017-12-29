@@ -56,6 +56,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lb_SoImageDaHoanThanh = new System.Windows.Forms.Label();
             this.chk_ChiaUser = new System.Windows.Forms.CheckBox();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_Truong_005 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_Truong_006 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_Truong_016 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_Truong_017 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_BatchName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_PathFolder.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Location.Properties)).BeginInit();
@@ -63,6 +71,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_DateCreate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ImagePath.Properties)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_005.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_006.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_016.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_017.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -195,6 +207,7 @@
             this.txt_ImagePath.Properties.ReadOnly = true;
             this.txt_ImagePath.Size = new System.Drawing.Size(582, 22);
             this.txt_ImagePath.TabIndex = 7;
+            this.txt_ImagePath.EditValueChanged += new System.EventHandler(this.txt_ImagePath_EditValueChanged);
             // 
             // btn_Browser
             // 
@@ -222,7 +235,7 @@
             // 
             this.btn_CreateBatch.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CreateBatch.Appearance.Options.UseFont = true;
-            this.btn_CreateBatch.Location = new System.Drawing.Point(345, 318);
+            this.btn_CreateBatch.Location = new System.Drawing.Point(345, 392);
             this.btn_CreateBatch.Name = "btn_CreateBatch";
             this.btn_CreateBatch.Size = new System.Drawing.Size(164, 44);
             this.btn_CreateBatch.TabIndex = 12;
@@ -238,7 +251,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(31, 283);
+            this.labelControl8.Location = new System.Drawing.Point(31, 280);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(67, 16);
             this.labelControl8.TabIndex = 1;
@@ -260,7 +273,7 @@
             this.txt_LoaiPhieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txt_LoaiPhieu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_LoaiPhieu.FormattingEnabled = true;
-            this.txt_LoaiPhieu.Location = new System.Drawing.Point(153, 278);
+            this.txt_LoaiPhieu.Location = new System.Drawing.Point(153, 275);
             this.txt_LoaiPhieu.Name = "txt_LoaiPhieu";
             this.txt_LoaiPhieu.Size = new System.Drawing.Size(100, 24);
             this.txt_LoaiPhieu.TabIndex = 8;
@@ -269,7 +282,7 @@
             // 
             this.lb_SobatchHoanThanh.AutoSize = true;
             this.lb_SobatchHoanThanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_SobatchHoanThanh.Location = new System.Drawing.Point(105, 340);
+            this.lb_SobatchHoanThanh.Location = new System.Drawing.Point(105, 414);
             this.lb_SobatchHoanThanh.Name = "lb_SobatchHoanThanh";
             this.lb_SobatchHoanThanh.Size = new System.Drawing.Size(0, 16);
             this.lb_SobatchHoanThanh.TabIndex = 1;
@@ -278,9 +291,9 @@
             // 
             this.panel1.Controls.Add(this.progressBar1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 374);
+            this.panel1.Location = new System.Drawing.Point(0, 448);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(860, 25);
+            this.panel1.Size = new System.Drawing.Size(855, 25);
             this.panel1.TabIndex = 14;
             // 
             // progressBar1
@@ -289,14 +302,14 @@
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.progressBar1.Location = new System.Drawing.Point(0, 0);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(860, 25);
+            this.progressBar1.Size = new System.Drawing.Size(855, 25);
             this.progressBar1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 340);
+            this.label1.Location = new System.Drawing.Point(28, 414);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 1;
@@ -306,7 +319,7 @@
             // 
             this.lb_SoImageDaHoanThanh.AutoSize = true;
             this.lb_SoImageDaHoanThanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_SoImageDaHoanThanh.Location = new System.Drawing.Point(124, 340);
+            this.lb_SoImageDaHoanThanh.Location = new System.Drawing.Point(124, 414);
             this.lb_SoImageDaHoanThanh.Name = "lb_SoImageDaHoanThanh";
             this.lb_SoImageDaHoanThanh.Size = new System.Drawing.Size(0, 16);
             this.lb_SoImageDaHoanThanh.TabIndex = 1;
@@ -321,11 +334,87 @@
             this.chk_ChiaUser.Text = "Chia User";
             this.chk_ChiaUser.UseVisualStyleBackColor = true;
             // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(31, 321);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(67, 16);
+            this.labelControl9.TabIndex = 15;
+            this.labelControl9.Text = "Trường 005";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(31, 358);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(67, 16);
+            this.labelControl10.TabIndex = 16;
+            this.labelControl10.Text = "Trường 006";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Appearance.Options.UseFont = true;
+            this.labelControl11.Location = new System.Drawing.Point(354, 318);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(67, 16);
+            this.labelControl11.TabIndex = 17;
+            this.labelControl11.Text = "Trường 016";
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.Location = new System.Drawing.Point(354, 357);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(67, 16);
+            this.labelControl12.TabIndex = 18;
+            this.labelControl12.Text = "Trường 017";
+            // 
+            // txt_Truong_005
+            // 
+            this.txt_Truong_005.Location = new System.Drawing.Point(153, 318);
+            this.txt_Truong_005.Name = "txt_Truong_005";
+            this.txt_Truong_005.Size = new System.Drawing.Size(153, 20);
+            this.txt_Truong_005.TabIndex = 19;
+            // 
+            // txt_Truong_006
+            // 
+            this.txt_Truong_006.Location = new System.Drawing.Point(153, 353);
+            this.txt_Truong_006.Name = "txt_Truong_006";
+            this.txt_Truong_006.Size = new System.Drawing.Size(153, 20);
+            this.txt_Truong_006.TabIndex = 20;
+            // 
+            // txt_Truong_016
+            // 
+            this.txt_Truong_016.Location = new System.Drawing.Point(437, 317);
+            this.txt_Truong_016.Name = "txt_Truong_016";
+            this.txt_Truong_016.Size = new System.Drawing.Size(160, 20);
+            this.txt_Truong_016.TabIndex = 21;
+            // 
+            // txt_Truong_017
+            // 
+            this.txt_Truong_017.Location = new System.Drawing.Point(437, 356);
+            this.txt_Truong_017.Name = "txt_Truong_017";
+            this.txt_Truong_017.Size = new System.Drawing.Size(160, 20);
+            this.txt_Truong_017.TabIndex = 22;
+            // 
             // frm_CreateBatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 399);
+            this.ClientSize = new System.Drawing.Size(855, 473);
+            this.Controls.Add(this.txt_Truong_017);
+            this.Controls.Add(this.txt_Truong_016);
+            this.Controls.Add(this.txt_Truong_006);
+            this.Controls.Add(this.txt_Truong_005);
+            this.Controls.Add(this.labelControl12);
+            this.Controls.Add(this.labelControl11);
+            this.Controls.Add(this.labelControl10);
+            this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.chk_ChiaUser);
             this.Controls.Add(this.lb_SoImageDaHoanThanh);
             this.Controls.Add(this.label1);
@@ -364,6 +453,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_DateCreate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ImagePath.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_005.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_006.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_016.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_017.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,5 +491,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_SoImageDaHoanThanh;
         private System.Windows.Forms.CheckBox chk_ChiaUser;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.TextEdit txt_Truong_005;
+        private DevExpress.XtraEditors.TextEdit txt_Truong_006;
+        private DevExpress.XtraEditors.TextEdit txt_Truong_016;
+        private DevExpress.XtraEditors.TextEdit txt_Truong_017;
     }
 }

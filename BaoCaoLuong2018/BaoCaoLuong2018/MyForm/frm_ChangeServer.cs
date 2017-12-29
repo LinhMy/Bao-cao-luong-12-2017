@@ -61,7 +61,10 @@ namespace BaoCaoLuong2018.MyForm
                     Global.DbBpo = new DataBPODataContext(@"Data Source=101.99.53.121,3605;Initial Catalog=DatabaseDataEntryBPO;Persist Security Info=True;Network Library=DBMSSOCN;User ID=bpoentry;Password=123@123a");
                 }
             }
-            catch (Exception i) { MessageBox.Show(i.Message + ""); }
+            catch (Exception i)
+            {
+                MessageBox.Show(i.Message + "");
+            }
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

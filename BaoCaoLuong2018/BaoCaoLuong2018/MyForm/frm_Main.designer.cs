@@ -30,15 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
-            this.tp_DeSo = new DevExpress.XtraTab.XtraTabPage();
             this.pn_Main = new DevExpress.XtraTab.XtraTabControl();
             this.tab_CityO_Loai1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.uC_CityO_Loai11 = new BaoCaoLuong2018.MyUserControl.UC_CityO_Loai1();
+            this.tab_CityO_Loai2 = new DevExpress.XtraTab.XtraTabPage();
+            this.tab_CityO_Loai3 = new DevExpress.XtraTab.XtraTabPage();
+            this.uC_CityO_Loai3_DeSo1 = new BaoCaoLuong2018.MyUserControl.UC_CityO_Loai3_DeSo();
+            this.tab_CityO_JP = new DevExpress.XtraTab.XtraTabPage();
+            this.uC_CityO_JP1 = new BaoCaoLuong2018.MyUserControl.UC_CityO_JP();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btn_Pause = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Submit_Logout = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Submit = new DevExpress.XtraEditors.SimpleButton();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.panel_Right = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel_Top = new DevExpress.XtraEditors.PanelControl();
@@ -67,7 +70,11 @@
             this.btn_RefreshImageNotInput = new DevExpress.XtraBars.BarButtonItem();
             this.ckOutSource = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.btn_Check = new DevExpress.XtraBars.BarButtonItem();
+            this.menu_Check = new DevExpress.XtraBars.BarSubItem();
+            this.btn_Check_DeSo = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_Check_DeSo_NhamPhieu = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_Check_DeSo_QC = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_Check_DeJP = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
@@ -95,15 +102,13 @@
             this.uc_PictureBox1 = new BaoCaoLuong2018.MyUserControl.UC_PictureBox();
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.splitMain = new DevExpress.XtraEditors.SplitContainerControl();
-            this.uC_CityO_Loai11 = new BaoCaoLuong2018.MyUserControl.UC_CityO_Loai1();
-            this.tp_DeSo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pn_Main)).BeginInit();
             this.pn_Main.SuspendLayout();
             this.tab_CityO_Loai1.SuspendLayout();
+            this.tab_CityO_Loai3.SuspendLayout();
+            this.tab_CityO_JP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panel_Right)).BeginInit();
             this.panel_Right.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panel_Top)).BeginInit();
@@ -119,36 +124,74 @@
             this.splitMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tp_DeSo
-            // 
-            this.tp_DeSo.Controls.Add(this.pn_Main);
-            this.tp_DeSo.Name = "tp_DeSo";
-            this.tp_DeSo.Size = new System.Drawing.Size(309, 581);
-            // 
             // pn_Main
             // 
             this.pn_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_Main.Location = new System.Drawing.Point(0, 0);
+            this.pn_Main.Location = new System.Drawing.Point(2, 2);
             this.pn_Main.Name = "pn_Main";
             this.pn_Main.SelectedTabPage = this.tab_CityO_Loai1;
-            this.pn_Main.Size = new System.Drawing.Size(309, 581);
+            this.pn_Main.Size = new System.Drawing.Size(676, 587);
             this.pn_Main.TabIndex = 0;
             this.pn_Main.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tab_CityO_Loai1,
-            this.xtraTabPage2});
+            this.tab_CityO_Loai2,
+            this.tab_CityO_Loai3,
+            this.tab_CityO_JP});
+            this.pn_Main.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.pn_Main_SelectedPageChanged);
             // 
             // tab_CityO_Loai1
             // 
+            this.tab_CityO_Loai1.AutoScroll = true;
             this.tab_CityO_Loai1.Controls.Add(this.uC_CityO_Loai11);
             this.tab_CityO_Loai1.Name = "tab_CityO_Loai1";
-            this.tab_CityO_Loai1.Size = new System.Drawing.Size(303, 553);
+            this.tab_CityO_Loai1.Size = new System.Drawing.Size(670, 559);
             this.tab_CityO_Loai1.Text = "CityO Loại 1";
             // 
-            // xtraTabPage2
+            // uC_CityO_Loai11
             // 
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(303, 553);
-            this.xtraTabPage2.Text = "xtraTabPage2";
+            this.uC_CityO_Loai11.Location = new System.Drawing.Point(0, 0);
+            this.uC_CityO_Loai11.Name = "uC_CityO_Loai11";
+            this.uC_CityO_Loai11.Size = new System.Drawing.Size(670, 335);
+            this.uC_CityO_Loai11.TabIndex = 0;
+            // 
+            // tab_CityO_Loai2
+            // 
+            this.tab_CityO_Loai2.Name = "tab_CityO_Loai2";
+            this.tab_CityO_Loai2.Size = new System.Drawing.Size(670, 559);
+            this.tab_CityO_Loai2.Text = "CityO Loại2";
+            // 
+            // tab_CityO_Loai3
+            // 
+            this.tab_CityO_Loai3.AutoScroll = true;
+            this.tab_CityO_Loai3.Controls.Add(this.uC_CityO_Loai3_DeSo1);
+            this.tab_CityO_Loai3.Name = "tab_CityO_Loai3";
+            this.tab_CityO_Loai3.Size = new System.Drawing.Size(670, 559);
+            this.tab_CityO_Loai3.Text = "CityO Loại 3";
+            // 
+            // uC_CityO_Loai3_DeSo1
+            // 
+            this.uC_CityO_Loai3_DeSo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uC_CityO_Loai3_DeSo1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_CityO_Loai3_DeSo1.Location = new System.Drawing.Point(0, 0);
+            this.uC_CityO_Loai3_DeSo1.Name = "uC_CityO_Loai3_DeSo1";
+            this.uC_CityO_Loai3_DeSo1.Size = new System.Drawing.Size(670, 559);
+            this.uC_CityO_Loai3_DeSo1.TabIndex = 0;
+            // 
+            // tab_CityO_JP
+            // 
+            this.tab_CityO_JP.AutoScroll = true;
+            this.tab_CityO_JP.Controls.Add(this.uC_CityO_JP1);
+            this.tab_CityO_JP.Name = "tab_CityO_JP";
+            this.tab_CityO_JP.Size = new System.Drawing.Size(670, 559);
+            this.tab_CityO_JP.Text = "CityO JP";
+            // 
+            // uC_CityO_JP1
+            // 
+            this.uC_CityO_JP1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_CityO_JP1.Location = new System.Drawing.Point(0, 0);
+            this.uC_CityO_JP1.Name = "uC_CityO_JP1";
+            this.uC_CityO_JP1.Size = new System.Drawing.Size(670, 559);
+            this.uC_CityO_JP1.TabIndex = 0;
             // 
             // panelControl2
             // 
@@ -158,17 +201,18 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl2.Location = new System.Drawing.Point(2, 589);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(315, 30);
+            this.panelControl2.Size = new System.Drawing.Size(676, 30);
             this.panelControl2.TabIndex = 1;
             // 
             // btn_Pause
             // 
             this.btn_Pause.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Pause.Location = new System.Drawing.Point(219, 2);
+            this.btn_Pause.Location = new System.Drawing.Point(400, 2);
             this.btn_Pause.Name = "btn_Pause";
             this.btn_Pause.Size = new System.Drawing.Size(75, 25);
             this.btn_Pause.TabIndex = 3;
             this.btn_Pause.Text = "PAUSE";
+            this.btn_Pause.Visible = false;
             this.btn_Pause.Click += new System.EventHandler(this.btn_Pause_Click);
             // 
             // btn_Submit_Logout
@@ -176,7 +220,7 @@
             this.btn_Submit_Logout.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Submit_Logout.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Submit_Logout.Appearance.Options.UseFont = true;
-            this.btn_Submit_Logout.Location = new System.Drawing.Point(110, 2);
+            this.btn_Submit_Logout.Location = new System.Drawing.Point(291, 2);
             this.btn_Submit_Logout.Name = "btn_Submit_Logout";
             this.btn_Submit_Logout.Size = new System.Drawing.Size(106, 25);
             this.btn_Submit_Logout.TabIndex = 2;
@@ -188,34 +232,21 @@
             this.btn_Submit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Submit.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Submit.Appearance.Options.UseFont = true;
-            this.btn_Submit.Location = new System.Drawing.Point(31, 2);
+            this.btn_Submit.Location = new System.Drawing.Point(212, 2);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(74, 25);
             this.btn_Submit.TabIndex = 1;
             this.btn_Submit.Text = "Start";
             this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
-            // xtraTabControl1
-            // 
-            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(2, 2);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.tp_DeSo;
-            this.xtraTabControl1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
-            this.xtraTabControl1.Size = new System.Drawing.Size(315, 587);
-            this.xtraTabControl1.TabIndex = 1;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.tp_DeSo});
-            this.xtraTabControl1.TabStop = false;
-            // 
             // panel_Right
             // 
-            this.panel_Right.Controls.Add(this.xtraTabControl1);
+            this.panel_Right.Controls.Add(this.pn_Main);
             this.panel_Right.Controls.Add(this.panelControl2);
             this.panel_Right.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Right.Location = new System.Drawing.Point(0, 0);
             this.panel_Right.Name = "panel_Right";
-            this.panel_Right.Size = new System.Drawing.Size(319, 621);
+            this.panel_Right.Size = new System.Drawing.Size(680, 621);
             this.panel_Right.TabIndex = 18;
             // 
             // labelControl1
@@ -373,11 +404,15 @@
             this.barButtonItem5,
             this.skinBarSubItem1,
             this.skinBarSubItem2,
-            this.btn_Check,
             this.btn_RefreshImageNotInput,
-            this.ckOutSource});
+            this.ckOutSource,
+            this.menu_Check,
+            this.btn_Check_DeSo,
+            this.btn_Check_DeSo_NhamPhieu,
+            this.btn_Check_DeSo_QC,
+            this.btn_Check_DeJP});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 34;
+            this.barManager1.MaxItemId = 39;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemSpinEdit1,
@@ -395,7 +430,7 @@
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.menu_Menu),
             new DevExpress.XtraBars.LinkPersistInfo(this.menu_QuanLy),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Check),
+            new DevExpress.XtraBars.LinkPersistInfo(this.menu_Check),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.skinBarSubItem1)});
             this.bar2.OptionsBar.AutoPopupMode = DevExpress.XtraBars.BarAutoPopupMode.OnlyMenu;
@@ -497,12 +532,44 @@
             this.repositoryItemCheckEdit1.AutoHeight = false;
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             // 
-            // btn_Check
+            // menu_Check
             // 
-            this.btn_Check.Caption = "Check DESO";
-            this.btn_Check.Id = 28;
-            this.btn_Check.Name = "btn_Check";
-            this.btn_Check.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Check_ItemClick);
+            this.menu_Check.Caption = "Check";
+            this.menu_Check.Id = 34;
+            this.menu_Check.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Check_DeSo),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Check_DeSo_NhamPhieu),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Check_DeSo_QC),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Check_DeJP)});
+            this.menu_Check.Name = "menu_Check";
+            // 
+            // btn_Check_DeSo
+            // 
+            this.btn_Check_DeSo.Caption = "Check DESO";
+            this.btn_Check_DeSo.Id = 35;
+            this.btn_Check_DeSo.Name = "btn_Check_DeSo";
+            this.btn_Check_DeSo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Check_DeSo_ItemClick);
+            // 
+            // btn_Check_DeSo_NhamPhieu
+            // 
+            this.btn_Check_DeSo_NhamPhieu.Caption = "Check DESO Nhầm Phiếu";
+            this.btn_Check_DeSo_NhamPhieu.Id = 36;
+            this.btn_Check_DeSo_NhamPhieu.Name = "btn_Check_DeSo_NhamPhieu";
+            this.btn_Check_DeSo_NhamPhieu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Check_DeSo_NhamPhieu_ItemClick);
+            // 
+            // btn_Check_DeSo_QC
+            // 
+            this.btn_Check_DeSo_QC.Caption = "Check DESO QC";
+            this.btn_Check_DeSo_QC.Id = 37;
+            this.btn_Check_DeSo_QC.Name = "btn_Check_DeSo_QC";
+            this.btn_Check_DeSo_QC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Check_DeSo_QC_ItemClick);
+            // 
+            // btn_Check_DeJP
+            // 
+            this.btn_Check_DeJP.Caption = "Check DEJP";
+            this.btn_Check_DeJP.Id = 38;
+            this.btn_Check_DeJP.Name = "btn_Check_DeJP";
+            this.btn_Check_DeJP.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Check_DeJP_ItemClick);
             // 
             // barSubItem2
             // 
@@ -669,7 +736,7 @@
             this.uc_PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.uc_PictureBox1.Name = "uc_PictureBox1";
-            this.uc_PictureBox1.Size = new System.Drawing.Size(851, 621);
+            this.uc_PictureBox1.Size = new System.Drawing.Size(490, 621);
             this.uc_PictureBox1.TabIndex = 24;
             // 
             // bar1
@@ -696,17 +763,10 @@
             this.splitMain.Panel2.Controls.Add(this.panel_Right);
             this.splitMain.Panel2.Text = "Panel2";
             this.splitMain.Size = new System.Drawing.Size(1175, 621);
-            this.splitMain.SplitterPosition = 319;
+            this.splitMain.SplitterPosition = 680;
             this.splitMain.TabIndex = 34;
             this.splitMain.Text = "splitContainerControl1";
             this.splitMain.SplitterPositionChanged += new System.EventHandler(this.splitMain_SplitterPositionChanged);
-            // 
-            // uC_CityO_Loai11
-            // 
-            this.uC_CityO_Loai11.Location = new System.Drawing.Point(17, 34);
-            this.uC_CityO_Loai11.Name = "uC_CityO_Loai11";
-            this.uC_CityO_Loai11.Size = new System.Drawing.Size(291, 256);
-            this.uC_CityO_Loai11.TabIndex = 0;
             // 
             // frm_Main
             // 
@@ -727,14 +787,13 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Main_FormClosing);
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_Main_KeyDown);
-            this.tp_DeSo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pn_Main)).EndInit();
             this.pn_Main.ResumeLayout(false);
             this.tab_CityO_Loai1.ResumeLayout(false);
+            this.tab_CityO_Loai3.ResumeLayout(false);
+            this.tab_CityO_JP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panel_Right)).EndInit();
             this.panel_Right.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panel_Top)).EndInit();
@@ -755,12 +814,9 @@
         }
 
         #endregion
-
-        private DevExpress.XtraTab.XtraTabPage tp_DeSo;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SimpleButton btn_Submit_Logout;
         protected DevExpress.XtraEditors.SimpleButton btn_Submit;
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraEditors.PanelControl panel_Right;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.PanelControl panel_Top;
@@ -815,13 +871,21 @@
         private DevExpress.XtraEditors.SplitContainerControl splitMain;
   //      private MyUserControl.uc_DeSo uC_DESO1;
         private DevExpress.XtraEditors.SimpleButton btn_Pause;
-        private DevExpress.XtraBars.BarButtonItem btn_Check;
         private DevExpress.XtraBars.BarButtonItem btn_RefreshImageNotInput;
         private DevExpress.XtraBars.BarEditItem ckOutSource;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraTab.XtraTabControl pn_Main;
         private DevExpress.XtraTab.XtraTabPage tab_CityO_Loai1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private DevExpress.XtraTab.XtraTabPage tab_CityO_Loai2;
         private MyUserControl.UC_CityO_Loai1 uC_CityO_Loai11;
+        private DevExpress.XtraTab.XtraTabPage tab_CityO_Loai3;
+        private MyUserControl.UC_CityO_Loai3_DeSo uC_CityO_Loai3_DeSo1;
+        private DevExpress.XtraTab.XtraTabPage tab_CityO_JP;
+        private MyUserControl.UC_CityO_JP uC_CityO_JP1;
+        private DevExpress.XtraBars.BarSubItem menu_Check;
+        private DevExpress.XtraBars.BarButtonItem btn_Check_DeSo;
+        private DevExpress.XtraBars.BarButtonItem btn_Check_DeSo_NhamPhieu;
+        private DevExpress.XtraBars.BarButtonItem btn_Check_DeSo_QC;
+        private DevExpress.XtraBars.BarButtonItem btn_Check_DeJP;
     }
 }

@@ -179,11 +179,23 @@
     <Compile Include="MyForm\frm_ChangeZoom.designer.cs">
       <DependentUpon>frm_ChangeZoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frm_Checker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_Checker.designer.cs">
+      <DependentUpon>frm_Checker.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frm_CreateBatch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyForm\frm_CreateBatch.designer.cs">
       <DependentUpon>frm_CreateBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\frm_ExportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_ExportExcel.designer.cs">
+      <DependentUpon>frm_ExportExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="MyForm\frm_Main.cs">
       <SubType>Form</SubType>
@@ -197,11 +209,29 @@
     <Compile Include="MyForm\frm_ManagerBatch.designer.cs">
       <DependentUpon>frm_ManagerBatch.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frm_ShowCheckedImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_ShowCheckedImage.designer.cs">
+      <DependentUpon>frm_ShowCheckedImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frm_User.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyForm\frm_User.designer.cs">
       <DependentUpon>frm_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\ShowImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\ShowImage.designer.cs">
+      <DependentUpon>ShowImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\UC_CityO_JP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\UC_CityO_JP.Designer.cs">
+      <DependentUpon>UC_CityO_JP.cs</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\UC_CityO_Loai1.cs">
       <SubType>UserControl</SubType>
@@ -209,11 +239,23 @@
     <Compile Include="MyUserControl\UC_CityO_Loai1.designer.cs">
       <DependentUpon>UC_CityO_Loai1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\UC_CityO_Loai3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\UC_CityO_Loai3.Designer.cs">
+      <DependentUpon>UC_CityO_Loai3.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\UC_PictureBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MyUserControl\UC_PictureBox.designer.cs">
       <DependentUpon>UC_PictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\UC_ShowImage_CityO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\UC_ShowImage_CityO.Designer.cs">
+      <DependentUpon>UC_ShowImage_CityO.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -243,8 +285,14 @@
     <EmbeddedResource Include="MyForm\frm_ChangeZoom.resx">
       <DependentUpon>frm_ChangeZoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_Checker.resx">
+      <DependentUpon>frm_Checker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_CreateBatch.resx">
       <DependentUpon>frm_CreateBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_ExportExcel.resx">
+      <DependentUpon>frm_ExportExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
@@ -252,14 +300,29 @@
     <EmbeddedResource Include="MyForm\frm_ManagerBatch.resx">
       <DependentUpon>frm_ManagerBatch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_ShowCheckedImage.resx">
+      <DependentUpon>frm_ShowCheckedImage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_User.resx">
       <DependentUpon>frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\ShowImage.resx">
+      <DependentUpon>ShowImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\UC_CityO_JP.resx">
+      <DependentUpon>UC_CityO_JP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\UC_CityO_Loai1.resx">
       <DependentUpon>UC_CityO_Loai1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\UC_CityO_Loai3.resx">
+      <DependentUpon>UC_CityO_Loai3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\UC_PictureBox.resx">
       <DependentUpon>UC_PictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\UC_ShowImage_CityO.resx">
+      <DependentUpon>UC_ShowImage_CityO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -295,6 +358,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ExportExcel.xlsx" />
     <None Include="Resources\svn_deleted.png" />
   </ItemGroup>
   <ItemGroup>

@@ -61,6 +61,16 @@ namespace BaoCaoLuong2018.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ExportExcel {
+            get {
+                object obj = ResourceManager.GetObject("ExportExcel", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap svn_deleted {
