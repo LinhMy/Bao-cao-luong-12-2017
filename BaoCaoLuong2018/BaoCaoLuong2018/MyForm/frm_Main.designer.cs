@@ -148,7 +148,7 @@
             this.tab_CityO_Loai1.AutoScroll = true;
             this.tab_CityO_Loai1.Controls.Add(this.uC_CityO_Loai11);
             this.tab_CityO_Loai1.Name = "tab_CityO_Loai1";
-            this.tab_CityO_Loai1.Size = new System.Drawing.Size(670, 487);
+            this.tab_CityO_Loai1.Size = new System.Drawing.Size(670, 483);
             this.tab_CityO_Loai1.Text = "CityO Loại 1";
             // 
             // uC_CityO_Loai11
@@ -156,13 +156,13 @@
             this.uC_CityO_Loai11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_CityO_Loai11.Location = new System.Drawing.Point(0, 0);
             this.uC_CityO_Loai11.Name = "uC_CityO_Loai11";
-            this.uC_CityO_Loai11.Size = new System.Drawing.Size(670, 487);
+            this.uC_CityO_Loai11.Size = new System.Drawing.Size(670, 483);
             this.uC_CityO_Loai11.TabIndex = 0;
             // 
             // tab_CityO_Loai2
             // 
             this.tab_CityO_Loai2.Name = "tab_CityO_Loai2";
-            this.tab_CityO_Loai2.Size = new System.Drawing.Size(670, 510);
+            this.tab_CityO_Loai2.Size = new System.Drawing.Size(670, 483);
             this.tab_CityO_Loai2.Text = "CityO Loại2";
             // 
             // tab_CityO_Loai3
@@ -187,7 +187,7 @@
             this.tab_CityO_JP.AutoScroll = true;
             this.tab_CityO_JP.Controls.Add(this.uC_CityO_JP1);
             this.tab_CityO_JP.Name = "tab_CityO_JP";
-            this.tab_CityO_JP.Size = new System.Drawing.Size(670, 510);
+            this.tab_CityO_JP.Size = new System.Drawing.Size(670, 483);
             this.tab_CityO_JP.Text = "CityO JP";
             // 
             // uC_CityO_JP1
@@ -195,7 +195,7 @@
             this.uC_CityO_JP1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_CityO_JP1.Location = new System.Drawing.Point(0, 0);
             this.uC_CityO_JP1.Name = "uC_CityO_JP1";
-            this.uC_CityO_JP1.Size = new System.Drawing.Size(670, 510);
+            this.uC_CityO_JP1.Size = new System.Drawing.Size(670, 483);
             this.uC_CityO_JP1.TabIndex = 0;
             // 
             // panelControl2
@@ -273,6 +273,7 @@
             // txt_Note
             // 
             this.txt_Note.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_Note.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Note.Location = new System.Drawing.Point(0, 0);
             this.txt_Note.Name = "txt_Note";
             this.txt_Note.Size = new System.Drawing.Size(676, 71);

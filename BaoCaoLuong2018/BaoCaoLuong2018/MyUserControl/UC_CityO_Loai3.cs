@@ -141,6 +141,11 @@ namespace BaoCaoLuong2018.MyUserControl
             txt_Truong_110.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "110" select w.Note).FirstOrDefault();
             txt_Truong_111.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "111" select w.Note).FirstOrDefault();
 
+            textEdit1.GotFocus += Txt_Truong_015_GotFocus;
+            textEdit2.GotFocus += Txt_Truong_015_GotFocus;
+            textEdit3.GotFocus += Txt_Truong_015_GotFocus;
+            textEdit4.GotFocus += Txt_Truong_015_GotFocus;
+            textEdit5.GotFocus += Txt_Truong_015_GotFocus;
             txt_Truong_015.GotFocus += Txt_Truong_015_GotFocus;
             txt_Truong_017.GotFocus += Txt_Truong_015_GotFocus;
             txt_Truong_018.GotFocus += Txt_Truong_015_GotFocus;
