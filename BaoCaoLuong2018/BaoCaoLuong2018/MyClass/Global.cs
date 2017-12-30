@@ -23,7 +23,9 @@ namespace BaoCaoLuong2018
         public static string Token = "";
         public static string StrIdProject = "BaoCaoLuong2018";
         public static string StrCheck = "";
-        
+        public static List<dataNote_> DataNote = new List<dataNote_>();
+        public static bool FlagLoad = false;
+
         public static string Version = "1.0.0";
         public static string StrCity="";
         public static bool FlagChangeSave = true;
@@ -31,7 +33,13 @@ namespace BaoCaoLuong2018
         public static string Webservice;
         public static DataBaoCaoLuongDataContext Db;
         public static DataBPODataContext DbBpo;
-        
+        public struct dataNote_
+        {
+            public string City { set; get; }
+            public string LoaiPhieu { set; get; }
+            public string Truong { set; get; }
+            public string Note { set; get; }
+        }
         public static string GetToken(string strUserName)
         {
             Random rnd = new Random();
@@ -63,10 +71,11 @@ namespace BaoCaoLuong2018
         }
         public static void RunUpdateVersion()
         {
-            if (Settings.Default.Server == "Đà Nẵng")
-                Process.Start(@"\\10.10.10.254\DE_Viet\2017\");
-            else
-                Process.Start("https://drive.google.com/drive/folders/0BwO0VkvgrRHaeW5meEE4blBHdnc?usp=sharing");
+            Process.Start(@"\\10.10.10.254\DE_Viet\2017\BaoCaoLuong2018");
+            //if (Settings.Default.Server == "Đà Nẵng")
+            //    Process.Start(@"\\10.10.10.254\DE_Viet\2017\BaoCaoLuong2018");
+            //else
+            //    Process.Start("https://drive.google.com/drive/folders/0BwO0VkvgrRHaeW5meEE4blBHdnc?usp=sharing");
         }
     }
 }

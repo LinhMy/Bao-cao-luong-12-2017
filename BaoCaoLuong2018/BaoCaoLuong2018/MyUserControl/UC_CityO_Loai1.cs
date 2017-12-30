@@ -12,9 +12,11 @@ using BaoCaoLuong2018.Properties;
 namespace BaoCaoLuong2018.MyUserControl
 {
     public delegate void AllTextChange(object sender, EventArgs e);
+    public delegate void Focus_Text(string Truong, string Tag);
     public partial class UC_CityO_Loai1 : UserControl
     {
         public event AllTextChange Changed;
+        public event Focus_Text Focus;
         public UC_CityO_Loai1()
         {
             InitializeComponent();
@@ -238,6 +240,7 @@ namespace BaoCaoLuong2018.MyUserControl
 
         private void Txt_Truong_018_GotFocus(object sender, EventArgs e)
         {
+            //Focus(((TextEdit) sender).Name, ((TextEdit)sender).Tag+"");
             ((TextEdit)sender).SelectAll();
         }
 

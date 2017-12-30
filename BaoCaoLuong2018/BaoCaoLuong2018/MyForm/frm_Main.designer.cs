@@ -43,19 +43,8 @@
             this.btn_Submit_Logout = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Submit = new DevExpress.XtraEditors.SimpleButton();
             this.panel_Right = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.panel_Top = new DevExpress.XtraEditors.PanelControl();
-            this.lb_IdImage = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.lb_UserName = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.lb_SoPhieuNhap = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.lb_SoPhieuCon = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.lb_TongPhieu = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.lb_fBatchName = new DevExpress.XtraEditors.LabelControl();
+            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.txt_Note = new System.Windows.Forms.RichTextBox();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.menu_Menu = new DevExpress.XtraBars.BarSubItem();
@@ -99,6 +88,19 @@
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.btn_ChangeZoom = new DevExpress.XtraBars.BarButtonItem();
             this.skinBarSubItem2 = new DevExpress.XtraBars.SkinBarSubItem();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.panel_Top = new DevExpress.XtraEditors.PanelControl();
+            this.lb_IdImage = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_UserName = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_SoPhieuNhap = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_SoPhieuCon = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_TongPhieu = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_fBatchName = new DevExpress.XtraEditors.LabelControl();
             this.uc_PictureBox1 = new BaoCaoLuong2018.MyUserControl.UC_PictureBox();
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.splitMain = new DevExpress.XtraEditors.SplitContainerControl();
@@ -111,8 +113,8 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panel_Right)).BeginInit();
             this.panel_Right.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panel_Top)).BeginInit();
-            this.panel_Top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -120,6 +122,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTrackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panel_Top)).BeginInit();
+            this.panel_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
             this.splitMain.SuspendLayout();
             this.SuspendLayout();
@@ -127,10 +131,10 @@
             // pn_Main
             // 
             this.pn_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_Main.Location = new System.Drawing.Point(2, 2);
+            this.pn_Main.Location = new System.Drawing.Point(0, 0);
             this.pn_Main.Name = "pn_Main";
             this.pn_Main.SelectedTabPage = this.tab_CityO_Loai1;
-            this.pn_Main.Size = new System.Drawing.Size(676, 587);
+            this.pn_Main.Size = new System.Drawing.Size(676, 511);
             this.pn_Main.TabIndex = 0;
             this.pn_Main.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tab_CityO_Loai1,
@@ -144,20 +148,21 @@
             this.tab_CityO_Loai1.AutoScroll = true;
             this.tab_CityO_Loai1.Controls.Add(this.uC_CityO_Loai11);
             this.tab_CityO_Loai1.Name = "tab_CityO_Loai1";
-            this.tab_CityO_Loai1.Size = new System.Drawing.Size(670, 559);
+            this.tab_CityO_Loai1.Size = new System.Drawing.Size(670, 487);
             this.tab_CityO_Loai1.Text = "CityO Loại 1";
             // 
             // uC_CityO_Loai11
             // 
+            this.uC_CityO_Loai11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_CityO_Loai11.Location = new System.Drawing.Point(0, 0);
             this.uC_CityO_Loai11.Name = "uC_CityO_Loai11";
-            this.uC_CityO_Loai11.Size = new System.Drawing.Size(670, 335);
+            this.uC_CityO_Loai11.Size = new System.Drawing.Size(670, 487);
             this.uC_CityO_Loai11.TabIndex = 0;
             // 
             // tab_CityO_Loai2
             // 
             this.tab_CityO_Loai2.Name = "tab_CityO_Loai2";
-            this.tab_CityO_Loai2.Size = new System.Drawing.Size(670, 559);
+            this.tab_CityO_Loai2.Size = new System.Drawing.Size(670, 510);
             this.tab_CityO_Loai2.Text = "CityO Loại2";
             // 
             // tab_CityO_Loai3
@@ -165,7 +170,7 @@
             this.tab_CityO_Loai3.AutoScroll = true;
             this.tab_CityO_Loai3.Controls.Add(this.uC_CityO_Loai3_DeSo1);
             this.tab_CityO_Loai3.Name = "tab_CityO_Loai3";
-            this.tab_CityO_Loai3.Size = new System.Drawing.Size(670, 559);
+            this.tab_CityO_Loai3.Size = new System.Drawing.Size(670, 483);
             this.tab_CityO_Loai3.Text = "CityO Loại 3";
             // 
             // uC_CityO_Loai3_DeSo1
@@ -174,7 +179,7 @@
             this.uC_CityO_Loai3_DeSo1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_CityO_Loai3_DeSo1.Location = new System.Drawing.Point(0, 0);
             this.uC_CityO_Loai3_DeSo1.Name = "uC_CityO_Loai3_DeSo1";
-            this.uC_CityO_Loai3_DeSo1.Size = new System.Drawing.Size(670, 559);
+            this.uC_CityO_Loai3_DeSo1.Size = new System.Drawing.Size(670, 483);
             this.uC_CityO_Loai3_DeSo1.TabIndex = 0;
             // 
             // tab_CityO_JP
@@ -182,7 +187,7 @@
             this.tab_CityO_JP.AutoScroll = true;
             this.tab_CityO_JP.Controls.Add(this.uC_CityO_JP1);
             this.tab_CityO_JP.Name = "tab_CityO_JP";
-            this.tab_CityO_JP.Size = new System.Drawing.Size(670, 559);
+            this.tab_CityO_JP.Size = new System.Drawing.Size(670, 510);
             this.tab_CityO_JP.Text = "CityO JP";
             // 
             // uC_CityO_JP1
@@ -190,7 +195,7 @@
             this.uC_CityO_JP1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_CityO_JP1.Location = new System.Drawing.Point(0, 0);
             this.uC_CityO_JP1.Name = "uC_CityO_JP1";
-            this.uC_CityO_JP1.Size = new System.Drawing.Size(670, 559);
+            this.uC_CityO_JP1.Size = new System.Drawing.Size(670, 510);
             this.uC_CityO_JP1.TabIndex = 0;
             // 
             // panelControl2
@@ -241,7 +246,7 @@
             // 
             // panel_Right
             // 
-            this.panel_Right.Controls.Add(this.pn_Main);
+            this.panel_Right.Controls.Add(this.splitContainerControl1);
             this.panel_Right.Controls.Add(this.panelControl2);
             this.panel_Right.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Right.Location = new System.Drawing.Point(0, 0);
@@ -249,126 +254,30 @@
             this.panel_Right.Size = new System.Drawing.Size(680, 621);
             this.panel_Right.TabIndex = 18;
             // 
-            // labelControl1
+            // splitContainerControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(5, 7);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(31, 13);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Batch:";
+            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl1.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
+            this.splitContainerControl1.Horizontal = false;
+            this.splitContainerControl1.Location = new System.Drawing.Point(2, 2);
+            this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.pn_Main);
+            this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.txt_Note);
+            this.splitContainerControl1.Panel2.Text = "Panel2";
+            this.splitContainerControl1.Size = new System.Drawing.Size(676, 587);
+            this.splitContainerControl1.SplitterPosition = 71;
+            this.splitContainerControl1.TabIndex = 2;
+            this.splitContainerControl1.Text = "splitContainerControl1";
             // 
-            // panel_Top
+            // txt_Note
             // 
-            this.panel_Top.Controls.Add(this.lb_IdImage);
-            this.panel_Top.Controls.Add(this.labelControl7);
-            this.panel_Top.Controls.Add(this.lb_UserName);
-            this.panel_Top.Controls.Add(this.labelControl6);
-            this.panel_Top.Controls.Add(this.lb_SoPhieuNhap);
-            this.panel_Top.Controls.Add(this.labelControl4);
-            this.panel_Top.Controls.Add(this.lb_SoPhieuCon);
-            this.panel_Top.Controls.Add(this.labelControl3);
-            this.panel_Top.Controls.Add(this.lb_TongPhieu);
-            this.panel_Top.Controls.Add(this.labelControl2);
-            this.panel_Top.Controls.Add(this.lb_fBatchName);
-            this.panel_Top.Controls.Add(this.labelControl1);
-            this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Top.Location = new System.Drawing.Point(0, 20);
-            this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Size = new System.Drawing.Size(1175, 26);
-            this.panel_Top.TabIndex = 17;
-            // 
-            // lb_IdImage
-            // 
-            this.lb_IdImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_IdImage.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_IdImage.Appearance.Options.UseFont = true;
-            this.lb_IdImage.Location = new System.Drawing.Point(828, 5);
-            this.lb_IdImage.Name = "lb_IdImage";
-            this.lb_IdImage.Size = new System.Drawing.Size(7, 16);
-            this.lb_IdImage.TabIndex = 13;
-            this.lb_IdImage.Text = "1";
-            this.lb_IdImage.Click += new System.EventHandler(this.lb_IdImage_Click);
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl7.Location = new System.Drawing.Point(776, 7);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(45, 13);
-            this.labelControl7.TabIndex = 12;
-            this.labelControl7.Text = "Tên hình:";
-            // 
-            // lb_UserName
-            // 
-            this.lb_UserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_UserName.Location = new System.Drawing.Point(1032, 7);
-            this.lb_UserName.Name = "lb_UserName";
-            this.lb_UserName.Size = new System.Drawing.Size(51, 13);
-            this.lb_UserName.TabIndex = 11;
-            this.lb_UserName.Text = "mptelecom";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl6.Location = new System.Drawing.Point(978, 7);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(53, 13);
-            this.labelControl6.TabIndex = 10;
-            this.labelControl6.Text = "UserName:";
-            // 
-            // lb_SoPhieuNhap
-            // 
-            this.lb_SoPhieuNhap.Location = new System.Drawing.Point(536, 7);
-            this.lb_SoPhieuNhap.Name = "lb_SoPhieuNhap";
-            this.lb_SoPhieuNhap.Size = new System.Drawing.Size(0, 13);
-            this.lb_SoPhieuNhap.TabIndex = 7;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(460, 7);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(72, 13);
-            this.labelControl4.TabIndex = 6;
-            this.labelControl4.Text = "Số phiếu nhập:";
-            // 
-            // lb_SoPhieuCon
-            // 
-            this.lb_SoPhieuCon.Location = new System.Drawing.Point(403, 7);
-            this.lb_SoPhieuCon.Name = "lb_SoPhieuCon";
-            this.lb_SoPhieuCon.Size = new System.Drawing.Size(0, 13);
-            this.lb_SoPhieuCon.TabIndex = 5;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(335, 7);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(65, 13);
-            this.labelControl3.TabIndex = 4;
-            this.labelControl3.Text = "Số phiếu còn:";
-            // 
-            // lb_TongPhieu
-            // 
-            this.lb_TongPhieu.Location = new System.Drawing.Point(281, 7);
-            this.lb_TongPhieu.Name = "lb_TongPhieu";
-            this.lb_TongPhieu.Size = new System.Drawing.Size(0, 13);
-            this.lb_TongPhieu.TabIndex = 3;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(220, 7);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(57, 13);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Tổng phiếu:";
-            // 
-            // lb_fBatchName
-            // 
-            this.lb_fBatchName.Location = new System.Drawing.Point(38, 7);
-            this.lb_fBatchName.Name = "lb_fBatchName";
-            this.lb_fBatchName.Size = new System.Drawing.Size(6, 13);
-            this.lb_fBatchName.TabIndex = 1;
-            this.lb_fBatchName.Text = "1";
-            this.lb_fBatchName.Click += new System.EventHandler(this.lb_fBatchName_Click);
+            this.txt_Note.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_Note.Location = new System.Drawing.Point(0, 0);
+            this.txt_Note.Name = "txt_Note";
+            this.txt_Note.Size = new System.Drawing.Size(676, 71);
+            this.txt_Note.TabIndex = 0;
+            this.txt_Note.Text = "";
             // 
             // barManager1
             // 
@@ -731,6 +640,127 @@
             this.skinBarSubItem2.Id = 27;
             this.skinBarSubItem2.Name = "skinBarSubItem2";
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(5, 7);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(31, 13);
+            this.labelControl1.TabIndex = 1;
+            this.labelControl1.Text = "Batch:";
+            // 
+            // panel_Top
+            // 
+            this.panel_Top.Controls.Add(this.lb_IdImage);
+            this.panel_Top.Controls.Add(this.labelControl7);
+            this.panel_Top.Controls.Add(this.lb_UserName);
+            this.panel_Top.Controls.Add(this.labelControl6);
+            this.panel_Top.Controls.Add(this.lb_SoPhieuNhap);
+            this.panel_Top.Controls.Add(this.labelControl4);
+            this.panel_Top.Controls.Add(this.lb_SoPhieuCon);
+            this.panel_Top.Controls.Add(this.labelControl3);
+            this.panel_Top.Controls.Add(this.lb_TongPhieu);
+            this.panel_Top.Controls.Add(this.labelControl2);
+            this.panel_Top.Controls.Add(this.lb_fBatchName);
+            this.panel_Top.Controls.Add(this.labelControl1);
+            this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Top.Location = new System.Drawing.Point(0, 20);
+            this.panel_Top.Name = "panel_Top";
+            this.panel_Top.Size = new System.Drawing.Size(1175, 26);
+            this.panel_Top.TabIndex = 17;
+            // 
+            // lb_IdImage
+            // 
+            this.lb_IdImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_IdImage.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_IdImage.Appearance.Options.UseFont = true;
+            this.lb_IdImage.Location = new System.Drawing.Point(828, 5);
+            this.lb_IdImage.Name = "lb_IdImage";
+            this.lb_IdImage.Size = new System.Drawing.Size(7, 16);
+            this.lb_IdImage.TabIndex = 13;
+            this.lb_IdImage.Text = "1";
+            this.lb_IdImage.Click += new System.EventHandler(this.lb_IdImage_Click);
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl7.Location = new System.Drawing.Point(776, 7);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(45, 13);
+            this.labelControl7.TabIndex = 12;
+            this.labelControl7.Text = "Tên hình:";
+            // 
+            // lb_UserName
+            // 
+            this.lb_UserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_UserName.Location = new System.Drawing.Point(1032, 7);
+            this.lb_UserName.Name = "lb_UserName";
+            this.lb_UserName.Size = new System.Drawing.Size(51, 13);
+            this.lb_UserName.TabIndex = 11;
+            this.lb_UserName.Text = "mptelecom";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl6.Location = new System.Drawing.Point(978, 7);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(53, 13);
+            this.labelControl6.TabIndex = 10;
+            this.labelControl6.Text = "UserName:";
+            // 
+            // lb_SoPhieuNhap
+            // 
+            this.lb_SoPhieuNhap.Location = new System.Drawing.Point(536, 7);
+            this.lb_SoPhieuNhap.Name = "lb_SoPhieuNhap";
+            this.lb_SoPhieuNhap.Size = new System.Drawing.Size(0, 13);
+            this.lb_SoPhieuNhap.TabIndex = 7;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(460, 7);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(72, 13);
+            this.labelControl4.TabIndex = 6;
+            this.labelControl4.Text = "Số phiếu nhập:";
+            // 
+            // lb_SoPhieuCon
+            // 
+            this.lb_SoPhieuCon.Location = new System.Drawing.Point(403, 7);
+            this.lb_SoPhieuCon.Name = "lb_SoPhieuCon";
+            this.lb_SoPhieuCon.Size = new System.Drawing.Size(0, 13);
+            this.lb_SoPhieuCon.TabIndex = 5;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(335, 7);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(65, 13);
+            this.labelControl3.TabIndex = 4;
+            this.labelControl3.Text = "Số phiếu còn:";
+            // 
+            // lb_TongPhieu
+            // 
+            this.lb_TongPhieu.Location = new System.Drawing.Point(281, 7);
+            this.lb_TongPhieu.Name = "lb_TongPhieu";
+            this.lb_TongPhieu.Size = new System.Drawing.Size(0, 13);
+            this.lb_TongPhieu.TabIndex = 3;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(220, 7);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(57, 13);
+            this.labelControl2.TabIndex = 2;
+            this.labelControl2.Text = "Tổng phiếu:";
+            // 
+            // lb_fBatchName
+            // 
+            this.lb_fBatchName.Location = new System.Drawing.Point(38, 7);
+            this.lb_fBatchName.Name = "lb_fBatchName";
+            this.lb_fBatchName.Size = new System.Drawing.Size(6, 13);
+            this.lb_fBatchName.TabIndex = 1;
+            this.lb_fBatchName.Text = "1";
+            this.lb_fBatchName.Click += new System.EventHandler(this.lb_fBatchName_Click);
+            // 
             // uc_PictureBox1
             // 
             this.uc_PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -796,9 +826,8 @@
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panel_Right)).EndInit();
             this.panel_Right.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panel_Top)).EndInit();
-            this.panel_Top.ResumeLayout(false);
-            this.panel_Top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
+            this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
@@ -806,6 +835,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTrackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panel_Top)).EndInit();
+            this.panel_Top.ResumeLayout(false);
+            this.panel_Top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).EndInit();
             this.splitMain.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -887,5 +919,7 @@
         private DevExpress.XtraBars.BarButtonItem btn_Check_DeSo_NhamPhieu;
         private DevExpress.XtraBars.BarButtonItem btn_Check_DeSo_QC;
         private DevExpress.XtraBars.BarButtonItem btn_Check_DeJP;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
+        private System.Windows.Forms.RichTextBox txt_Note;
     }
 }

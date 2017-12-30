@@ -70,6 +70,8 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lb_Image = new DevExpress.XtraEditors.LabelControl();
             this.lb_Loi = new DevExpress.XtraEditors.LabelControl();
+            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.txt_Note = new DevExpress.XtraEditors.MemoEdit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tab_De2)).BeginInit();
@@ -91,6 +93,9 @@
             this.splitCheck.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Note.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -110,7 +115,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 655);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 589);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel2
@@ -118,9 +123,9 @@
             this.panel2.Controls.Add(this.tab_De2);
             this.panel2.Controls.Add(this.panelControl4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 330);
+            this.panel2.Location = new System.Drawing.Point(3, 297);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(455, 322);
+            this.panel2.Size = new System.Drawing.Size(455, 289);
             this.panel2.TabIndex = 0;
             // 
             // tab_De2
@@ -130,7 +135,7 @@
             this.tab_De2.Name = "tab_De2";
             this.tab_De2.SelectedTabPage = this.tab_CityO_Loai1_De2;
             this.tab_De2.ShowTabHeader = DevExpress.Utils.DefaultBoolean.True;
-            this.tab_De2.Size = new System.Drawing.Size(455, 292);
+            this.tab_De2.Size = new System.Drawing.Size(455, 259);
             this.tab_De2.TabIndex = 3;
             this.tab_De2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tab_CityO_Loai1_De2,
@@ -145,7 +150,7 @@
             this.tab_CityO_Loai1_De2.AutoScroll = true;
             this.tab_CityO_Loai1_De2.Controls.Add(this.uC_CityO_Loai12);
             this.tab_CityO_Loai1_De2.Name = "tab_CityO_Loai1_De2";
-            this.tab_CityO_Loai1_De2.Size = new System.Drawing.Size(449, 264);
+            this.tab_CityO_Loai1_De2.Size = new System.Drawing.Size(449, 231);
             this.tab_CityO_Loai1_De2.Text = "CityO Loại 1";
             // 
             // uC_CityO_Loai12
@@ -154,7 +159,7 @@
             this.uC_CityO_Loai12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_CityO_Loai12.Location = new System.Drawing.Point(0, 0);
             this.uC_CityO_Loai12.Name = "uC_CityO_Loai12";
-            this.uC_CityO_Loai12.Size = new System.Drawing.Size(449, 264);
+            this.uC_CityO_Loai12.Size = new System.Drawing.Size(449, 231);
             this.uC_CityO_Loai12.TabIndex = 0;
             this.uC_CityO_Loai12.Scroll += new System.Windows.Forms.ScrollEventHandler(this.uC_CityO_Loai12_Scroll);
             // 
@@ -208,7 +213,7 @@
             this.panelControl4.Controls.Add(this.btn_SuaVaLuu_DeSo2);
             this.panelControl4.Controls.Add(this.btn_Luu_DeSo2);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl4.Location = new System.Drawing.Point(0, 292);
+            this.panelControl4.Location = new System.Drawing.Point(0, 259);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(455, 30);
             this.panelControl4.TabIndex = 0;
@@ -249,7 +254,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(455, 321);
+            this.panel1.Size = new System.Drawing.Size(455, 288);
             this.panel1.TabIndex = 4;
             // 
             // tab_De1
@@ -259,7 +264,7 @@
             this.tab_De1.Name = "tab_De1";
             this.tab_De1.SelectedTabPage = this.tab_CityO_Loai1_De1;
             this.tab_De1.ShowTabHeader = DevExpress.Utils.DefaultBoolean.True;
-            this.tab_De1.Size = new System.Drawing.Size(455, 291);
+            this.tab_De1.Size = new System.Drawing.Size(455, 258);
             this.tab_De1.TabIndex = 2;
             this.tab_De1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tab_CityO_Loai1_De1,
@@ -274,7 +279,7 @@
             this.tab_CityO_Loai1_De1.AutoScroll = true;
             this.tab_CityO_Loai1_De1.Controls.Add(this.uC_CityO_Loai11);
             this.tab_CityO_Loai1_De1.Name = "tab_CityO_Loai1_De1";
-            this.tab_CityO_Loai1_De1.Size = new System.Drawing.Size(449, 263);
+            this.tab_CityO_Loai1_De1.Size = new System.Drawing.Size(449, 230);
             this.tab_CityO_Loai1_De1.Text = "CityO Loại 1";
             // 
             // uC_CityO_Loai11
@@ -283,7 +288,7 @@
             this.uC_CityO_Loai11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_CityO_Loai11.Location = new System.Drawing.Point(0, 0);
             this.uC_CityO_Loai11.Name = "uC_CityO_Loai11";
-            this.uC_CityO_Loai11.Size = new System.Drawing.Size(449, 263);
+            this.uC_CityO_Loai11.Size = new System.Drawing.Size(449, 230);
             this.uC_CityO_Loai11.TabIndex = 0;
             this.uC_CityO_Loai11.Scroll += new System.Windows.Forms.ScrollEventHandler(this.uC_CityO_Loai11_Scroll);
             // 
@@ -337,7 +342,7 @@
             this.panelControl3.Controls.Add(this.btn_SuaVaLuu_DeSo1);
             this.panelControl3.Controls.Add(this.btn_Luu_DeSo1);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(0, 291);
+            this.panelControl3.Location = new System.Drawing.Point(0, 258);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(455, 30);
             this.panelControl3.TabIndex = 0;
@@ -406,7 +411,7 @@
             this.splitCheck.Panel1.Controls.Add(this.uC_PictureBox1);
             this.splitCheck.Panel1.Controls.Add(this.panelControl1);
             this.splitCheck.Panel1.Text = "Panel1";
-            this.splitCheck.Panel2.Controls.Add(this.tableLayoutPanel1);
+            this.splitCheck.Panel2.Controls.Add(this.splitContainerControl1);
             this.splitCheck.Panel2.Text = "Panel2";
             this.splitCheck.Size = new System.Drawing.Size(1283, 655);
             this.splitCheck.SplitterPosition = 461;
@@ -509,6 +514,32 @@
             this.lb_Loi.TabIndex = 5;
             this.lb_Loi.Text = "labelControl3";
             // 
+            // splitContainerControl1
+            // 
+            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl1.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
+            this.splitContainerControl1.Horizontal = false;
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel2.Controls.Add(this.txt_Note);
+            this.splitContainerControl1.Panel2.Text = "Panel2";
+            this.splitContainerControl1.Size = new System.Drawing.Size(461, 655);
+            this.splitContainerControl1.SplitterPosition = 61;
+            this.splitContainerControl1.TabIndex = 2;
+            this.splitContainerControl1.Text = "splitContainerControl1";
+            // 
+            // txt_Note
+            // 
+            this.txt_Note.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_Note.Location = new System.Drawing.Point(0, 0);
+            this.txt_Note.Name = "txt_Note";
+            this.txt_Note.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Note.Properties.Appearance.Options.UseFont = true;
+            this.txt_Note.Size = new System.Drawing.Size(461, 61);
+            this.txt_Note.TabIndex = 1;
+            // 
             // frm_Checker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -544,6 +575,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
+            this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Note.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -589,5 +623,7 @@
         private MyUserControl.UC_CityO_Loai1 uC_CityO_Loai11;
         private MyUserControl.UC_CityO_Loai3_DeSo uC_CityO_Loai3_DeSo1;
         private MyUserControl.UC_CityO_JP uC_CityO_JP1;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
+        private DevExpress.XtraEditors.MemoEdit txt_Note;
     }
 }

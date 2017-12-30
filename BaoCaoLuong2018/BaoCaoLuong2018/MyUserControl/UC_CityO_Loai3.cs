@@ -14,6 +14,7 @@ namespace BaoCaoLuong2018.MyUserControl
 {
     public partial class UC_CityO_Loai3_DeSo : UserControl
     {
+        public event Focus_Text Focus;
         public event AllTextChange Changed;
         public UC_CityO_Loai3_DeSo()
         {
@@ -28,11 +29,13 @@ namespace BaoCaoLuong2018.MyUserControl
         }
         private void SetDataLookUpEdit()
         {
+            category.Clear();
             category.Add(new Category() { Value_JP = "", Value_SO = "" });
             category.Add(new Category() { Value_JP = "住", Value_SO = "01" });
             category.Add(new Category() { Value_JP = "認", Value_SO = "02" });
             category.Add(new Category() { Value_JP = "増", Value_SO = "03" });
             category.Add(new Category() { Value_JP = "震", Value_SO = "04" });
+            category.Add(new Category() { Value_JP = "特", Value_SO = "11" });
             category.Add(new Category() { Value_JP = "住（特）", Value_SO = "11" });
             category.Add(new Category() { Value_JP = "認（特）", Value_SO = "12" });
             category.Add(new Category() { Value_JP = "増（特）", Value_SO = "13" });
@@ -61,6 +64,82 @@ namespace BaoCaoLuong2018.MyUserControl
             txt_Truong_084.Properties.DataSource = category;
             txt_Truong_084.Properties.DisplayMember = "Value_JP";
             txt_Truong_084.Properties.ValueMember = "Value_SO";
+            if (Global.FlagLoad)
+                return;
+            textEdit1.Tag = "";
+            textEdit2.Tag = "";
+            textEdit3.Tag = "";
+            textEdit4.Tag = "";
+            textEdit5.Tag = "";
+            txt_Truong_015.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "15" select w.Note).FirstOrDefault();
+            txt_Truong_017.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "17" select w.Note).FirstOrDefault();
+            txt_Truong_018.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "18" select w.Note).FirstOrDefault();
+            txt_Truong_019.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "19" select w.Note).FirstOrDefault();
+            txt_Truong_020.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "20" select w.Note).FirstOrDefault();
+            txt_Truong_021.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "21" select w.Note).FirstOrDefault();
+            txt_Truong_023.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "23" select w.Note).FirstOrDefault();
+            txt_Truong_024.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "24" select w.Note).FirstOrDefault();
+            txt_Truong_025.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "25" select w.Note).FirstOrDefault();
+            txt_Truong_026.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "26" select w.Note).FirstOrDefault();
+            txt_Truong_027.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "27" select w.Note).FirstOrDefault();
+            txt_Truong_028.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "28" select w.Note).FirstOrDefault();
+            txt_Truong_030.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "30" select w.Note).FirstOrDefault();
+            txt_Truong_031.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "31" select w.Note).FirstOrDefault();
+            txt_Truong_032.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "32" select w.Note).FirstOrDefault();
+            txt_Truong_033.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "33" select w.Note).FirstOrDefault();
+            txt_Truong_034.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "34" select w.Note).FirstOrDefault();
+            txt_Truong_035.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "35" select w.Note).FirstOrDefault();
+            txt_Truong_036.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "36" select w.Note).FirstOrDefault();
+            txt_Truong_037.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "37" select w.Note).FirstOrDefault();
+            txt_Truong_038.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "38" select w.Note).FirstOrDefault();
+            txt_Truong_039.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "39" select w.Note).FirstOrDefault();
+            txt_Truong_040.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "40" select w.Note).FirstOrDefault();
+            txt_Truong_041.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "41" select w.Note).FirstOrDefault();
+            txt_Truong_044.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "44" select w.Note).FirstOrDefault();
+            txt_Truong_045.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "45" select w.Note).FirstOrDefault();
+            txt_Truong_046.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "46" select w.Note).FirstOrDefault();
+            txt_Truong_048.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "48" select w.Note).FirstOrDefault();
+            txt_Truong_049.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "49" select w.Note).FirstOrDefault();
+            txt_Truong_050.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "50" select w.Note).FirstOrDefault();
+            txt_Truong_051.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "51" select w.Note).FirstOrDefault();
+            txt_Truong_052.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "52" select w.Note).FirstOrDefault();
+            txt_Truong_055.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "55" select w.Note).FirstOrDefault();
+            txt_Truong_056.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "56" select w.Note).FirstOrDefault();
+            txt_Truong_058.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "58" select w.Note).FirstOrDefault();
+            txt_Truong_059.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "59" select w.Note).FirstOrDefault();
+            txt_Truong_060.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "60" select w.Note).FirstOrDefault();
+            txt_Truong_062.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "62" select w.Note).FirstOrDefault();
+            txt_Truong_063.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "63" select w.Note).FirstOrDefault();
+            txt_Truong_064.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "64" select w.Note).FirstOrDefault();
+            txt_Truong_067.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "67" select w.Note).FirstOrDefault();
+            txt_Truong_069.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "69" select w.Note).FirstOrDefault();
+            txt_Truong_072.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "72" select w.Note).FirstOrDefault();
+            txt_Truong_073.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "73" select w.Note).FirstOrDefault();
+            txt_Truong_074.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "74" select w.Note).FirstOrDefault();
+            txt_Truong_075.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "75" select w.Note).FirstOrDefault();
+            txt_Truong_076.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "76" select w.Note).FirstOrDefault();
+            txt_Truong_077.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "77" select w.Note).FirstOrDefault();
+            txt_Truong_078.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "78" select w.Note).FirstOrDefault();
+            txt_Truong_079.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "79" select w.Note).FirstOrDefault();
+            txt_Truong_081.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "81" select w.Note).FirstOrDefault();
+            txt_Truong_082.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "82" select w.Note).FirstOrDefault();
+            txt_Truong_083.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "83" select w.Note).FirstOrDefault();
+            txt_Truong_084.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "84" select w.Note).FirstOrDefault();
+            txt_Truong_086.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "86" select w.Note).FirstOrDefault();
+            txt_Truong_087.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "87" select w.Note).FirstOrDefault();
+            txt_Truong_088.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "88" select w.Note).FirstOrDefault();
+            txt_Truong_089.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "89" select w.Note).FirstOrDefault();
+            txt_Truong_090.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "90" select w.Note).FirstOrDefault();
+            txt_Truong_095.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "95" select w.Note).FirstOrDefault();
+            txt_Truong_097.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "97" select w.Note).FirstOrDefault();
+            txt_Truong_099.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "99" select w.Note).FirstOrDefault();
+            txt_Truong_101.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "101" select w.Note).FirstOrDefault();
+            txt_Truong_103.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "103" select w.Note).FirstOrDefault();
+            txt_Truong_105.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "105" select w.Note).FirstOrDefault();
+            txt_Truong_107.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "107" select w.Note).FirstOrDefault();
+            txt_Truong_109.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "109" select w.Note).FirstOrDefault();
+            txt_Truong_110.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "110" select w.Note).FirstOrDefault();
+            txt_Truong_111.Tag = (from w in Global.DataNote where w.City == "CityO" & w.LoaiPhieu == "Loai3" & w.Truong == "111" select w.Note).FirstOrDefault();
 
             txt_Truong_015.GotFocus += Txt_Truong_015_GotFocus;
             txt_Truong_017.GotFocus += Txt_Truong_015_GotFocus;
@@ -135,6 +214,7 @@ namespace BaoCaoLuong2018.MyUserControl
 
         private void Txt_Truong_015_GotFocus(object sender, EventArgs e)
         {
+            Focus(((TextEdit)sender)?.Name, ((TextEdit)sender)?.Tag + "");
             ((TextEdit)sender).SelectAll();
         }
         
@@ -1466,13 +1546,31 @@ namespace BaoCaoLuong2018.MyUserControl
             {
                 te.Text = te.Text.Replace(",", "");
             }
-            else
+            else if(!string.IsNullOrEmpty(te.Text))
             {
-                string str = te.Text;
-                int start = te.Text.Length - te.SelectionStart;
-                str = str.Replace(",", "");
-                te.Text = FormatCurency(str);
-                te.SelectionStart = -start + te.Text.Length;
+                if(te.Text[0]+""=="-")
+                {
+                    string str = te.Text.Replace("-","").Replace(",","");
+                    int start = te.Text.Length - te.SelectionStart;
+                    te.Text = "-"+FormatCurency(str);
+                    te.SelectionStart = -start + te.Text.Length;
+                }
+                else
+                {
+                    string str = te.Text.Replace(",", "");
+                    int start = te.Text.Length - te.SelectionStart;
+                    te.Text = FormatCurency(str);
+                    te.SelectionStart = -start + te.Text.Length;
+                }
+            }
+        }
+
+        private void txt_Truong_017_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Add)
+            {
+                ((TextEdit)sender).Text = ((TextEdit)sender).Text + "000";
+                ((TextEdit)sender).SelectionStart = ((TextEdit)sender).Text.Length;
             }
         }
     }

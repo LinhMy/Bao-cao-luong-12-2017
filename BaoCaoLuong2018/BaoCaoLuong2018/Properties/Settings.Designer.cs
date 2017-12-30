@@ -83,7 +83,7 @@ namespace BaoCaoLuong2018.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("35")]
+        [global::System.Configuration.DefaultSettingValueAttribute("52")]
         public int ZoomImage {
             get {
                 return ((int)(this["ZoomImage"]));

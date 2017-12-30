@@ -168,6 +168,7 @@
             this.txt_Truong_018.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txt_Truong_018.Size = new System.Drawing.Size(115, 22);
             this.txt_Truong_018.TabIndex = 1;
+            this.txt_Truong_018.Tag = "";
             this.txt_Truong_018.EditValueChanged += new System.EventHandler(this.txt_Truong_018_EditValueChanged);
             this.txt_Truong_018.TextChanged += new System.EventHandler(this.txt_Truong_018_TextChanged);
             this.txt_Truong_018.Leave += new System.EventHandler(this.txt_Truong_018_Leave);
@@ -182,6 +183,7 @@
             this.txt_Truong_025.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txt_Truong_025.Size = new System.Drawing.Size(115, 22);
             this.txt_Truong_025.TabIndex = 2;
+            this.txt_Truong_025.Tag = "";
             this.txt_Truong_025.EditValueChanged += new System.EventHandler(this.txt_Truong_025_EditValueChanged);
             this.txt_Truong_025.Leave += new System.EventHandler(this.txt_Truong_025_Leave);
             this.txt_Truong_025.Validated += new System.EventHandler(this.txt_Truong_018_TextChanged);
@@ -196,6 +198,7 @@
             this.txt_Truong_019.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txt_Truong_019.Size = new System.Drawing.Size(115, 22);
             this.txt_Truong_019.TabIndex = 3;
+            this.txt_Truong_019.Tag = "";
             this.txt_Truong_019.EditValueChanged += new System.EventHandler(this.txt_Truong_019_EditValueChanged);
             this.txt_Truong_019.Leave += new System.EventHandler(this.txt_Truong_019_Leave);
             this.txt_Truong_019.Validated += new System.EventHandler(this.txt_Truong_018_TextChanged);

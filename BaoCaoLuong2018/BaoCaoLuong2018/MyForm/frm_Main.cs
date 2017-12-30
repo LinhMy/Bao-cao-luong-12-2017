@@ -38,6 +38,7 @@ namespace BaoCaoLuong2018.MyForm
         {
             try
             {
+                Global.FlagLoad = true;
                 ChiaUser = -1;
                 LevelUser = -1;
                 lb_IdImage.Text = "";
@@ -61,7 +62,9 @@ namespace BaoCaoLuong2018.MyForm
 
                 lb_fBatchName.Text = Global.StrBatch;
                 lb_UserName.Text = Global.StrUserName;
+                Global.FlagLoad = false;
                 var checkDisableUser = (from w in Global.DbBpo.tbl_Users where w.Username == Global.StrUserName select w.IsDelete).FirstOrDefault();
+                Global.DataNote = (from w in Global.Db.tbl_Notes select new Global.dataNote_ { City = w.City, LoaiPhieu = w.LoaiPhieu, Truong = w.Truong, Note = w.Note }).ToList();
                 //Global.listdata13.Clear();
                 //Global.listdata13 = (from w in Global.Db.tbl_Database_Truong13s select w.id3).ToList();
                 //Folder = (from w in Global.Db.GetFolder(lb_fBatchName.Text) select w.fPathPicture).FirstOrDefault();
@@ -93,6 +96,8 @@ namespace BaoCaoLuong2018.MyForm
                         if (Global.StrCity == "CityO")
                         {
                             tab_CityO_Loai1.PageVisible = true;
+                            uC_CityO_Loai3_DeSo1.UC_CityO_Loai3_DeSo_Load(null, null);
+                            uC_CityO_Loai3_DeSo1.Focus += UC_CityO_Loai3_DeSo1_Focus;
                             tab_CityO_Loai2.PageVisible = true;
                             tab_CityO_Loai3.PageVisible = true;
                             uC_CityO_Loai11.ResetData();
@@ -155,6 +160,12 @@ namespace BaoCaoLuong2018.MyForm
                 DialogResult = DialogResult.Yes;
             }
         }
+
+        private void UC_CityO_Loai3_DeSo1_Focus(string Truong, string Tag)
+        {
+            txt_Note.Text = Tag;
+        }
+        
         private void setValue()
         {
             if (Global.StrRole.ToUpper() == "DESO")
@@ -1033,7 +1044,7 @@ namespace BaoCaoLuong2018.MyForm
 
         private void btn_TienDo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //new FrmTienDo().ShowDialog();
+            new FrmTienDo().ShowDialog();
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1043,7 +1054,7 @@ namespace BaoCaoLuong2018.MyForm
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //new frm_NangSuat().ShowDialog();
+            new frm_NangSuat().ShowDialog();
         }
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1107,17 +1118,10 @@ namespace BaoCaoLuong2018.MyForm
                 splitMain.SplitterPosition = 677;
             }
         }
-
-        private void btn_Check_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-         //   Global.FlagChangeSave = false;
-         //   Global.StrCheck = "CHECKDESO";
-         ////   new frm_Checker().ShowDialog();
-        }
-
+        
         private void btn_RefreshImageNotInput_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-         //   new Refresh_ImageNotInput().ShowDialog();
+            new Refresh_ImageNotInput().ShowDialog();
         }
 
         private void btn_Check_DeSo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

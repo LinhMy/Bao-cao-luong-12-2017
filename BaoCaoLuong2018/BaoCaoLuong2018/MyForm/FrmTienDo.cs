@@ -94,12 +94,12 @@ namespace BaoCaoLuong2018.MyForm
 
         private void btn_ChiTiet_Click(object sender, EventArgs e)
         {
-            if (cbb_Batch.Text == "" && ck_All.Checked == false)
+            //if (cbb_Batch.Text == "" && ck_All.Checked == false)
             {
                 return;
             }
             var frm = new frm_ChiTietTienDo() { lb_fBatchNameHT = { Text = ck_All.Checked ? "All" : cbb_Batch.Text } };
-            frm.lb_City.Text = cbb_City.Text;            
+            frm.lb_City.Text = cbb_City.Text;
             frm.lb_fBatchName = ck_All.Checked ? "All" : cbb_Batch.SelectedValue.ToString();
             if (rb_deso1.Checked)
             {

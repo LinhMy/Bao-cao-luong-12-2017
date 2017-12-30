@@ -798,6 +798,7 @@ namespace BaoCaoLuong2018.MyForm
         bool FlagLoad = false;
         private void frm_Checker_Load(object sender, EventArgs e)
         {
+            Global.FlagLoad = true;
             FlagLoad = true;
             this.Text = TypeCheck;
             splitCheck.SplitterPosition = Settings.Default.PositionSplitCheck;
@@ -816,8 +817,13 @@ namespace BaoCaoLuong2018.MyForm
             tab_CityO_Loai2_De2.PageVisible = false;
             tab_CityO_Loai3_De2.PageVisible = false;
             tab_CityO_JP_De2.PageVisible = false;
+            Global.FlagLoad = false;
             if (Global.StrCheck == "CHECKDESO" && Global.StrCity == "CityO")
             {
+                uC_CityO_Loai3_DeSo1.UC_CityO_Loai3_DeSo_Load(null, null);
+                uC_CityO_Loai3_DeSo2.UC_CityO_Loai3_DeSo_Load(null, null);
+                uC_CityO_Loai3_DeSo1.Focus += UC_CityO_Loai3_DeSo1_Focus;
+                uC_CityO_Loai3_DeSo2.Focus += UC_CityO_Loai3_DeSo1_Focus;
                 tab_CityO_Loai1_De1.PageVisible = true;
                 tab_CityO_Loai2_De1.PageVisible = true;
                 tab_CityO_Loai3_De1.PageVisible = true;
@@ -843,6 +849,11 @@ namespace BaoCaoLuong2018.MyForm
             var soloi = ((from w in Global.Db.GetSoLoiCheck(cbb_Batch_Check.SelectedValue + "", Global.StrCity, TypeCheck) select w.IDImage).Count() / 2).ToString();
             lb_Loi.Text = soloi + " Lỗi";
             FlagLoad = false;
+        }
+
+        private void UC_CityO_Loai3_DeSo1_Focus(string Truong, string Tag)
+        {
+            txt_Note.Text = Tag;
         }
 
         private void Uc_DeSo2_Changed(object sender, EventArgs e)
